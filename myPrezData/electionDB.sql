@@ -9,13 +9,13 @@ CREATE TABLE candidates (
 CREATE TABLE parties (
   partyAbbr varchar(3) NOT NULL,
   partyName varchar(72) NOT NULL,
-  PRIMARY KEY (partyAbbr),
+  PRIMARY KEY (partyAbbr)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE states (
   stateAbbr varchar(2) NOT NULL,
   stateName varchar(72) NOT NULL,
-  PRIMARY KEY (stateAbbr),
+  PRIMARY KEY (stateAbbr)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE electoralCollege (
