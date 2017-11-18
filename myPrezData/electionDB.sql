@@ -1,28 +1,18 @@
 CREATE DATABASE prezplaypro;
 
-CREATE TABLE 2016results (
+CREATE TABLE results (
   stateAbbr varchar(2) NOT NULL,
   candidateID int(2) NOT NULL,
   popVotes int(7) NOT NULL,
+  year int(4) NOT NULL,
+  FOREIGN KEY (candidateID) REFERENCES candidates (candidateID),
+  FOREIGN KEY (stateAbbr) REFERENCES states (stateAbbr),
   INDEX (stateAbbr),
-  INDEX (candidateID)
+  INDEX (candidateID),
+  INDEX (year)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-CREATE TABLE 2012results (
-  stateAbbr varchar(2) NOT NULL,
-  candidateID int(2) NOT NULL,
-  popVotes int(7) NOT NULL,
-  INDEX (stateAbbr),
-  INDEX (candidateID)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-CREATE TABLE 2012candidates (
-  candidateID int(2) NOT NULL,
-  candidateName varchar(72) NOT NULL,
-  PRIMARY KEY (candidateID)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-CREATE TABLE 2016candidates (
+CREATE TABLE candidates (
   candidateID int(2) NOT NULL,
   candidateName varchar(72) NOT NULL,
   PRIMARY KEY (candidateID)
@@ -34,20 +24,29 @@ CREATE TABLE parties (
   PRIMARY KEY (partyAbbr),
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-CREATE TABLE 2016affiliations (
-	albumID varchar(48) NOT NULL UNIQUE,
-	albumName varchar(255) NOT NULL,
-	artistID varchar(48) NOT NULL,
-	year varchar(4) NOT NULL,
-	PRIMARY KEY (albumID),
-	FOREIGN KEY (artistID) REFERENCES artists (artistID),
-	INDEX (year),
-	INDEX (artistID)
+CREATE TABLE affiliations (
+	candidateID int(2) NOT NULL,
+	partyAbbr varchar(3) NOT NULL,
+	year int(4) NOT NULL,
+	FOREIGN KEY (candidateID) REFERENCES candidates (candidateID),
+	FOREIGN KEY (partyAbbr) REFERENCES parties (partyAbbr),
+  INDEX (candidateID),
+	INDEX (partyAbbr),
+  INDEX (year)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE states (
   stateAbbr varchar(2) NOT NULL,
   stateName varchar(72) NOT NULL,
-  stateEC int(2) NOT NULL,
   PRIMARY KEY (stateAbbr),
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE electoralCollege (
+  stateAbbr varchar(2) NOT NULL,
+  1992 int(2) NOT NULL,
+  2004 int(2) NOT NULL,
+  2012 int(2) NOT NULL,
+  INDEX (1992),
+  INDEX (2004),
+  INDEX (2012)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
