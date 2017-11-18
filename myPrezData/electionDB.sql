@@ -48,3 +48,20 @@ CREATE TABLE results (
   INDEX (candidateID),
   INDEX (year)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*
+the following is just copied from places for practice and such and does not do anything
+*/
+
+LOAD DATA INFILE "/home/jay/candidates.csv"
+INTO TABLE candidates
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+COLUMNS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY '"'
+ESCAPED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS
+(title,@expired_date,amount)
+SET expired_date = STR_TO_DATE(@expired_date, '%m/%d/%y')
+IGNORE 1 LINES;
