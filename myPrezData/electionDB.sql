@@ -52,6 +52,5 @@ CREATE TABLE results (
 LOAD DATA local INFILE "/var/www/html/prezplaypro/myPrezData/candidates.csv"
 INTO TABLE candidates
 FIELDS TERMINATED BY ","
-ENCLOSED BY "'"
 LINES TERMINATED BY "\n"
 (candidateID,candidateName);
