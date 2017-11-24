@@ -56,7 +56,6 @@ LINES TERMINATED BY "\n"
 (candidateID,candidateName);
 
 INSERT INTO candidates2016 (candidateName) VALUES 
-('Boogers McGee'), 
 ('Frank Atwood'), 
 ('Darrell L. Castle'), 
 ('Hillary Clinton'), 
