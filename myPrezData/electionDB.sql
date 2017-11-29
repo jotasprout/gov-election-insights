@@ -88,7 +88,7 @@ INSERT INTO candidates2016 (candidateName) VALUES
 ('Dan R. Vacek'), 
 ('Jerry White');
 
-INSERT INTO parties (stateAbbr,stateName) VALUES
+INSERT INTO states (stateAbbr,stateName) VALUES
 ('AL','Alabama'),
 ('AK','Alaska'),
 ('AZ','Arizona'),
@@ -116,7 +116,7 @@ INSERT INTO parties (stateAbbr,stateName) VALUES
 ('MS','Mississippi'),
 ('MO','Missouri'),
 ('MT','Montana'),
-('NE','ebraska'),
+('NE','Nebraska'),
 ('NV','Nevada'),
 ('NH','New Hampshire'),
 ('NJ','New Jersey'),
