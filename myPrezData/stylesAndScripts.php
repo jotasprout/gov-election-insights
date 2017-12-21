@@ -4,7 +4,8 @@ $stylesAndSuch = "
     <meta charset='UTF-8'> 
     <link rel='stylesheet' type='text/css' href='https://www.roxorsoxor.com/bootstrap/css/bootstrap.min.css'>
     <link rel='stylesheet' type='text/css' href='https://www.roxorsoxor.com/bootstrap/css/justified-nav.css'>
-	<link rel='stylesheet' href='https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css'>
+    <link rel='stylesheet' href='https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css'>
+    <script type='text/javascript' src='https://d3js.org/d3.v4.min.js'></script>
 ";
 
 $scriptsAndSuch = "
