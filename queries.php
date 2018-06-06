@@ -53,4 +53,11 @@ $getCandidateAndPartyAbbr = "SELECT c.candidateID, c.candidateName, a.partyAbbr
 
 // Below this line is experimental
 
+$newTable = "CREATE TABLE partiesspectrum (partyAbbr varchar(3) NOT NULL, PRIMARY KEY (partyAbbr), partyName varchar(72) NOT NULL, rating int(1) NOT NULL, INDEX rating_index (rating), spectrum varchar(12) NOT NULL, INDEX spectrum_index (spectrum)) ENGINE=InnoDB";
+
+$newPartiesSpectrumData="LOAD DATA LOCAL INFILE '~/Documents/github/prezPlayPro/myPrezData/partiesSpectrum.csv' INTO TABLE partiesspectrum";
+
+$dropKick="ALTER TABLE affiliations2016 DROP FOREIGN KEY affiliations2016_ibfk_2";
+
+$newKick="ALTER TABLE affiliations2016 ADD CONSTRAINT partyAbbr_ibfk FOREIGN KEY(partyAbbr) REFERENCES partiesspectrum (partyAbbr) ON UPDATE CASCADE ON DELETE CASCADE";
 ?>
