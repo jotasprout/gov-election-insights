@@ -1,0 +1,63 @@
+﻿partyAbbr,partyName,rating,spectrum
+IDP,Independence,3,center
+IOC,It's Our Children,3,center
+KFP,Kotlikoff for President,3,center
+RPF,Reform Party of Florida,3,center
+NTP,Nutrition Party,3,center
+ADP,American Delta Party,2,center-left
+D,Democratic,2,center-left
+DFL,Democratic-Farmer Labor,2,center-left
+DNL,Democratic-Nonpartisan League,2,center-left
+LTC,Loyal Trustworthy Compassion,2,center-left
+BFA,Better for America,4,center-right
+R,Republican,4,center-right
+VP,Veterans Party,4,center-right
+APV,Approval Voting Party,0,neither
+BP,By Petition,0,neither
+IND,Independent,0,neither
+IPC,Independent People of Colorado,0,neither
+N,Nonpartisan,0,neither
+NAF,Nonaffiliated,0,neither
+NP,Nominated by Petition,0,neither
+NPY,No Political Party,0,neither
+UN,Unaffiliated,0,neither
+WEP,Women's Equality Party,0,neither
+AIP,American Independent,5,right
+AM,American Party,5,right
+AMC,American Constitution Party,5,right
+AMP,America’s Party,5,right
+C,Conservative,5,right
+CCS,Courage Character Service,5,right
+CON,Constitution,5,right
+CPF,Constitution Party of Florida,5,right
+IAP,Independent American  Party,5,right
+LBF,Libertarian Party of Florida,5,right
+LFC,"Life, Family, Constitution",5,right
+LIB,Libertarian,5,right
+NLP,Natural Law Party,5,right
+P,Prohibition Party,5,right
+UST,U.S. Taxpayers,5,right
+VPA,Veterans Party of America,5,right
+ASP,American Solidarity Party,1,socialist
+GI,Green Independent,1,socialist
+GPF,Green Party of Florida,1,socialist
+GR,Green-Rainbow,1,socialist
+GRE,Green,1,socialist
+IG,Iowa Green,1,socialist
+LBU,Liberty Union,1,socialist
+LMN,Legal Marijuana Now,1,socialist
+MTP,Mountain Party,1,socialist
+NPI,New Independent Party Iowa,1,socialist
+NRP,Nonviolent Resistance/Pacifist,1,socialist
+PAF,Peace and Freedom,1,socialist
+PG,Pacific Green,1,socialist
+PRO,Progressive,1,socialist
+PSL,Party for Socialism and Liberation,1,socialist
+SEA,Socialism Equality Anti-War,1,socialist
+SLP,Socialism and Liberation Party,1,socialist
+SOC,Socialist Party USA,1,socialist
+STG,Statehood Green,1,socialist
+SWP,Socialist Workers Party,1,socialist
+WF,Working Families,1,socialist
+WG,Wisconsin Green,1,socialist
+WW,Workers World,1,socialist
