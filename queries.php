@@ -38,11 +38,12 @@ $getSocialistParties = "SELECT parties.partyName, parties1.partyAbbr FROM partie
 						JOIN (SELECT * FROM spectrum WHERE rating = '1') parties1 
 						ON parties1.partyAbbr = parties.partyAbbr";
 
-$getSocCandidateID = "SELECT * FROM affiliations2016 a
-					JOIN (SELECT parties.partyName, parties1.partyAbbr FROM parties 
-						JOIN (SELECT * FROM spectrum WHERE rating = '1') parties1 
-						ON parties1.partyAbbr = parties.partyAbbr) s
-						ON a.partyAbbr = s.partyAbbr";
+$getSocialists = "SELECT a.candidateID, a.partyAbbr, p.partyName, c.candidateName
+						FROM affiliations2016 a
+						JOIN candidates2016 c
+						ON a.candidateID = c.candidateID
+						JOIN (SELECT * FROM partiesspectrum WHERE rating = 1) p
+						ON a.partyAbbr = p.partyAbbr";
 
 $getCandidateAndPartyAbbr = "SELECT c.candidateID, c.candidateName, a.partyAbbr
 								FROM candidates2016 c
@@ -57,11 +58,13 @@ $addy="update spectrum set spectrum = 'neither' where rating = 0";
 
 // Below this line is experimental
 
-$newTable = "CREATE TABLE partiesspectrum (partyAbbr varchar(3) NOT NULL, PRIMARY KEY (partyAbbr), partyName varchar(72) NOT NULL, rating int(1) NOT NULL, INDEX rating_index (rating), spectrum varchar(12) NOT NULL, INDEX spectrum_index (spectrum)) ENGINE=InnoDB";
+SELECT * FROM affiliations2016 a JOIN (SELECT * FROM partiesspectrum WHERE rating = 1) p ON a.partyAbbr = p.partyAbbr;
 
-$newPartiesSpectrumData="LOAD DATA LOCAL INFILE '~/Documents/github/prezPlayPro/myPrezData/partiesSpectrum.csv' INTO TABLE partiesspectrum";
+$newTable = "CREATE TABLE partiesspectrum (partyAbbr varchar(3) NOT NULL, PRIMARY KEY (partyAbbr), partyName varchar(72) NOT NULL, rating int(1) NOT NULL, INDEX rating_index (rating), spectrum varchar(12) NOT NULL, INDEX spectrum_index (spectrum)) ENGINE=InnoDB";
 
 $dropKick="ALTER TABLE affiliations2016 DROP FOREIGN KEY affiliations2016_ibfk_2";
 
 $newKick="ALTER TABLE affiliations2016 ADD CONSTRAINT partyAbbr_ibfk FOREIGN KEY(partyAbbr) REFERENCES partiesspectrum (partyAbbr) ON UPDATE CASCADE ON DELETE CASCADE";
+
+SELECT a.candidateID, a.partyAbbr, p.partyName, c.candidateName FROM affiliations2016 a JOIN candidates2016 c ON a.candidateID = c.candidateID JOIN (SELECT * FROM partiesspectrum WHERE rating = 1) p ON a.partyAbbr = p.partyAbbr;
 ?>
