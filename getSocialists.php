@@ -15,7 +15,7 @@ JOIN (SELECT a.candidateID, a.partyAbbr, p.partyName, c.candidateName
     ON s.candidateID = f.candidateID
 ORDER BY f.popVotes";
 
-$getSocialistResultsFL = "SELECT f.candidateID, f.stateAbbr, f.popVotes, s.partyAbbr, s.partyName, s.candidateName
+$getSocialistResults = "SELECT f.candidateID, f.stateAbbr, f.popVotes, s.partyAbbr, s.partyName, s.candidateName
 FROM results2016 f
 JOIN (SELECT a.candidateID, a.partyAbbr, p.partyName, c.candidateName 
         FROM affiliations2016 a 
@@ -24,6 +24,6 @@ JOIN (SELECT a.candidateID, a.partyAbbr, p.partyName, c.candidateName
         JOIN (SELECT * FROM partiesspectrum WHERE rating = 1) p 
             ON a.partyAbbr = p.partyAbbr) s 
     ON s.candidateID = f.candidateID
+    AND f.popVotes > 0
 ORDER BY f.stateAbbr";
-
 ?>
