@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
 
@@ -28,6 +28,21 @@
             // Path Generator
             const path = d3.geoPath()
                            .projection(projection);
+
+            // Create SVG
+            const svg = d3.select("body")
+                          .append("svg")
+                          .attr("width", w)
+                          .attr("height", h);
+
+            // Get geoJSON
+            d3.json("myPrezData/us-states.json", function(json) {
+                svg.selectAll("path")
+                   .data(json.features)
+                   .enter()
+                   .append("path")
+                   .attr("d", path);
+            });
         
         </script>
 
