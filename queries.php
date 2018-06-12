@@ -51,6 +51,10 @@ $getCandidateAndPartyAbbr = "SELECT c.candidateID, c.candidateName, a.partyAbbr
 
 // SELECT c.candidateID, c.candidateName, a.partyAbbr FROM candidates2016 c JOIN affiliations2016 a ON a.candidateID = c.candidateID;
 
+$sofar="INSERT INTO partiesspectrum SELECT parties.partyAbbr, parties.partyName, spectrum.rating, spectrum.spectrum FROM parties LEFT JOIN spectrum ON parties.partyAbbr = spectrum.partyAbbr";
+
+$addy="update spectrum set spectrum = 'neither' where rating = 0";
+
 // Below this line is experimental
 
 $newTable = "CREATE TABLE partiesspectrum (partyAbbr varchar(3) NOT NULL, PRIMARY KEY (partyAbbr), partyName varchar(72) NOT NULL, rating int(1) NOT NULL, INDEX rating_index (rating), spectrum varchar(12) NOT NULL, INDEX spectrum_index (spectrum)) ENGINE=InnoDB";
