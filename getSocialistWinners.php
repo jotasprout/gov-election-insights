@@ -1,6 +1,13 @@
 <?php
 
 // build this out modeling after Pop-PHP file createD3b.php
+require_once '../prezdb.php';
+
+$connekt = new mysqli('host','un','magicword','db');
+
+if (!connekt) {
+    echo 'Shit! Did not connect.';
+};
 
 $getSocialistResults = "SELECT y.*, z.candidateName
 FROM (SELECT r.stateAbbr, r.popVotes, r.candidateID
@@ -16,4 +23,18 @@ JOIN candidates2016 z
 ON z.candidateID = y.candidateID
 ORDER BY y.stateAbbr";
 
+$result = mysqli_query($connekt, $getSocialistResults);
+
+if (msqli_num_rows($result) > 0) {
+    $rows = array();
+    while ($row = mysqli_fetch_array($result)) {
+        $rows[] = $row;
+    }
+    echo json_encode($rows);
+}
+else {
+    echo "Nope. I got nothin.";
+}
+
+mysqli_close($connekt);
 ?>
