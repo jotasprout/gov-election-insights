@@ -1,7 +1,7 @@
 <?php
 
 // build this out modeling after Pop-PHP file createD3b.php
-require_once '../prezdb.php';
+require_once '../../secret_php/prezdb.php';
 
 $connekt = new mysqli('host','un','magicword','db');
 
