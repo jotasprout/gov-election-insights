@@ -32,6 +32,44 @@ $happyScabies2 = "SELECT a.albumName, a.year, a.albumArt, z.artistName, p1.pop, 
 	ON a.albumID = p1.albumID
 	ORDER BY year ASC;";
 
+$winners = "SELECT a.*
+			FROM results2016 a
+			INNER JOIN (SELECT candidateID, stateAbbr, max(popVotes) AS maxVotes
+						FROM results2016  
+						GROUP BY stateAbbr) groupStateVotes
+			ON a.popVotes = groupStateVotes.maxVotes
+			ORDER BY stateAbbr";
+
+
+$getSocialistWinners = "SELECT y.*, z.candidateName
+						FROM (SELECT r.stateAbbr, r.popVotes, r.candidateID
+							FROM results2016 r
+							WHERE r.candidateID IN
+								(SELECT a.candidateID 
+								FROM affiliations2016 a 
+								JOIN (SELECT * FROM partiesspectrum WHERE rating = 1) p 
+								ON a.partyAbbr = p.partyAbbr)
+							AND r.candidateID != 3
+							AND r.popVotes > 0) y
+						JOIN candidates2016 z
+						ON z.candidateID = y.candidateID
+						ORDER BY y.stateAbbr";
+
+						
+$getSocialistResults = "SELECT y.*, z.candidateName
+						FROM (SELECT r.stateAbbr, r.popVotes, r.candidateID
+							FROM results2016 r
+							WHERE r.candidateID IN
+								(SELECT a.candidateID 
+								FROM affiliations2016 a 
+								JOIN (SELECT * FROM partiesspectrum WHERE rating = 1) p 
+								ON a.partyAbbr = p.partyAbbr)
+							AND r.candidateID != 3
+							AND r.popVotes > 0) y
+						JOIN candidates2016 z
+						ON z.candidateID = y.candidateID
+						ORDER BY y.stateAbbr";
+
 $getSocialistPartyAbbr = "SELECT * FROM spectrum WHERE rating = '1'";
 
 $getSocialistParties = "SELECT parties.partyName, parties1.partyAbbr FROM parties 
@@ -66,7 +104,8 @@ $dropKick="ALTER TABLE affiliations2016 DROP FOREIGN KEY affiliations2016_ibfk_2
 
 $newKick="ALTER TABLE affiliations2016 ADD CONSTRAINT partyAbbr_ibfk FOREIGN KEY(partyAbbr) REFERENCES partiesspectrum (partyAbbr) ON UPDATE CASCADE ON DELETE CASCADE";
 
-SELECT a.candidateID, a.partyAbbr, p.partyName, c.candidateName FROM affiliations2016 a JOIN candidates2016 c ON a.candidateID = c.candidateID JOIN (SELECT * FROM partiesspectrum WHERE rating = 1) p ON a.partyAbbr = p.partyAbbr;
+
+
 
 
 ?>
