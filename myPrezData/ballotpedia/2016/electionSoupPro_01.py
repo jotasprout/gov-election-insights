@@ -13,7 +13,21 @@ headspan = soup.find(id="Results")
 justhead = headspan.parent
 resultstable = justhead.find_next("table")
 hrow = resultstable.select("tr:nth-of-type(2)")
-print (hrow)
+
+# candidates = resultstable.findAll('tr')
+
+    # party = candidate.select("td:nth-of-type(2)")
+    # candidateName = candidate.select("td:nth-of-type(3)")
+    # popVotes = candidate.select("td:nth-of-type(5)")
+    # ecVotes = candidate.select("td:nth-of-type(6)")
+    # print (f"{party} {candidateName} won {popVotes} popular votes for {ecVotes} electoral college votes.")
+    # print (party.get_text())
+# cells = hrow.findAll('td')
+
+# for cell in cells:
+
+
+# 
 # Grab just the results table
 
 
