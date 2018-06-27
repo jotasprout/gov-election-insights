@@ -5,22 +5,28 @@ from bs4 import BeautifulSoup
 # Grab local file I downloaded
 # Can I use a variable in the next line and loop through an array for all 51 files?
 html = open("Florida_2016.html")
-soup = BeautifulSoup(html, 'html.parser')
+soup = BeautifulSoup(html, 'lxml')
 
 allResults = []
 
 headspan = soup.find(id="Results")
 justhead = headspan.parent
 resultstable = justhead.find_next("table")
-hrow = resultstable.select("tr:nth-of-type(2)")
+lrow = resultstable.select("tr:nth-of-type(5)")
+candidates = resultstable.findAll('tr')
+# print (lrow)
 
-# candidates = resultstable.findAll('tr')
-
+# for candidate in candidates:
     # party = candidate.select("td:nth-of-type(2)")
+party = candidates[5].findAll('td')[1].string
     # candidateName = candidate.select("td:nth-of-type(3)")
+candidateName = candidates[5].findAll('td')[2].a.string
     # popVotes = candidate.select("td:nth-of-type(5)")
+popVotes = candidates[5].findAll('td')[4].string
     # ecVotes = candidate.select("td:nth-of-type(6)")
-    # print (f"{party} {candidateName} won {popVotes} popular votes for {ecVotes} electoral college votes.")
+ecVotes = candidates[5].findAll('td')[5].string
+
+print (f"{party} {candidateName} won {popVotes} popular votes for {ecVotes} electoral college votes.")
     # print (party.get_text())
 # cells = hrow.findAll('td')
 
@@ -34,3 +40,4 @@ hrow = resultstable.select("tr:nth-of-type(2)")
 # create JSON file in which to put leftover soup
 # with open("results.json", "w") as outfile:
 #    json.dump(allResults, outfile)
+# print (candidate)
