@@ -14,7 +14,20 @@ justhead = headspan.parent
 resultstable = justhead.find_next("table")
 lrow = resultstable.select("tr:nth-of-type(5)")
 candidates = resultstable.findAll('tr')
-# print (lrow)
+
+# loops to try
+i=0
+while i < 10:
+    print i
+    i = i + 1
+
+# the following two loops are equivalent to each other
+for counter in range (1,6):
+    print counter
+
+numbers = range (1,6)
+for count in numbers:
+    print (count)
 
 # for candidate in candidates:
     # party = candidate.select("td:nth-of-type(2)")
