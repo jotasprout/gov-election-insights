@@ -66,65 +66,59 @@
                                json.features[j].properties.winner = dataWinner
                             }
                         }
-
-                        /*
-                        */
                     }
-                    
                     //Bind data and create one path per GeoJSON feature
                     svg.selectAll("path")
                         .data(json.features)
                         .enter()
                         .append("path")
                         .attr("d", path)
+                        .style("stroke", "#e0e0e0")
                         .style("fill", function(d) {
-
                             let value = d.properties.winner;
-
                             switch (value) {
                                 case '28':
-                                    return "#f00";
+                                    return "#f00"; // Jill Stein
                                     break;
                                 case '17':
-                                    return "#00f";
+                                    return "#00f"; // Gloria Elela La Riva
                                     break;   
                                 case '12':
-                                    return "#ff0";
+                                    return "#ff0"; // Lynn S. Kahn
+                                    break;
+                                case '13':
+                                    return "#060"; // Chris Keniston
                                     break;
                                 case '14':
-                                    return "#0f0";
+                                    return "#0f0"; // Alyson Kennedy
                                     break;   
-                                case '18':
-                                    return "#f60";
-                                    break;
                                 case '20':
-                                    return "#f09";
+                                    return "#f09"; // Michael A. Maturen
                                     break;   
                                 case '22':
-                                    return "#606";
+                                    return "#606"; // Monica Moorehead
                                     break;
                                 case '27':
-                                    return "#09f";
-                                    break;    
-                                case '30':
-                                    return "#7d7d7d";
-                                    break;  
-                                case '31':
-                                    return "#000";
-                                    break;
+                                    return "#09f"; // Emidio Soltysik
+                                    break;       
                                 default:
                                     return "#ccc";
+                                    break;  
+                                /* 
+                                case '30':
+                                    return "#7d7d7d"; // Dan R. Vacek -- not in winner results now
+                                    break;  
+                                case '31':
+                                    return "#000"; // Jerry White -- not in winner results now
                                     break;
+                                case '18':
+                                    return "#f60"; // Bradford Lyttle -- not in winner results now
+                                    break;   
+                                */                           
                             }
-
                         });
                 });    
-
             });
-            
-
-        
         </script>
-
     </body>
 </html>
