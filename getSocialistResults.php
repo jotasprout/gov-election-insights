@@ -8,8 +8,7 @@ if (!$connekt) {
     echo 'Shit! Did not connect.';
 };
 
-$getSocialistWinners = "SELECT m.stateAbbr, m.stateName, m.candidateID, m.candidateName, max(m.popVotes) AS mostVotes FROM
-(SELECT y.*, z.candidateName, k.stateName
+$getSocialistResults = "SELECT y.*, z.candidateName
 FROM (SELECT r.stateAbbr, r.popVotes, r.candidateID
     FROM results2016 r
     WHERE r.candidateID IN
@@ -21,12 +20,9 @@ FROM (SELECT r.stateAbbr, r.popVotes, r.candidateID
     AND r.popVotes > 0) y
 JOIN candidates2016 z
 ON z.candidateID = y.candidateID
-JOIN states k
-ON k.stateAbbr = y.stateAbbr
-ORDER BY y.stateAbbr) m
-GROUP BY m.stateAbbr";
+ORDER BY y.stateAbbr";
 
-$result = mysqli_query($connekt, $getSocialistWinners);
+$result = mysqli_query($connekt, $getSocialistResults);
 
 if (!$result){
     echo "Nope. I got nothin.";

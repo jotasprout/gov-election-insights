@@ -9,6 +9,7 @@
 
         <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
         <script src='https://d3js.org/d3.v4.min.js'></script>
+        <script src='states.js'></script>
         <!--             
             link to CSS
         -->
@@ -119,6 +120,31 @@
                         });
                 });    
             });
+
+            fetch(`getSocialistResults.php`).then(function(response){
+                return response.json();
+            }).then(function(response){
+                console.log(response);
+                states.forEach(function (state){
+                    let stateCandidates = response.filter(function (candidateResult){
+                        return candidateResult.stateAbbr === state;
+                    })
+
+                    console.log(stateCandidates);
+
+                    let mostVotes = 0;
+                    let stateWinner;
+
+                    stateCandidates.map(function(candidate) {
+                        if (candidate.popVotes > mostVotes) stateWinner = candidate;
+                    });
+
+                    console.log (stateWinner);
+                })
+            });
+
+            console.log(states);
+
         </script>
     </body>
 </html>
