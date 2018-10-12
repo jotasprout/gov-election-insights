@@ -1,0 +1,19 @@
+SELECT x.candidateID as candidateID, x.candidateName as candidateName, x.partyAbbr as partyAbbr, s.rating, s.partyName, x.stateAbbr as stateAbbr FROM
+(SELECT a.candidateID as candidateID, c.candidateName as candidateName, a.partyAbbr as partyAbbr, a.stateAbbr as stateAbbr FROM
+(SELECT candidateID, partyAbbr, stateAbbr FROM affiliations2016) a
+JOIN candidates2016 c ON a.candidateID = c.candidateID) x
+JOIN (SELECT rating, partyAbbr, partyName FROM partiesspectrum) s ON s.partyAbbr = x.partyAbbr
+WHERE (s.rating = 1) OR (s.rating = 0 AND x.candidateID = 14)
+
+
+===== NEXT TRY EXPERIMENT ====
+
+SELECT * FROM
+(SELECT x.candidateID as candidateID, x.candidateName as candidateName, x.partyAbbr as partyAbbr, s.rating, s.partyName, x.stateAbbr as stateAbbr FROM
+(SELECT a.candidateID as candidateID, c.candidateName as candidateName, a.partyAbbr as partyAbbr, a.stateAbbr as stateAbbr FROM
+(SELECT candidateID, partyAbbr, stateAbbr FROM affiliations2016) a
+JOIN candidates2016 c ON a.candidateID = c.candidateID) x
+JOIN (SELECT rating, partyAbbr, partyName FROM partiesspectrum) s ON s.partyAbbr = x.partyAbbr
+WHERE (s.rating = 1) OR (s.rating = 0 AND x.candidateID = 14)) f
+
+LEFT JOIN (SELECT candidateID, stateAbbr, popVotes FROM results2016) r ON f.candidateID = r.candidateID AND f.stateAbbr = r.stateAbbr
