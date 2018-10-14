@@ -6,14 +6,39 @@ JOIN (SELECT rating, partyAbbr, partyName FROM partiesspectrum) s ON s.partyAbbr
 WHERE (s.rating = 1) OR (s.rating = 0 AND x.candidateID = 14)
 
 
+
 ===== NEXT TRY EXPERIMENT ====
 
-SELECT * FROM
-(SELECT x.candidateID as candidateID, x.candidateName as candidateName, x.partyAbbr as partyAbbr, s.rating, s.partyName, x.stateAbbr as stateAbbr FROM
-(SELECT a.candidateID as candidateID, c.candidateName as candidateName, a.partyAbbr as partyAbbr, a.stateAbbr as stateAbbr FROM
-(SELECT candidateID, partyAbbr, stateAbbr FROM affiliations2016) a
-JOIN candidates2016 c ON a.candidateID = c.candidateID) x
-JOIN (SELECT rating, partyAbbr, partyName FROM partiesspectrum) s ON s.partyAbbr = x.partyAbbr
-WHERE (s.rating = 1) OR (s.rating = 0 AND x.candidateID = 14)) f
+SELECT f.candidateID as candidateID, f.candidateName as candidateName, f.partyAbbr as partyAbbr, f.rating, f.partyName, f.stateAbbr as stateAbbr, r1.popVotes
+FROM (SELECT x.candidateID as candidateID, x.candidateName as candidateName, x.partyAbbr as partyAbbr, s.rating, s.partyName, x.stateAbbr as stateAbbr 
+        FROM (SELECT a.candidateID as candidateID, c.candidateName as candidateName, a.partyAbbr as partyAbbr, a.stateAbbr as stateAbbr 
+                FROM (SELECT candidateID, partyAbbr, stateAbbr FROM affiliations2016) a
+        JOIN candidates2016 c ON a.candidateID = c.candidateID) x
+        JOIN (SELECT rating, partyAbbr, partyName FROM partiesspectrum) s ON s.partyAbbr = x.partyAbbr
+        WHERE (s.rating = 1) OR (s.rating = 0 AND x.candidateID = 14)) f
+JOIN (SELECT r.*
+            FROM results2016 r
+            INNER JOIN (SELECT candidateID, stateAbbr, max(popVotes) AS maxPopVotes 
+                        FROM results2016 
+                        GROUP BY stateAbbr) groupedr) r1
+ON r1.candidateID = f.candidateID AND r1.stateAbbr = f.stateAbbr
 
-LEFT JOIN (SELECT candidateID, stateAbbr, popVotes FROM results2016) r ON f.candidateID = r.candidateID AND f.stateAbbr = r.stateAbbr
+
+
+===== CLOSE BUT ====
+
+SELECT f.candidateID as candidateID, f.candidateName as candidateName, f.partyAbbr as partyAbbr, f.rating, f.partyName, f.stateAbbr as stateAbbr, r1.popVotes
+FROM (SELECT x.candidateID as candidateID, x.candidateName as candidateName, x.partyAbbr as partyAbbr, s.rating, s.partyName, x.stateAbbr as stateAbbr 
+        FROM (SELECT a.candidateID as candidateID, c.candidateName as candidateName, a.partyAbbr as partyAbbr, a.stateAbbr as stateAbbr 
+                FROM (SELECT candidateID, partyAbbr, stateAbbr FROM affiliations2016) a
+        JOIN candidates2016 c ON a.candidateID = c.candidateID) x
+        JOIN (SELECT rating, partyAbbr, partyName FROM partiesspectrum) s ON s.partyAbbr = x.partyAbbr
+        WHERE (s.rating = 1) OR (s.rating = 0 AND x.candidateID = 14)) f
+INNER JOIN (SELECT r.*
+            FROM results2016 r
+            INNER JOIN (SELECT candidateID, stateAbbr, max(popVotes) AS maxPopVotes 
+                        FROM results2016 
+                        GROUP BY stateAbbr) groupedr 
+            ON r.candidateID = groupedr.candidateID 
+            AND r.stateAbbr = groupedr.stateAbbr) r1
+ON r1.candidateID = f.candidateID AND r1.stateAbbr = f.stateAbbr
