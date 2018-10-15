@@ -30,6 +30,7 @@ if (!$result){
 else {
     $rows = array();
     while ($row = mysqli_fetch_array($result)) {
+		$row['popVotes'] = (int) $row['popVotes'];
         $rows[] = $row;
     }
     echo json_encode($rows);

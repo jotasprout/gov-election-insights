@@ -40,7 +40,7 @@
             d3.json("getSocialistWinners.php", function(data) {
 
                 // so I can see what it looks like
-                console.log(data);
+               // console.log(data);
 
                 // Get geoJSON
                 d3.json("myPrezData/us-states.json", function(json) {
@@ -133,17 +133,14 @@
                     console.log(stateCandidates);
 
                     let mostVotes = 0;
-                    let stateWinner;
-
-                    stateCandidates.map(function(candidate) {
-                        if (candidate.popVotes > mostVotes) stateWinner = candidate;
+                    let stateWinner = stateCandidates.reduce((max, candidate) => max && max.popVotes > candidate.popVotes ? max : candidate, null);
+					
+					console.log (stateWinner);
                     });
+                    
+                });
 
-                    console.log (stateWinner);
-                })
-            });
-
-            console.log(states);
+           // console.log(states);
 
         </script>
     </body>

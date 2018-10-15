@@ -8,6 +8,27 @@ if (!$connekt) {
     echo 'Shit! Did not connect.';
 };
 
+$getAllSocialistAffiliations = "SELECT x.candidateID as candidateID, x.candidateName as candidateName, x.partyAbbr as partyAbbr, s.rating, s.partyName, x.stateAbbr as stateAbbr 
+        FROM (SELECT a.candidateID as candidateID, c.candidateName as candidateName, a.partyAbbr as partyAbbr, a.stateAbbr as stateAbbr 
+                FROM (SELECT candidateID, partyAbbr, stateAbbr FROM affiliations2016) a
+        JOIN candidates2016 c ON a.candidateID = c.candidateID) x
+        JOIN (SELECT rating, partyAbbr, partyName FROM partiesspectrum) s ON s.partyAbbr = x.partyAbbr
+        WHERE (s.rating = 1) OR (s.rating = 0 AND x.candidateID = 14)";
+
+$getSocialistResults = "SELECT y.*, z.candidateName
+						FROM (SELECT r.stateAbbr, r.popVotes, r.candidateID
+							FROM results2016 r
+							WHERE r.candidateID IN
+								(SELECT a.candidateID 
+								FROM affiliations2016 a 
+								JOIN (SELECT * FROM partiesspectrum WHERE rating = 1) p 
+								ON a.partyAbbr = p.partyAbbr)
+							AND r.candidateID != 3
+							AND r.popVotes > 0) y
+						JOIN candidates2016 z
+						ON z.candidateID = y.candidateID
+						ORDER BY y.stateAbbr";
+
 $prezScabies = "SELECT f.candidateID as candidateID, f.candidateName as candidateName, f.partyAbbr as partyAbbr, f.rating, f.partyName, f.stateAbbr as stateAbbr, r1.maxPopVotes
 FROM (SELECT x.candidateID as candidateID, x.candidateName as candidateName, x.partyAbbr as partyAbbr, s.rating, s.partyName, x.stateAbbr as stateAbbr 
         FROM (SELECT a.candidateID as candidateID, c.candidateName as candidateName, a.partyAbbr as partyAbbr, a.stateAbbr as stateAbbr 
