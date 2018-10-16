@@ -8,7 +8,7 @@ if (!$connekt) {
     echo 'Shit! Did not connect.';
 };
 
-$getSocialistResults = "SELECT y.*, z.candidateName
+$getSocialistResults = "SELECT y.*, z.candidateName, s.stateName
 FROM (SELECT r.stateAbbr, r.popVotes, r.candidateID
     FROM results2016 r
     WHERE r.candidateID IN
@@ -20,6 +20,7 @@ FROM (SELECT r.stateAbbr, r.popVotes, r.candidateID
     AND r.popVotes > 0) y
 JOIN candidates2016 z
 ON z.candidateID = y.candidateID
+JOIN states s ON s.stateAbbr = y.stateAbbr
 ORDER BY y.stateAbbr";
 
 $result = mysqli_query($connekt, $getSocialistResults);

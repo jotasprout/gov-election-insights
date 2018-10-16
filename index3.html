@@ -38,31 +38,30 @@
 
             let winners = [];
 
-            fetch(`getSocialistResults.php`).then(function(response){
-                return response.json();
-            }).then(function(response){
-                console.log(response);
-                states.forEach(function (state){
-                    let stateCandidates = response.filter(function (candidateResult){
-                        return candidateResult.stateAbbr === state;
-                    })
+            let socialistResults = function () {
+                fetch(`getSocialistResults.php`).then(function(response){
+                    return response.json();
+                }).then(function(response){
+                    console.log(response);
+                    states.forEach(function (state){
+                        let stateCandidates = response.filter(function (candidateResult){
+                            return candidateResult.stateAbbr === state;
+                        })
 
-                    console.log(stateCandidates);
+                        console.log(stateCandidates);
 
-                    let mostVotes = 0;
-                    let stateWinner = stateCandidates.reduce((max, candidate) => max && max.popVotes > candidate.popVotes ? max : candidate, null);
-                    
-                    console.log (stateWinner);
+                        let mostVotes = 0;
+                        let stateWinner = stateCandidates.reduce((max, candidate) => max && max.popVotes > candidate.popVotes ? max : candidate, null);
+                        
+                        console.log (stateWinner);
 
-                    winners.push(stateWinner);
+                        winners.push(stateWinner);
                     });
-                    
+                    return winners;
                 });
-
-            console.log(winners);
-
+            };
             // get election results
-            d3.json("getSocialistWinners.php", function(data) {
+            d3.json(socialistResults, function(data) {
 
                 // so I can see what it looks like
                // console.log(data);
@@ -147,6 +146,8 @@
             });
 
 
+
+           // console.log(states);
 
         </script>
     </body>
