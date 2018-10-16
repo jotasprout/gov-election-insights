@@ -62,7 +62,7 @@
             console.log(winners);
 
             // get election results
-            d3.json("getSocialistWinners.php", function(data) {
+           // d3.json("getSocialistWinners.php", function(data) {
 
                 // so I can see what it looks like
                // console.log(data);
@@ -72,14 +72,14 @@
 
                     //Merge the ag. data and GeoJSON
 					//Loop through once for each ag. data value
-                    for (var i = 0; i < data.length; i++) {
+                    for (var i = 0; i < winners.length; i++) {
 
                         // Get the state name
-                        let dataState = data[i].stateName;
+                        let dataState = winners[i].stateName;
                         // console.log(dataState);
 
                         // Get winning candidate
-                        let dataWinner = data[i].candidateID;
+                        let dataWinner = winners[i].candidateID;
                         // console.log(dataWinner + " won " + dataState);
 
                         //Find the corresponding state inside the GeoJSON
@@ -144,7 +144,6 @@
                             }
                         });
                 });    
-            });
 
 
 

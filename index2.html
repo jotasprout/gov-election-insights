@@ -55,21 +55,22 @@
 					console.log (stateWinner);
 
                     winners.push(stateWinner);
+
                 });
-                    
-            });
+
+                console.log (winners);
 
                 // Get geoJSON
                 d3.json("myPrezData/us-states.json", function(json) {
 
                     //Merge the ag. data and GeoJSON
-					//Loop through once for each ag. data value
+                    //Loop through once for each ag. data value
                     for (var i = 0; i < json.length; i++) {
 
                         console.log(winners[i]);
                         // Get the state name
                         let dataState = winners[i].stateName;
-                        // console.log(dataState);
+                        console.log(dataState);
 
                         // Get winning candidate
                         let dataWinner = winners[i].candidateID;
@@ -81,8 +82,8 @@
                             let jsonState = json.features[j].properties.name;
 
                             // if (dataState == jsonState) {
-                               // console.log("Yay!" + [j]);
-                               json.features[j].properties.winner = dataWinner
+                            // console.log("Yay!" + [j]);
+                            json.features[j].properties.winner = dataWinner
                             // }
                         }
                     }
@@ -136,7 +137,11 @@
                                 */                           
                             }
                         });
-                });    
+                    }); 
+                    
+            });
+
+                   
 
         </script>
     </body>
