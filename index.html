@@ -41,18 +41,18 @@
             fetch(`getSocialistResults.php`).then(function(response){
                 return response.json();
             }).then(function(response){
-                console.log(response);
+                // console.log(response);
                 states.forEach(function (state){
                     let stateCandidates = response.filter(function (candidateResult){
                         return candidateResult.stateAbbr === state;
                     })
 
-                    console.log(stateCandidates);
+                    // console.log(stateCandidates);
 
                     let mostVotes = 0;
                     let stateWinner = stateCandidates.reduce((max, candidate) => max && max.popVotes > candidate.popVotes ? max : candidate, null);
                     
-                    console.log (stateWinner);
+                    // console.log (stateWinner);
 
                     winners.push(stateWinner);
                     });
@@ -76,22 +76,23 @@
 
                         // Get the state name
                         let dataState = winners[i].stateName;
-                        // console.log(dataState);
+                        console.log("first winners state is " + dataState);
 
                         // Get winning candidate
                         let dataWinner = winners[i].candidateID;
-                        // console.log(dataWinner + " won " + dataState);
+                        console.log(dataWinner + " won " + dataState);
 
                         //Find the corresponding state inside the GeoJSON
                         for (var j = 0; j < json.features.length; j++) {
 
                             let jsonState = json.features[j].properties.name;
-
+                            
                             if (dataState == jsonState) {
                                // console.log("Yay!" + [j]);
                                json.features[j].properties.winner = dataWinner
                             }
                         }
+                        
                     }
                     //Bind data and create one path per GeoJSON feature
                     svg.selectAll("path")
