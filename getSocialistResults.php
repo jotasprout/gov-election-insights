@@ -37,7 +37,7 @@ ON z.candidateID = y.candidateID
 JOIN states s ON s.stateAbbr = y.stateAbbr
 ORDER BY y.stateAbbr";
 
-$result = mysqli_query($connekt, $getSocialistResults);
+$result = mysqli_query($connekt, $getSocialistResultsWithZero);
 
 if (!$result){
     echo "Nope. I got nothin.";

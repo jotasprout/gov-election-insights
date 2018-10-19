@@ -31,39 +31,41 @@
                           .append("svg")
                           .attr("width", w)
                           .attr("height", h);
+
+            console.log(states);
+            
             // get election results
             d3.json("getSocialistWinners.php", function(truedata) {
                 // so I can see what it looks like
                 console.log(truedata);
-                return truedata.json();
-
-                function(truedata) {
-                    
-                };
-
-                // my function goes here and it should RETURN "data"
-
 
                 // Get geoJSON
                 d3.json("myPrezData/us-states.json", function(json) {
+
                     //Merge the ag. data and GeoJSON
 					//Loop through once for each ag. data value
-                    for (var i = 0; i < data.length; i++) {
+                    for (var i = 0; i < truedata.length; i++) {
                         // Get the state name
-                        let dataState = data[i].stateName;
-                        // console.log(dataState);
+                        let dataState = truedata[i].stateName;
+                        // console.log("first winners state is " + dataState);
                         // Get winning candidate
-                        let dataWinner = data[i].candidateID;
+                        let dataWinner = truedata[i].candidateID;
                         // console.log(dataWinner + " won " + dataState);
                         //Find the corresponding state inside the GeoJSON
                         for (var j = 0; j < json.features.length; j++) {
                             let jsonState = json.features[j].properties.name;
                             if (dataState == jsonState) {
-                               // console.log("Yay!" + [j]);
+                               // console.log(dataState + " equals " + jsonState);
                                json.features[j].properties.winner = dataWinner
+                            }
+                            else {
+                               // console.log(dataState + " does not equal " + jsonState);
                             }
                         }
                     }
+
+                    console.log(json);                    
+                    
                     //Bind data and create one path per GeoJSON feature
                     svg.selectAll("path")
                         .data(json.features)
@@ -116,6 +118,7 @@
                         });
                 });    
             });
+            /*
             fetch(`getSocialistResults.php`).then(function(response){
                 return response.json();
             }).then(function(response){
@@ -134,6 +137,7 @@
                 })
             });
             console.log(states);
+            */
         </script>
     </body>
 </html>

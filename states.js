@@ -48,5 +48,6 @@ let states = new Set ([
     "VT",
     "WA",
     "WI",
-    "WV"
+    "WV",
+    "WY"
 ]);
