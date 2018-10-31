@@ -5,11 +5,15 @@ _Interactive data visualization of presidential election results._
 * D3.js for data viz
 
 ## Examples
-![Screenshot of webpage showing map of USA made with D3. Each state is a different color depending on which candidate won.](https://jotascript.files.wordpress.com/2018/06/pppprogress.png)
+![Screenshot of webpage showing map of USA made with D3. Each state is a different color depending on which candidate won.](https://jotascript.files.wordpress.com/2018/10/screen-shot-2018-10-18-at-9-51-39-pm.png?w=640)
+
+This map shows socialist candidates whose party affiliations may or may not have the word "socialist" in their names -- including Jill Stein.
+
 Gray states are those with no socialist candidates (or there were socialist candidates but they received zero votes.
 
 ## Schema
 ![Schema diagram showing tables with columns for candidates, states, party affiliations, and election results.](https://jotascript.files.wordpress.com/2018/10/schema_101618.png)
+
 Like the U.S. Constitution, this schema is a living document and has evolved over time.
 
 ## Blog Posts
