@@ -46,7 +46,10 @@
 .hillary-clinton { background-color: #2980b9; }
 .james-hedges { background-color: #d98880; }
 .jerry-white { background-color: #145a32; }
-.jill-stein { background-color: #2ecc71; }
+.jill-stein { 
+    background-color: #2ecc71;
+    fill: #2ecc71;
+}
 .joseph-maldonado { background-color: #7d3c98; }
 .kyle-kopitke { background-color: #fdedec; }
 .laurence-kotlikoff { background-color: #4a235a; }
@@ -63,3 +66,4 @@
 .ryan-scott { background-color: #633974; }
 .scott-copeland { background-color: #922b21; }
 .tom-hoefling { background-color: #f1948a; }
+.nope { background-color: black;}
