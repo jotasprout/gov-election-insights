@@ -1,0 +1,65 @@
+#controls {
+    /*
+    background-color: green;
+    */
+}
+
+#legend {
+        /*
+    background-color: yellow;
+    */
+    display: flex;
+}
+
+.candi-legend {
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px;
+    width: 200px;
+    display: flex;
+}
+
+.candi-name {
+
+}
+
+.candi-box {
+    /**/
+    border-style: solid;
+    border-width: 1px;
+    padding: 0px;
+    height: 10px;
+    width: 10px;
+    margin-right: 2px;
+}
+
+.alyson-kennedy { background-color: #a9dfbf; }
+.bradford-lyttle { background-color: #117a65; }
+.chris-keniston { background-color: #d6eaf8; }
+.dan-r-vacek { background-color: #186a3b; }
+.darrell-castle { background-color: #641e16; }
+.donald-trump { background-color: #78281f; }
+.emidio-soltysik { background-color: #5499c7; }
+.evan-mcmullin { background-color: #ec7063; }
+.frank-atwood { background-color: #d7bde2; }
+.gary-johnson { background-color: #c0392b; }
+.hillary-clinton { background-color: #2980b9; }
+.james-hedges { background-color: #d98880; }
+.jerry-white { background-color: #145a32; }
+.jill-stein { background-color: #2ecc71; }
+.joseph-maldonado { background-color: #7d3c98; }
+.kyle-kopitke { background-color: #fdedec; }
+.laurence-kotlikoff { background-color: #4a235a; }
+.lynn-kahn { background-color: #1abc9c; }
+.michael-maturen { background-color: #5dade2; }
+.mike-smith { background-color: #9b59b6; }
+.monica-moorehead { background-color: #1b4f72; }
+.peter-skewes { background-color: #e74c3c; }
+.princess-jacobs { background-color: #6c3483; }
+.richard-duncan { background-color: #a569bd; }
+.rocky-giordani { background-color: #b03a2e; }
+.rod-silva { background-color: #c39bd3; }
+.roque-delafuente { background-color: #d2b4de; }
+.ryan-scott { background-color: #633974; }
+.scott-copeland { background-color: #922b21; }
+.tom-hoefling { background-color: #f1948a; }
