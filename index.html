@@ -14,39 +14,44 @@
         <link rel='stylesheet' type='text/css' href='prezStyle.css'>
 
         <link rel='stylesheet' type='text/css' href='https://www.roxorsoxor.com/bootstrap4/css/bootswatch-slate.min.css'>
-        <link rel='stylesheet' type='text/css' href='https://www.roxorsoxor.com/bootstrap4/js/bootstrap.min.js'>
+        <script src='https://www.roxorsoxor.com/bootstrap4/js/bootstrap.min.js'></script>
 
     </head>
-    <body>
-        <script>
+<body>
+<script>
 
-            // Width and Height
-            const w = 1000;
-            const h = 650;
+    // Width and Height
+    const w = 1000;
+    const h = 650;
 
-            // Map projection
-            const projection = d3.geoAlbersUsa()
-                                 .translate([w/2, h/2])
-                                 .scale([1000]);
+    // Map projection
+    const projection = d3.geoAlbersUsa()
+                            .translate([w/2, h/2])
+                            .scale([1000]);
 
-            // Path Generator
-            const path = d3.geoPath()
-                           .projection(projection);
+    // Path Generator
+    const path = d3.geoPath()
+                    .projection(projection);
 
-            // Create SVG
-            const svg = d3.select("body")
-                          .append("svg")
-                          .attr("width", w)
-                          .attr("height", h);
+    // Create SVG
+    const svg = d3.select("body")
+                    .append("svg")
+                    .attr("width", w)
+                    .attr("height", h);
 
-            let winners = [];
+    let winners = [];
 
-            // console.log(states);
+    // console.log(states);
 
-            fetch(`getSocialistResults.php`).then(function(response){
-                return response.json();
-            }).then(function(response){
-                // console.log(response);
+    let opponents = "getSocialistResults.php";
+
+    function allThisStuff (opponents) {
+        fetch(opponents).then(function(response){
+            return response.json();
+        }).then(function(response){
+            // console.log(response);
+
+            function wrangleWinners (response) {
                 states.forEach(function (state){
                     let stateCandidates = response.filter(function (candidateResult){
                         return candidateResult.stateAbbr === state;
@@ -69,12 +74,27 @@
                     console.log (stateWinner);
                     winners.push(stateWinner);
                 });
+            } // end of wrangleWinners   
 
-               // console.log(winners);
+            wrangleWinners (response);
 
-                // Get geoJSON
+            // console.log(winners);
+
+            function getGeoJSON () {
                 d3.json("myPrezData/us-states.json", function(json) {
+                    combineMapWinners(json);
+                    bindData(json);
+                });
+            }; // end of getGeoJSON
 
+            getGeoJSON();
+
+            // Get geoJSON
+
+        // d3.json("myPrezData/us-states.json", function(json) {
+
+
+                function combineMapWinners (json) {
                     //Merge the ag. data and GeoJSON
                     //Loop through once for each ag. data value
                     for (var i = 0; i < winners.length; i++) {
@@ -96,9 +116,13 @@
                             }
                         }
                     }
+                } // end of combineMapWinners
 
-                // console.log(json);                
+            // combineMapWinners(json);
 
+                // console.log(json);    
+
+                function bindData (json) {
                     //Bind data and create one path per GeoJSON feature
                     svg.selectAll("path")
                         .data(json.features)
@@ -193,6 +217,9 @@
                                 case '28':
                                     return "jill-stein"; // Jill Stein
                                     break;
+                                case '29':
+                                    return "donald-trump"; // Donald Trump
+                                    break;
                                 case '30':
                                     return "dan-r-vacek"; // Dan R. Vacek
                                     break;  
@@ -203,14 +230,23 @@
                                 default:
                                     return "nope";
                                     break;  
-                         
                             }
-                        });
-                }); 
-                    
-            });
+                        }); 
+                } // end of bindData    
 
-        </script>
+            // bindData();       
+
+        // }); // end of getGeoJSON
+                
+        });
+
+        console.log ("Yay!");
+    } // end of allThisStuff
+
+allThisStuff (opponents);  
+
+</script>
+
 <div class="container">
 
 <form id="selectCandidates" action="" method="post">
@@ -226,31 +262,31 @@
         </div>
         <div class="form-check">
             <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="opponents" id="socialists-nogreen" value="socialists-nogreen" checked="">
+                <input type="radio" class="form-check-input" name="opponents" id="socialists-nogreen" value="socialists-nogreen">
                 All Socialists Except Jill Stein (Green)
             </label>
         </div>            
         <div class="form-check">
             <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="opponents" id="left-all-vs-trump" value="left-all-vs-trump" checked="">
+                <input type="radio" class="form-check-input" name="opponents" id="left-all-vs-trump" value="left-all-vs-trump">
                 All "Left" vs Trump (Republican)
             </label>
         </div>
         <div class="form-check">
             <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="opponents" id="right-all-notrump" value="right-all-notrump" checked="">
+                <input type="radio" class="form-check-input" name="opponents" id="right-all-notrump" value="right-all-notrump">
                 All "Right"
             </label>
         </div>
         <div class="form-check">
             <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="opponents" id="right-all-vs-clinton" value="right-all-vs-clinton" checked="">
+                <input type="radio" class="form-check-input" name="opponents" id="right-all-vs-clinton" value="right-all-vs-clinton">
                 All "Right" vs Clinton (Democratic)
             </label>
         </div>
         <div class="form-check">
             <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="opponents" id="right-all-vs-left-all" value="right-all-vs-left-all" checked=""> 
+                <input type="radio" class="form-check-input" name="opponents" id="right-all-vs-left-all" value="right-all-vs-left-all"> 
                 Left vs Right
             </label>
         </div>   
@@ -260,26 +296,27 @@
 </form>
 
 <div id="legend">
+
     <div class="candi-legend" id="jill-stein">
         <div class="candi-box jill-stein"></div>
         <div class="candi-name">Jill Stein</div>
-        
     </div>
+
     <div class="candi-legend" id="alyson-kennedy">
         <div class="candi-box alyson-kennedy"></div>
         <div class="candi-name">Alyson Kennedy</div>
-        
     </div>
+
     <div class="candi-legend" id="chris-keniston">
-        
         <div class="candi-box chris-keniston"></div>
         <div class="candi-name">Chris Keniston</div>
     </div>
+
     <div class="candi-legend" id="roque-delafuente">
-        
         <div class="candi-box roque-delafuente"></div>
         <div class="candi-name">Roque De La Fuente</div>
-    </div>            
+    </div>   
+
 </div>
 
 </div> <!-- End of Container -->
