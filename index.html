@@ -267,12 +267,9 @@ $(document).ready(function(){
                 allThisStuff("getSocialistResultsNoGreen.php"); 
                 break;
             default:
-                return "getSocialistResults.php";
+                allThisStuff("getSocialistResults.php");
                 break;  
         }
-    }).then(function(newopponents){
-        console.log(newopponents);
-        allThisStuff(opponents);
     });
 });
 
