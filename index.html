@@ -46,6 +46,7 @@
     let opponents = "getSocialistResults.php";
 
     function allThisStuff (opponents) {
+        console.log(opponents);
         fetch(opponents).then(function(response){
             return response.json();
         }).then(function(response){
@@ -80,159 +81,166 @@
 
             // console.log(winners);
 
-            function getGeoJSON () {
-                d3.json("myPrezData/us-states.json", function(json) {
-                    combineMapWinners(json);
-                    bindData(json);
-                });
-            }; // end of getGeoJSON
 
-            getGeoJSON();
 
             // Get geoJSON
 
         // d3.json("myPrezData/us-states.json", function(json) {
 
 
-                function combineMapWinners (json) {
-                    //Merge the ag. data and GeoJSON
-                    //Loop through once for each ag. data value
-                    for (var i = 0; i < winners.length; i++) {
-                        // Get the state name
-                        let dataState = winners[i].stateName;
-                        // console.log("first winners state is " + dataState);
-                        // Get winning candidate
-                        let dataWinner = winners[i].candidateID;
-                        // console.log(dataWinner + " won " + dataState);
-                        //Find the corresponding state inside the GeoJSON
-                        for (var j = 0; j < json.features.length; j++) {
-                            let jsonState = json.features[j].properties.name;
-                            if (dataState == jsonState) {
-                            // console.log(dataState + " equals " + jsonState);
-                                json.features[j].properties.winner = dataWinner;
-                            }
-                            else {
-                            // console.log(dataState + " does not equal " + jsonState);
-                            }
+            function combineMapWinners (json) {
+                //Merge the ag. data and GeoJSON
+                //Loop through once for each ag. data value
+                for (var i = 0; i < winners.length; i++) {
+                    // Get the state name
+                    let dataState = winners[i].stateName;
+                    // console.log("first winners state is " + dataState);
+                    // Get winning candidate
+                    let dataWinner = winners[i].candidateID;
+                    // console.log(dataWinner + " won " + dataState);
+                    //Find the corresponding state inside the GeoJSON
+                    for (var j = 0; j < json.features.length; j++) {
+                        let jsonState = json.features[j].properties.name;
+                        if (dataState == jsonState) {
+                        // console.log(dataState + " equals " + jsonState);
+                            json.features[j].properties.winner = dataWinner;
+                        }
+                        else {
+                        // console.log(dataState + " does not equal " + jsonState);
                         }
                     }
-                } // end of combineMapWinners
+                    
+                }
+               console.log(json);
+               // return json;
+            } // end of combineMapWinners
 
             // combineMapWinners(json);
 
-                // console.log(json);    
+                //    
 
-                function bindData (json) {
-                    //Bind data and create one path per GeoJSON feature
-                    svg.selectAll("path")
-                        .data(json.features)
-                        .enter()
-                        .append("path")
-                        .attr("d", path)
-                        .style("stroke", "#e0e0e0")
-                        .attr("class", function(d) {
-                            let value = d.properties.winner;
-                            switch (value) {
-                                case '1':
-                                    return "frank-atwood"; // frank-atwood
-                                    break;
-                                case '2':
-                                    return "darrell-castle"; // darrell-castle
-                                    break;
-                                case '3':
-                                    return "hillary-clinton"; // hillary-clinton
-                                    break;
-                                case '4':
-                                    return "scott-copeland"; // scott-copeland
-                                    break;   
-                                case '5':
-                                    return "roque-delafuente"; // roque-delafuente
-                                    break;   
-                                case '6':
-                                    return "richard-duncan"; // richard-duncan
-                                    break; 
-                                case '7':
-                                    return "rocky-giordani"; // rocky-giordani
-                                    break;      
-                                case '8':
-                                    return "james-hedges"; // james-hedges
-                                    break;
-                                case '9':
-                                    return "tom-hoefling"; // tom-hoefling
-                                    break; 
-                                case '10':
-                                    return "princess-jacob"; // princess-jacob
-                                    break;  
-                                case '11':
-                                    return "gary-johnson"; // gary-johnson
-                                    break;                                
-                                case '12':
-                                    return "lynn-kahn"; // Lynn S. Kahn
-                                    break;
-                                case '13':
-                                    return "chris-keniston"; // Chris Keniston
-                                    break;
-                                case '14':
-                                    return "alyson-kennedy"; // Alyson Kennedy
-                                    break;
-                                case '15':
-                                    return "kyle-kopitke"; // kyle-kopitke
-                                    break;   
-                                case '16':
-                                    return "laurence-kotlikoff"; // laurence-kotlikoff
-                                    break;   
-                                case '17':
-                                    return "gloria-estelalariva"; // Gloria Estela La Riva
-                                    break;   
-                                case '18':
-                                    return "bradford-lyttle"; // Bradford Lyttle
-                                    break; 
-                                case '19':
-                                    return "joseph-maldonado"; // joseph-maldonado
-                                    break;   
-                                case '20':
-                                    return "michael-maturen"; // Michael A. Maturen
-                                    break;   
-                                case '21':
-                                    return "evan-mcmullin"; // evan-mcmullin
-                                    break;
-                                case '22':
-                                    return "monica-moorehead"; // Monica Moorehead
-                                    break;
-                                case '23':
-                                    return "ryan-scott"; // ryan-scott
-                                    break;       
-                                case '24':
-                                    return "rod-silva"; // rod-silva
-                                    break;
-                                case '25':
-                                    return "peter-skewes"; // peter-skewes
-                                    break;  
-                                case '26':
-                                    return "mike-smith"; // mike-smith
-                                    break;
-                                case '27':
-                                    return "emidio-soltysik"; // Emidio Soltysik
-                                    break;       
-                                case '28':
-                                    return "jill-stein"; // Jill Stein
-                                    break;
-                                case '29':
-                                    return "donald-trump"; // Donald Trump
-                                    break;
-                                case '30':
-                                    return "dan-r-vacek"; // Dan R. Vacek
-                                    break;  
-                                case '31':
-                                    return "jerry-white"; // Jerry White 
-                                    break;
-                                
-                                default:
-                                    return "nope";
-                                    break;  
-                            }
-                        }); 
-                } // end of bindData    
+            function bindData (json) {
+                // Bind data and create one path per GeoJSON feature
+                // console.log("inside bindData");
+                
+                svg.selectAll("path")
+                    .data(json.features)
+                    .enter()
+                    .append("path")
+                    .attr("d", path)
+                    .style("stroke", "#e0e0e0")
+                    .attr("class", function(d) {
+                        let value = d.properties.winner;
+                        switch (value) {
+                            case '1':
+                                return "frank-atwood"; // frank-atwood
+                                break;
+                            case '2':
+                                return "darrell-castle"; // darrell-castle
+                                break;
+                            case '3':
+                                return "hillary-clinton"; // hillary-clinton
+                                break;
+                            case '4':
+                                return "scott-copeland"; // scott-copeland
+                                break;   
+                            case '5':
+                                return "roque-delafuente"; // roque-delafuente
+                                break;   
+                            case '6':
+                                return "richard-duncan"; // richard-duncan
+                                break; 
+                            case '7':
+                                return "rocky-giordani"; // rocky-giordani
+                                break;      
+                            case '8':
+                                return "james-hedges"; // james-hedges
+                                break;
+                            case '9':
+                                return "tom-hoefling"; // tom-hoefling
+                                break; 
+                            case '10':
+                                return "princess-jacob"; // princess-jacob
+                                break;  
+                            case '11':
+                                return "gary-johnson"; // gary-johnson
+                                break;                                
+                            case '12':
+                                return "lynn-kahn"; // Lynn S. Kahn
+                                break;
+                            case '13':
+                                return "chris-keniston"; // Chris Keniston
+                                break;
+                            case '14':
+                                return "alyson-kennedy"; // Alyson Kennedy
+                                break;
+                            case '15':
+                                return "kyle-kopitke"; // kyle-kopitke
+                                break;   
+                            case '16':
+                                return "laurence-kotlikoff"; // laurence-kotlikoff
+                                break;   
+                            case '17':
+                                return "gloria-estelalariva"; // Gloria Estela La Riva
+                                break;   
+                            case '18':
+                                return "bradford-lyttle"; // Bradford Lyttle
+                                break; 
+                            case '19':
+                                return "joseph-maldonado"; // joseph-maldonado
+                                break;   
+                            case '20':
+                                return "michael-maturen"; // Michael A. Maturen
+                                break;   
+                            case '21':
+                                return "evan-mcmullin"; // evan-mcmullin
+                                break;
+                            case '22':
+                                return "monica-moorehead"; // Monica Moorehead
+                                break;
+                            case '23':
+                                return "ryan-scott"; // ryan-scott
+                                break;       
+                            case '24':
+                                return "rod-silva"; // rod-silva
+                                break;
+                            case '25':
+                                return "peter-skewes"; // peter-skewes
+                                break;  
+                            case '26':
+                                return "mike-smith"; // mike-smith
+                                break;
+                            case '27':
+                                return "emidio-soltysik"; // Emidio Soltysik
+                                break;       
+                            case '28':
+                                return "jill-stein"; // Jill Stein
+                                break;
+                            case '29':
+                                return "donald-trump"; // Donald Trump
+                                break;
+                            case '30':
+                                return "dan-r-vacek"; // Dan R. Vacek
+                                break;  
+                            case '31':
+                                return "jerry-white"; // Jerry White 
+                                break;
+                            
+                            default:
+                                return "nope";
+                                break;  
+                        }
+                    }); 
+            } // end of bindData   
+
+        function getGeoJSON () {
+            d3.json("myPrezData/us-states.json", function(json) {
+                combineMapWinners(json);
+                bindData(json);
+            });
+        }; // end of getGeoJSON
+
+        getGeoJSON(); 
 
             // bindData();       
 
@@ -240,10 +248,32 @@
                 
         });
 
-        console.log ("Yay!");
+        // console.log ("Yay!");
     } // end of allThisStuff
 
 allThisStuff (opponents);  
+
+$(document).ready(function(){
+    $('input[type=radio]').click(function(){
+        // if (this.name == "opponents")
+        let buttonvalue = this.value;
+        console.log(buttonvalue);
+        switch (buttonvalue) {
+            case 'socialists-all':
+                allThisStuff("getSocialistResults.php");
+                break;
+            case 'socialists-nogreen':
+                allThisStuff("getSocialistResultsNoGreen.php"); 
+                break;
+            default:
+                return "getSocialistResults.php";
+                break;  
+        }
+    }).then(function(newopponents){
+        console.log(newopponents);
+        allThisStuff(opponents);
+    });
+});
 
 </script>
 
