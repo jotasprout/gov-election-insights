@@ -122,6 +122,7 @@
             function bindData (json) {
                 // Bind data and create one path per GeoJSON feature
                 // console.log("inside bindData");
+                console.log(json);
                 
                 svg.selectAll("path")
                     .data(json.features)
