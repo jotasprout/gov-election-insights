@@ -236,8 +236,9 @@
 
         function getGeoJSON () {
             d3.json("myPrezData/us-states.json", function(json) {
-                combineMapWinners(json);
-                bindData(json);
+                // combineMapWinners(json);
+                // bindData(json);
+                $.when(combineMapWinners(json)).then(bindData(json));
             });
         }; // end of getGeoJSON
 
