@@ -228,6 +228,25 @@
     } // end of allThisStuff
 
 allThisStuff (opponents);  
+/*
+$(document).ready(function(){
+    $('input[type=radio]').click(function(){
+        let buttonvalue = this.value;
+        console.log(buttonvalue);
+        switch (buttonvalue) {
+            case 'socialists-all':
+                allThisStuff("getSocialistResults.php");
+                break;
+            case 'socialists-nogreen':
+                allThisStuff("getSocialistResultsNoGreen.php"); 
+                break;
+            default:
+                allThisStuff("getSocialistResults.php");
+                break;  
+        }
+    });
+});
+*/
 
 $(document).ready(function(){
     $('input[type=radio]').click(function(){
