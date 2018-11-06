@@ -7,15 +7,18 @@
 #legend {
         /*
     background-color: yellow;
-    */
     display: flex;
+    */
+    
 }
-
+/*
+    width: 200px;
+*/
 .candi-legend {
     border-style: solid;
     border-width: 1px;
     padding: 5px;
-    width: 200px;
+
     display: flex;
 }
 
@@ -24,10 +27,6 @@
 }
 
 .candi-box {
-    /*
-    border-style: solid;
-    border-width: 1px;
-    */
     padding: 0px;
     height: 20px;
     width: 20px;
