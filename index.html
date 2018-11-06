@@ -236,25 +236,6 @@
     } // end of allThisStuff
 
 allThisStuff (opponents);  
-/*
-$(document).ready(function(){
-    $('input[type=radio]').click(function(){
-        let buttonvalue = this.value;
-        console.log(buttonvalue);
-        switch (buttonvalue) {
-            case 'socialists-all':
-                allThisStuff("getSocialistResults.php");
-                break;
-            case 'socialists-nogreen':
-                allThisStuff("getSocialistResultsNoGreen.php"); 
-                break;
-            default:
-                allThisStuff("getSocialistResults.php");
-                break;  
-        }
-    });
-});
-*/
 
 $(document).ready(function(){
     $('input[type=radio]').click(function(){
@@ -267,6 +248,18 @@ $(document).ready(function(){
             case 'socialists-nogreen':
                 allThisStuff("getSocialistResultsNoGreen.php"); 
                 break;
+            case 'left-all-vs-trump':
+                allThisStuff("getAllLeftAndTrump.php");
+                break;
+            case 'right-all-notrump':
+                allThisStuff("getAllRightNoTrump.php"); 
+                break;
+            case 'right-all-vs-clinton':
+                allThisStuff("getAllRightAndClinton.php");
+                break;
+            case 'right-all-vs-left-all':
+                allThisStuff("getAllRightAndLeft.php"); 
+                break;                                
             default:
                 allThisStuff("getSocialistResults.php");
                 break;  
@@ -275,8 +268,6 @@ $(document).ready(function(){
 });
 
 </script>
-
-
 
 <form id="selectCandidates" action="" method="post">
 
