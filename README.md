@@ -21,5 +21,4 @@ Gray states are those with no socialist candidates (or there were socialist cand
 Like the U.S. Constitution, this schema is a living document and has evolved over time.
 
 ## Blog Posts
-* [PrezPlayPro Progress](https://jotascript.wordpress.com/2018/06/19/prezplaypro-progress/) - latest
 * [I Have a Dream Come True](https://jotascript.wordpress.com/2015/11/18/i-have-a-dream-come-true/) - concepts from 2012 in Photoshop
