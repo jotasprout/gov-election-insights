@@ -40,11 +40,13 @@
                     .attr("width", w)
                     .attr("height", h);
 
-    let winners = [];
+    
 
     let opponents = "getSocialistResults.php";
 
     function allThisStuff (opponents) {
+
+        let winners = [];
         console.log(opponents);
         fetch(opponents).then(function(response){
             return response.json();
@@ -104,6 +106,9 @@
             function bindData (json) {
                 // Bind data and create one path per GeoJSON feature
                 console.log(json);
+
+                // attempt to reset svg map as suggested by redditor
+                d3.select('svg').html('');
                 
                 svg.selectAll("path")
                     .data(json.features)
