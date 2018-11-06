@@ -18,11 +18,12 @@
 
     </head>
 <body>
+<div class="container">
     <div id="mappymap"></div>
 <script>
 
     // Width and Height
-    const w = 1000;
+    const w = 1110;
     const h = 650;
 
     // Map projection
@@ -35,7 +36,7 @@
                     .projection(projection);
 
     // Create SVG
-    const svg = d3.select("body")
+    const svg = d3.select("#mappymap")
                     .append("svg")
                     .attr("width", w)
                     .attr("height", h);
@@ -273,7 +274,7 @@ $(document).ready(function(){
 
 </script>
 
-<div class="container">
+
 
 <form id="selectCandidates" action="" method="post">
 
@@ -301,7 +302,7 @@ $(document).ready(function(){
         <div class="form-check">
             <label class="form-check-label">
                 <input type="radio" class="form-check-input" name="opponents" id="right-all-notrump" value="right-all-notrump">
-                All "Right"
+                All "Right" Except Donald Trump (Republican)
             </label>
         </div>
         <div class="form-check">
