@@ -108,9 +108,7 @@
 
             function bindData (json) {
                 // Bind data and create one path per GeoJSON feature
-                console.log(json);
-
-                // attempt to reset svg map as suggested by redditor
+                // reset svg map as suggested by redditor
                 d3.select('svg').html('');
                 
                 svg.selectAll("path")
@@ -220,6 +218,10 @@
                                 return "nope";
                                 break;  
                         }
+                    })
+                    .append("title")
+                    .text(function(d){
+                        return d;
                     }); 
             } // end of bindData   
 
