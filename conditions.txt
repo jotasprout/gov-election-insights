@@ -1,0 +1,81 @@
+Use brackets
+
+
+
+SELECT * 
+FROM  `nam_order_items` 
+WHERE (item_status =  'Glass Bending - Andy'
+OR item_status =  'Glass Bending - Bren'
+OR item_status =  'Glass Bending - Gary'
+OR item_status =  'Glass Bending - James'
+OR item_status =  'Glass Bending - Oscar')
+AND (`backing_cut` = 0 OR `backing_cut` = 1 OR `backing_bent` = 0 OR `backing_bent` = 1)
+
+
+
+you could also use value in array as
+
+
+
+SELECT * 
+FROM  `nam_order_items` 
+WHERE `item_status` IN  ('Glass Bending - Andy','Glass Bending - Bren','Glass Bending - Gary','Glass Bending - James','Glass Bending - Oscar')
+AND (`backing_cut` = 0 OR `backing_cut` = 1 OR `backing_bent` = 0 OR `backing_bent` = 1)
+
+
+
+you could then build your array using php and simply do something like:
+
+
+
+
+
+$options = array('Glass Bending - Andy','Glass Bending - Bren','Glass Bending - Gary','Glass Bending - James','Glass Bending - Oscar');
+
+$sql = "SELECT * FROM `nam_order_items` WHERE `item_status` IN ({implode(',', $options}) AND (`backing_cut` = 0 OR `backing_cut` = 1 OR `backing_bent` = 0 OR `backing_bent` = 1)";
+
+
+
+
+
+SELECT * FROM table WHERE age >= '18' AND age <= '50' AND (lname = 'Doe' OR lname = 'Smith');
+
+
+
+
+
+....
+WHERE id IN (3, 9, 100, ...)
+
+
+
+SELECT 
+    productCode, 
+    productName, 
+    buyPrice
+FROM
+    products
+WHERE
+    buyPrice BETWEEN 90 AND 100;
+
+
+
+SELECT 
+    productCode, 
+    productName, 
+    buyPrice
+FROM
+    products
+WHERE
+    buyPrice NOT BETWEEN 20 AND 100;
+
+
+
+SELECT 
+    productCode, 
+    productName, 
+    buyPrice
+FROM
+    products
+WHERE
+    buyPrice < 20 OR buyPrice > 100;
