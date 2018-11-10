@@ -50,11 +50,11 @@
     function allThisStuff (opponents) {
 
         let winners = [];
-        console.log(opponents);
+        // console.log(opponents);
         fetch(opponents).then(function(response){
             return response.json();
         }).then(function(response){
-
+            // console.log(response);
             function wrangleWinners (response) {
                 states.forEach(function (state){
                     let stateCandidates = response.filter(function (candidateResult){
@@ -226,7 +226,7 @@
                     })
                     .append("title")
                     .text(function(d){
-                        return d.properties.winnerName;
+                        return d.properties.name + ": " + d.properties.winnerName;
                     }); 
             } // end of bindData   
 
@@ -255,6 +255,9 @@ $(document).ready(function(){
             case 'socialists-nogreen':
                 allThisStuff("getSocialistResultsNoGreen.php"); 
                 break;
+            case 'everyone':
+                allThisStuff("everyone.php"); 
+                break;                 
             case 'left-all-vs-trump':
                 allThisStuff("getAllLeftAndTrump.php");
                 break;
@@ -316,7 +319,13 @@ $(document).ready(function(){
                 <input type="radio" class="form-check-input" name="opponents" id="right-all-vs-left-all" value="right-all-vs-left-all"> 
                 All Left vs All Right
             </label>
-        </div>   
+        </div>  
+        <div class="form-check">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="opponents" id="everyone" value="everyone"> 
+                Everyone
+            </label>
+        </div>          
 
     </fieldset>
 
