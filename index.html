@@ -88,6 +88,8 @@
                     let dataState = winners[i].stateName;
                     // Get winning candidate
                     let dataWinner = winners[i].candidateID;
+                    let winnerName = winners[i].candidateName;
+                    // let stateName = winners[i].stateName;
                     // console.log(dataWinner + " won " + dataState);
                     //Find the corresponding state inside the GeoJSON
                     for (var j = 0; j < json.features.length; j++) {
@@ -95,6 +97,8 @@
                         if (dataState == jsonState) {
                         // console.log(dataState + " equals " + jsonState);
                             json.features[j].properties.winner = dataWinner;
+                            json.features[j].properties.winnerName = winnerName;
+                            // json.features[j].properties.stateName = stateName;
                         }
                         else {
                         // console.log(dataState + " does not equal " + jsonState);
@@ -108,6 +112,7 @@
 
             function bindData (json) {
                 // Bind data and create one path per GeoJSON feature
+                console.log(json);
                 // reset svg map as suggested by redditor
                 d3.select('svg').html('');
                 
@@ -221,7 +226,7 @@
                     })
                     .append("title")
                     .text(function(d){
-                        return d;
+                        return d.properties.winnerName;
                     }); 
             } // end of bindData   
 
