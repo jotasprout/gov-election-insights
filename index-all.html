@@ -24,223 +24,223 @@
     <div id="mappymap"></div>
 <script>
 
-    // Width and Height
-    const w = 1110;
-    const h = 650;
+// Width and Height
+const w = 1110;
+const h = 650;
 
-    // Map projection
-    const projection = d3.geoAlbersUsa()
-                            .translate([w/2, h/2])
-                            .scale([1000]);
+// Map projection
+const projection = d3.geoAlbersUsa()
+                        .translate([w/2, h/2])
+                        .scale([1000]);
 
-    // Path Generator
-    const path = d3.geoPath()
-                    .projection(projection);
+// Path Generator
+const path = d3.geoPath()
+                .projection(projection);
 
-    // Create SVG
-    const svg = d3.select("#mappymap")
-                    .append("svg")
-                    .attr("width", w)
-                    .attr("height", h);
+// Create SVG
+const svg = d3.select("#mappymap")
+                .append("svg")
+                .attr("width", w)
+                .attr("height", h);
 
-    
 
-    let opponents = "everyone.php";
 
-    function allThisStuff (opponents) {
+let opponents = "everyone2.php";
 
-        let winners = [];
-        // console.log(opponents);
-        fetch(opponents).then(function(response){
-            return response.json();
-        }).then(function(response){
-            // console.log(response);
-            function wrangleWinners (response) {
-                states.forEach(function (state){
-                    let stateCandidates = response.filter(function (candidateResult){
-                        return candidateResult.stateAbbr === state;
-                    })
+function allThisStuff (opponents) {
 
-                    let stateWinner = stateCandidates.reduce((max, candidate) => max && max.popVotes > candidate.popVotes ? max : candidate, null);
+    let winners = [];
+    // console.log(opponents);
+    fetch(opponents).then(function(response){
+        return response.json();
+    }).then(function(response){
+        // console.log(response);
+        function wrangleWinners (response) {
+            states.forEach(function (state){
+                let stateCandidates = response.filter(function (candidateResult){
+                    return candidateResult.stateAbbr === state;
+                })
 
-                    if (stateWinner.popVotes == 0) {
-                        console.log (stateWinner.stateName + " has no votes or candidates");
+                let stateWinner = stateCandidates.reduce((max, candidate) => max && max.popVotes > candidate.popVotes ? max : candidate, null);
 
-                        stateWinner = {
-                            'stateName': stateWinner.stateName,
-                            'popVotes': 0,
-                            'candidateName': 'None',
-                            'candidateID': 0,
-                            'stateAbbr': stateWinner.stateAbbr
-                        };
+                if (stateWinner.popVotes == 0) {
+                    console.log (stateWinner.stateName + " has no votes or candidates");
+
+                    stateWinner = {
+                        'stateName': stateWinner.stateName,
+                        'popVotes': 0,
+                        'candidateName': 'None',
+                        'candidateID': 0,
+                        'stateAbbr': stateWinner.stateAbbr
                     };
-                    winners.push(stateWinner);
-                });
-            } // end of wrangleWinners   
-
-            wrangleWinners (response);
-
-            function combineMapWinners (json) {
-                //Merge results data with GeoJSON
-                //Loop through once for each result data value
-                for (var i = 0; i < winners.length; i++) {
-                    // Get the state name
-                    let dataState = winners[i].stateName;
-                    // Get winning candidate
-                    let dataWinner = winners[i].candidateID;
-                    let winnerName = winners[i].candidateName;
-                    // let stateName = winners[i].stateName;
-                    // console.log(dataWinner + " won " + dataState);
-                    //Find the corresponding state inside the GeoJSON
-                    for (var j = 0; j < json.features.length; j++) {
-                        let jsonState = json.features[j].properties.name;
-                        if (dataState == jsonState) {
-                        // console.log(dataState + " equals " + jsonState);
-                            json.features[j].properties.winner = dataWinner;
-                            json.features[j].properties.winnerName = winnerName;
-                            // json.features[j].properties.stateName = stateName;
-                        }
-                        else {
-                        // console.log(dataState + " does not equal " + jsonState);
-                        };
-                    };
-                    
                 };
-               // console.log(json);
-               return json;
-            } // end of combineMapWinners   
-
-            function bindData (json) {
-                // Bind data and create one path per GeoJSON feature
-                console.log(json);
-                // reset svg map as suggested by redditor
-                d3.select('svg').html('');
-                
-                svg.selectAll("path")
-                    .data(json.features)
-                    .enter()
-                    .append("path")
-                    .attr("d", path)
-                    .style("stroke", "#e0e0e0")
-                    .attr("class", function(d) {
-                        let value = d.properties.winner;
-                        switch (value) {
-                            case '1':
-                                return "frank-atwood"; // frank-atwood
-                                break;
-                            case '2':
-                                return "darrell-castle"; // darrell-castle
-                                break;
-                            case '3':
-                                return "hillary-clinton"; // hillary-clinton
-                                break;
-                            case '4':
-                                return "scott-copeland"; // scott-copeland
-                                break;   
-                            case '5':
-                                return "roque-delafuente"; // roque-delafuente
-                                break;   
-                            case '6':
-                                return "richard-duncan"; // richard-duncan
-                                break; 
-                            case '7':
-                                return "rocky-giordani"; // rocky-giordani
-                                break;      
-                            case '8':
-                                return "james-hedges"; // james-hedges
-                                break;
-                            case '9':
-                                return "tom-hoefling"; // tom-hoefling
-                                break; 
-                            case '10':
-                                return "princess-jacob"; // princess-jacob
-                                break;  
-                            case '11':
-                                return "gary-johnson"; // gary-johnson
-                                break;                                
-                            case '12':
-                                return "lynn-kahn"; // Lynn S. Kahn
-                                break;
-                            case '13':
-                                return "chris-keniston"; // Chris Keniston
-                                break;
-                            case '14':
-                                return "alyson-kennedy"; // Alyson Kennedy
-                                break;
-                            case '15':
-                                return "kyle-kopitke"; // kyle-kopitke
-                                break;   
-                            case '16':
-                                return "laurence-kotlikoff"; // laurence-kotlikoff
-                                break;   
-                            case '17':
-                                return "gloria-estelalariva"; // Gloria Estela La Riva
-                                break;   
-                            case '18':
-                                return "bradford-lyttle"; // Bradford Lyttle
-                                break; 
-                            case '19':
-                                return "joseph-maldonado"; // joseph-maldonado
-                                break;   
-                            case '20':
-                                return "michael-maturen"; // Michael A. Maturen
-                                break;   
-                            case '21':
-                                return "evan-mcmullin"; // evan-mcmullin
-                                break;
-                            case '22':
-                                return "monica-moorehead"; // Monica Moorehead
-                                break;
-                            case '23':
-                                return "ryan-scott"; // ryan-scott
-                                break;       
-                            case '24':
-                                return "rod-silva"; // rod-silva
-                                break;
-                            case '25':
-                                return "peter-skewes"; // peter-skewes
-                                break;  
-                            case '26':
-                                return "mike-smith"; // mike-smith
-                                break;
-                            case '27':
-                                return "emidio-soltysik"; // Emidio Soltysik
-                                break;       
-                            case '28':
-                                return "jill-stein"; // Jill Stein
-                                break;
-                            case '29':
-                                return "donald-trump"; // Donald Trump
-                                break;
-                            case '30':
-                                return "dan-r-vacek"; // Dan R. Vacek
-                                break;  
-                            case '31':
-                                return "jerry-white"; // Jerry White 
-                                break;
-                            
-                            default:
-                                return "nope";
-                                break;  
-                        }
-                    })
-                    .append("title")
-                    .text(function(d){
-                        return d.properties.name + ": " + d.properties.winnerName;
-                    }); 
-            } // end of bindData   
-
-        function getGeoJSON () {
-            d3.json("myPrezData/us-states.json", function(json) {
-                // console.log(json);
-               $.when(combineMapWinners(json)).then(bindData(json));
+                winners.push(stateWinner);
             });
-        }; // end of getGeoJSON
+        } // end of wrangleWinners   
 
-        getGeoJSON(); 
+        wrangleWinners (response);
+
+        function combineMapWinners (json) {
+            //Merge results data with GeoJSON
+            //Loop through once for each result data value
+            for (var i = 0; i < winners.length; i++) {
+                // Get the state name
+                let dataState = winners[i].stateName;
+                // Get winning candidate
+                let dataWinner = winners[i].candidateID;
+                let winnerName = winners[i].candidateName;
+                // let stateName = winners[i].stateName;
+                // console.log(dataWinner + " won " + dataState);
+                //Find the corresponding state inside the GeoJSON
+                for (var j = 0; j < json.features.length; j++) {
+                    let jsonState = json.features[j].properties.name;
+                    if (dataState == jsonState) {
+                    // console.log(dataState + " equals " + jsonState);
+                        json.features[j].properties.winner = dataWinner;
+                        json.features[j].properties.winnerName = winnerName;
+                        // json.features[j].properties.stateName = stateName;
+                    }
+                    else {
+                    // console.log(dataState + " does not equal " + jsonState);
+                    };
+                };
                 
+            };
+            // console.log(json);
+            return json;
+        } // end of combineMapWinners   
+
+        function bindData (json) {
+            // Bind data and create one path per GeoJSON feature
+            console.log(json);
+            // reset svg map as suggested by redditor
+            d3.select('svg').html('');
+            
+            svg.selectAll("path")
+                .data(json.features)
+                .enter()
+                .append("path")
+                .attr("d", path)
+                .style("stroke", "#e0e0e0")
+                .attr("class", function(d) {
+                    let value = d.properties.winner;
+                    switch (value) {
+                        case '1':
+                            return "frank-atwood"; // frank-atwood
+                            break;
+                        case '2':
+                            return "darrell-castle"; // darrell-castle
+                            break;
+                        case '3':
+                            return "hillary-clinton"; // hillary-clinton
+                            break;
+                        case '4':
+                            return "scott-copeland"; // scott-copeland
+                            break;   
+                        case '5':
+                            return "roque-delafuente"; // roque-delafuente
+                            break;   
+                        case '6':
+                            return "richard-duncan"; // richard-duncan
+                            break; 
+                        case '7':
+                            return "rocky-giordani"; // rocky-giordani
+                            break;      
+                        case '8':
+                            return "james-hedges"; // james-hedges
+                            break;
+                        case '9':
+                            return "tom-hoefling"; // tom-hoefling
+                            break; 
+                        case '10':
+                            return "princess-jacob"; // princess-jacob
+                            break;  
+                        case '11':
+                            return "gary-johnson"; // gary-johnson
+                            break;                                
+                        case '12':
+                            return "lynn-kahn"; // Lynn S. Kahn
+                            break;
+                        case '13':
+                            return "chris-keniston"; // Chris Keniston
+                            break;
+                        case '14':
+                            return "alyson-kennedy"; // Alyson Kennedy
+                            break;
+                        case '15':
+                            return "kyle-kopitke"; // kyle-kopitke
+                            break;   
+                        case '16':
+                            return "laurence-kotlikoff"; // laurence-kotlikoff
+                            break;   
+                        case '17':
+                            return "gloria-estelalariva"; // Gloria Estela La Riva
+                            break;   
+                        case '18':
+                            return "bradford-lyttle"; // Bradford Lyttle
+                            break; 
+                        case '19':
+                            return "joseph-maldonado"; // joseph-maldonado
+                            break;   
+                        case '20':
+                            return "michael-maturen"; // Michael A. Maturen
+                            break;   
+                        case '21':
+                            return "evan-mcmullin"; // evan-mcmullin
+                            break;
+                        case '22':
+                            return "monica-moorehead"; // Monica Moorehead
+                            break;
+                        case '23':
+                            return "ryan-scott"; // ryan-scott
+                            break;       
+                        case '24':
+                            return "rod-silva"; // rod-silva
+                            break;
+                        case '25':
+                            return "peter-skewes"; // peter-skewes
+                            break;  
+                        case '26':
+                            return "mike-smith"; // mike-smith
+                            break;
+                        case '27':
+                            return "emidio-soltysik"; // Emidio Soltysik
+                            break;       
+                        case '28':
+                            return "jill-stein"; // Jill Stein
+                            break;
+                        case '29':
+                            return "donald-trump"; // Donald Trump
+                            break;
+                        case '30':
+                            return "dan-r-vacek"; // Dan R. Vacek
+                            break;  
+                        case '31':
+                            return "jerry-white"; // Jerry White 
+                            break;
+                        
+                        default:
+                            return "nope";
+                            break;  
+                    }
+                })
+                .append("title")
+                .text(function(d){
+                    return d.properties.name + ": " + d.properties.winnerName;
+                }); 
+        } // end of bindData   
+
+    function getGeoJSON () {
+        d3.json("myPrezData/us-states.json", function(json) {
+            // console.log(json);
+            $.when(combineMapWinners(json)).then(bindData(json));
         });
-    } // end of allThisStuff
+    }; // end of getGeoJSON
+
+    getGeoJSON(); 
+            
+    });
+} // end of allThisStuff
 
 allThisStuff (opponents);  
 
