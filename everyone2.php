@@ -26,12 +26,12 @@ if (!$result){
     echo "Nope. I got nothin.";
 }
 else {
-    $rows = array();
     while ($row = mysqli_fetch_array($result)) {
         $row['popVotes'] = (int) $row['popVotes'];
-        $rows[] = $row;
+        $popVotes = $row['popVotes'];
+        echo $popVotes . '<br>';
     }
-    echo json_encode($rows);
+
 }
 
 mysqli_close($connekt);
