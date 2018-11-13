@@ -43,18 +43,16 @@
                     .attr("width", w)
                     .attr("height", h);
 
-    
-
     let opponents = "getSocialistResults.php";
 
     function allThisStuff (opponents) {
 
         let winners = [];
         // console.log(opponents);
-        fetch(opponents).then(function(response){
+        fetch(opponents).then(function(response){           
             return response.json();
         }).then(function(response){
-            // console.log(response);
+            console.log(response);
             function wrangleWinners (response) {
                 states.forEach(function (state){
                     let stateCandidates = response.filter(function (candidateResult){

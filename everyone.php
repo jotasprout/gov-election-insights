@@ -26,6 +26,7 @@ else {
         $row['popVotes'] = (int) $row['popVotes'];
         $rows[] = $row;
     }
+    header('Content-Type: application/json');
     echo json_encode($rows);
 }
 
