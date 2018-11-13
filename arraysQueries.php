@@ -30,16 +30,16 @@ $getAffiliationsWithParties = "SELECT a.stateAbbr, a.candidateID, c.candidateNam
                                 JOIN candidates2016 c ON c.candidateID = a.candidateID
                                 JOIN states s ON s.stateAbbr = a.stateAbbr";
 
-$getAllResultsWithParties = "SELECT y.stateAbbr, z.stateName, y.candidateID, z.candidateName, z.partyAbbr, z.partyName, y.popVotes
+$getAllResultsWithParties = "SELECT y.stateAbbr, s.stateName, y.candidateID, z.candidateName, z.partyAbbr, z.partyName, y.popVotes
                                 FROM (SELECT r.stateAbbr AS stateAbbr, r.popVotes AS popVotes, r.candidateID AS candidateID
                                     FROM results2016 r
                                     WHERE r.popVotes > 0) y
-                                JOIN (SELECT a.stateAbbr, a.candidateID, c.candidateName, a.partyAbbr, p.partyName, s.stateName
+                                JOIN (SELECT a.stateAbbr, a.candidateID, c.candidateName, a.partyAbbr, p.partyName
                                         FROM affiliations2016 a
                                         JOIN partiesspectrum p ON a.partyAbbr = p.partyAbbr
-                                        JOIN candidates2016 c ON c.candidateID = a.candidateID
-                                        JOIN states s ON s.stateAbbr = a.stateAbbr) z 
+                                        JOIN candidates2016 c ON c.candidateID = a.candidateID) z 
                                 ON z.stateAbbr = y.stateAbbr AND z.candidateID = y.candidateID
+                                JOIN states s ON s.stateAbbr = y.stateAbbr
                                 ORDER BY y.stateAbbr";
 
 $getAllResults = "SELECT y.*, z.candidateName, s.stateName

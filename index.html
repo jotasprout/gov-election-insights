@@ -91,7 +91,7 @@
                     // Get winning candidate
                     let dataWinner = winners[i].candidateID;
                     let winnerName = winners[i].candidateName;
-                    let winnerParty = winners[i].winnerParty;
+                    let winnerParty = winners[i].partyName;
                     let winnerPartyAbbr = winners[i].partyAbbr;
                     // console.log(dataWinner + " won " + dataState);
                     //Find the corresponding state inside the GeoJSON
@@ -230,7 +230,7 @@
                     })
                     .append("title")
                     .text(function(d){
-                        return d.properties.name + ": " + d.properties.winnerName + ", " + d.properties.partyName + ", " + d.properties.partyAbbr;
+                        return d.properties.name + ": " + d.properties.winnerName + ", " + d.properties.partyName + ", (" + d.properties.partyAbbr + ")";
                     }); 
             } // end of bindData   
 
