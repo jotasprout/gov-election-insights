@@ -54,7 +54,7 @@
         fetch(opponents).then(function(response){
             return response.json();
         }).then(function(response){
-            // console.log(response);
+            console.log(response);
             function wrangleWinners (response) {
                 states.forEach(function (state){
                     let stateCandidates = response.filter(function (candidateResult){
@@ -71,6 +71,7 @@
                             'popVotes': 0,
                             'candidateName': 'None',
                             'candidateID': 0,
+                            'winnerParty': stateWinner.partyName,
                             'stateAbbr': stateWinner.stateAbbr
                         };
                     };
@@ -89,7 +90,7 @@
                     // Get winning candidate
                     let dataWinner = winners[i].candidateID;
                     let winnerName = winners[i].candidateName;
-                    // let stateName = winners[i].stateName;
+                    let winnerParty = winners[i].partyName;
                     // console.log(dataWinner + " won " + dataState);
                     //Find the corresponding state inside the GeoJSON
                     for (var j = 0; j < json.features.length; j++) {
@@ -98,7 +99,7 @@
                         // console.log(dataState + " equals " + jsonState);
                             json.features[j].properties.winner = dataWinner;
                             json.features[j].properties.winnerName = winnerName;
-                            // json.features[j].properties.stateName = stateName;
+                            json.features[j].properties.partyName = winnerParty;
                         }
                         else {
                         // console.log(dataState + " does not equal " + jsonState);
@@ -226,7 +227,7 @@
                     })
                     .append("title")
                     .text(function(d){
-                        return d.properties.name + ": " + d.properties.winnerName;
+                        return d.properties.name + ": " + d.properties.winnerName + ", " + d.properties.partyName;
                     }); 
             } // end of bindData   
 
