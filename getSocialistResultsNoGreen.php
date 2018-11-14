@@ -13,7 +13,7 @@ FROM (SELECT r.stateAbbr, r.popVotes, r.candidateID
     FROM results2016 r
     WHERE r.candidateID IN
         (SELECT a.candidateID 
-        FROM affiliations2016 a 
+        FROM affiliations2 a 
         JOIN (SELECT * FROM partiesspectrum WHERE rating = 1) p 
         ON a.partyAbbr = p.partyAbbr)
     AND r.candidateID != 3

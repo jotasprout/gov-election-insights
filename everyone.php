@@ -8,9 +8,9 @@ if (!$connekt) {
     echo 'Shit! Did not connect.';
 };
 
-$everyone = "SELECT y.*, c.candidateName, s.stateName, a.partyAbbr
+$everyone = "SELECT y.*, c.candidateName, s.stateName, a.partyAbbr, a.partyName
                     FROM (SELECT r.* FROM results2016 r WHERE r.popVotes > 0) y
-                    JOIN affiliations2016 a ON y.candidateID = a.candidateID AND y.stateAbbr = a.stateAbbr
+                    JOIN affiliations2 a ON y.candidateID = a.candidateID AND y.stateAbbr = a.stateAbbr
                     JOIN candidates2016 c ON c.candidateID = y.candidateID
                     JOIN states s ON s.stateAbbr = y.stateAbbr
                 ORDER BY y.stateAbbr";
