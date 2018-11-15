@@ -11,6 +11,7 @@
         <script src='https://d3js.org/d3.v4.min.js'></script>
 
         <script src='states.js'></script>
+        <script src='spectrum.js'></script>
         <link rel='stylesheet' type='text/css' href='prezStyle.css'>
 
         <link rel='stylesheet' type='text/css' href='https://www.roxorsoxor.com/bootstrap4/css/bootswatch-slate.min.css'>
@@ -43,7 +44,7 @@
                     .attr("width", w)
                     .attr("height", h);
 
-    let opponents = "getSocialistResults.php";
+    let opponents = "everyone.php";
 
     function allThisStuff (opponents) {
 
@@ -52,11 +53,20 @@
         fetch(opponents).then(function(response){           
             return response.json();
         }).then(function(response){
-            // console.log(response);
+            console.log(response);
+
+            // make a function that filters to just all right and Trump
+
+            // First, get all right candidates including Trump
+
+            // Second, remove Trump from that group
+            // Third, combine all popVotes for remaining right candidates
+            // create array with two candidates: Trump and RestOfRight
+            // maybe above should be done for each state?
 
             function wrangleWinners (response) {
-                console.log(response);
-                console.log(states);
+                // console.log(response);
+                // console.log(states);
                 states.forEach(function (state){
                     let stateCandidates = response.filter(function (candidateResult){
                         return candidateResult.stateAbbr === state;
@@ -309,7 +319,7 @@ $(document).ready(function(){
         </div>
         <div class="form-check">
             <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="opponents" id="right-all-notrump" value="right-all-notrump">
+                <input type="radio" class="form-check-input" name="opponents" id="right-all-notrump" value="right-all-notrump" checked="">
                 All "Right" Except Donald Trump (Republican)
             </label>
         </div>
