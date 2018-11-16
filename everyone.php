@@ -24,6 +24,7 @@ else {
     $rows = array();
     while ($row = mysqli_fetch_array($result)) {
         $row['popVotes'] = (int) $row['popVotes'];
+		$row['candidateID'] = (int) $row['candidateID'];
         $rows[] = $row;
     }
     header('Content-Type: application/json');

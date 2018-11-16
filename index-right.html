@@ -53,25 +53,26 @@
         fetch(opponents).then(function(response){           
             return response.json();
         }).then(function(response){
-            console.log(response);
+            // console.log(response);
 
             // make a function that filters to just all right and Trump
 			let rightCandidates = [];
 			
 			function combineRightExceptTrump (response) {
-				console.log (allRightNoTrump);
+				// console.log (allRightNoTrump);
 				// First, get all right candidates except Trump
-				let rightCandidates = response.filter((candidateResult) => {
-					if(allRightNoTrump.indexOf(candidateResult) >= 0) {
+				rightCandidates = response.filter((candidateResult) => {
+					// console.log(candidateResult);
+					if(allRightNoTrumpNorJohnson.indexOf(candidateResult.candidateID) >= 0) {
 						return candidateResult;
 					};
 				
 				});
-				console.log(rightCandidates);
+				// console.log(rightCandidates);
 				return rightCandidates;
 			}
 
-			combineRightExceptTrump (response);
+			
             // make a function that filters to just all right and Trump
 			// First, get all right candidates except Trump
 			// Second, remove Trump from that group
@@ -81,17 +82,19 @@
 				
 			
             function wrangleWinners (filteredCandidates) {
-                // console.log(filteredCandidates);
+                console.log(filteredCandidates);
                 // console.log(states);
                 states.forEach(function (state){
                     let stateCandidates = filteredCandidates.filter(function (candidateResult){
                         return candidateResult.stateAbbr === state;
-                    })
+                    });
+					
+					console.log(stateCandidates);
 
                     let stateWinner = stateCandidates.reduce((max, candidate) => max && max.popVotes > candidate.popVotes ? max : candidate, null);
 
                     if (stateWinner.popVotes == 0) {
-                        // console.log (stateWinner.stateName + " has no votes or candidates");
+                        console.log (stateWinner.stateName + " has no votes or candidates");
 
                         stateWinner = {
                             'stateName': stateWinner.stateName,
@@ -103,13 +106,20 @@
                             'stateAbbr': stateWinner.stateAbbr
                         };
                     };
+					console.log(stateWinner);
                     winners.push(stateWinner);
                 });
+				
+				console.log(winners);
             } // end of wrangleWinners   
+			
+			
+			combineRightExceptTrump(response);
 
             wrangleWinners (rightCandidates);
 
             function combineMapWinners (json) {
+				console.log(winners);
                 //Merge results data with GeoJSON
                 //Loop through once for each result data value
                 for (var i = 0; i < winners.length; i++) {
