@@ -91,25 +91,38 @@
 					
 					// What if there are no stateCandidates?
 					
-					console.log(stateCandidates);
-
-                    let stateWinner = stateCandidates.reduce((max, candidate) => max && max.popVotes > candidate.popVotes ? max : candidate, null);
-
-                    if (stateWinner.popVotes == 0) {
-                        console.log (stateWinner.stateName + " has no votes or candidates");
-
-                        stateWinner = {
-                            'stateName': stateWinner.stateName,
+					if (stateCandidates.length > 0) {
+						
+						console.log(stateCandidates);
+						
+						let stateWinner = stateCandidates.reduce((max, candidate) => max && max.popVotes > candidate.popVotes ? max : candidate, null);
+						
+						console.log(stateWinner);
+						winners.push(stateWinner);						
+						
+					} else {
+						
+						let stateWinner = {
+                            'stateName': state,
                             'popVotes': 0,
                             'candidateName': 'None',
                             'candidateID': 0,
                             'candidateParty': 'None',
                             'candidatePartyAbbr': 'None',
-                            'stateAbbr': stateWinner.stateAbbr
+							// next line breaks styling because CSS needs stateName
+                            'stateAbbr': state
                         };
-                    };
-					console.log(stateWinner);
-                    winners.push(stateWinner);
+						
+						console.log (state + " has no votes or candidates");
+
+
+						
+						console.log(stateWinner);
+						winners.push(stateWinner);						
+						
+					};
+
+
                 });
 				
 				console.log(winners);
