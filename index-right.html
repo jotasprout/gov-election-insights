@@ -56,19 +56,35 @@
             console.log(response);
 
             // make a function that filters to just all right and Trump
+			let rightCandidates = [];
+			
+			function combineRightExceptTrump (response) {
+				console.log (allRightNoTrump);
+				// First, get all right candidates except Trump
+				let rightCandidates = response.filter((candidateResult) => {
+					if(allRightNoTrump.indexOf(candidateResult) >= 0) {
+						return candidateResult;
+					};
+				
+				});
+				console.log(rightCandidates);
+				return rightCandidates;
+			}
 
-            // First, get all right candidates including Trump
-
-            // Second, remove Trump from that group
+			combineRightExceptTrump (response);
+            // make a function that filters to just all right and Trump
+			// First, get all right candidates except Trump
+			// Second, remove Trump from that group
             // Third, combine all popVotes for remaining right candidates
             // create array with two candidates: Trump and RestOfRight
             // maybe above should be done for each state?
-
-            function wrangleWinners (response) {
-                // console.log(response);
+				
+			
+            function wrangleWinners (filteredCandidates) {
+                // console.log(filteredCandidates);
                 // console.log(states);
                 states.forEach(function (state){
-                    let stateCandidates = response.filter(function (candidateResult){
+                    let stateCandidates = filteredCandidates.filter(function (candidateResult){
                         return candidateResult.stateAbbr === state;
                     })
 
@@ -91,7 +107,7 @@
                 });
             } // end of wrangleWinners   
 
-            wrangleWinners (response);
+            wrangleWinners (rightCandidates);
 
             function combineMapWinners (json) {
                 //Merge results data with GeoJSON
