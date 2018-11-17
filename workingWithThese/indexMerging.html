@@ -44,7 +44,7 @@
                     .attr("width", w)
                     .attr("height", h);
 
-    let opponents = "everyone.php";
+    let opponents = "getSocialistResults.php";
 
     function allThisStuff (opponents) {
 
@@ -58,7 +58,7 @@
             // make a function that filters to just all right and Trump
 			let rightCandidates = [];
 			
-			function combineRightExceptTrump (response) {
+			function getRightNoTrumpNorJohnson (response) {
 				// console.log (allRightNoTrump);
 				// First, get all right candidates except Trump
 				rightCandidates = response.filter((candidateResult) => {
@@ -70,9 +70,8 @@
 				});
 				// console.log(rightCandidates);
 				return rightCandidates;
-			}
-				
-			
+            }
+                        
             function wrangleWinners (filteredCandidates) {
                 console.log(filteredCandidates);
                 // console.log(states);
@@ -87,7 +86,21 @@
 						
 						console.log(stateCandidates);
 						
-						let stateWinner = stateCandidates.reduce((max, candidate) => max && max.popVotes > candidate.popVotes ? max : candidate, null);
+                        let stateWinner = stateCandidates.reduce((max, candidate) => max && max.popVotes > candidate.popVotes ? max : candidate, null);
+                        
+                        if (stateWinner.popVotes == 0) {
+                        // console.log (stateWinner.stateName + " has no votes or candidates");
+
+                            stateWinner = {
+                                'stateName': stateWinner.stateName,
+                                'popVotes': 0,
+                                'candidateName': 'None',
+                                'candidateID': 0,
+                                'candidateParty': 'None',
+                                'candidatePartyAbbr': 'None',
+                                'stateAbbr': stateWinner.stateAbbr
+                            };
+                        };                        
 						
 						console.log(stateWinner);
 						winners.push(stateWinner);						
@@ -112,15 +125,13 @@
 					};
                 });
 				console.log(winners);
-            } // end of wrangleWinners   
-			
-			
-			combineRightExceptTrump(response);
+            } // end of wrangleWinners  
+            
+           // getRightNoTrumpNorJohnson(response);
 
-            wrangleWinners (rightCandidates);
+            wrangleWinners (response);
 
             function combineMapWinners (json) {
-				console.log(winners);
                 //Merge results data with GeoJSON
                 //Loop through once for each result data value
                 for (var i = 0; i < winners.length; i++) {
@@ -260,7 +271,6 @@
                             case 31:
                                 return "jerry-white"; // Jerry White 
                                 break;
-                            
                             default:
                                 return "nope";
                                 break;  
@@ -306,6 +316,10 @@ $(document).ready(function(){
             case 'right-all-notrump':
                 allThisStuff("getAllRightNoTrump.php"); 
                 break;
+            case 'right-all-notrumpnorjohnson':
+            // next line needs the appropriate function or argument for a function not a php file
+                allThisStuff(""); 
+                break;            
             case 'right-all-vs-clinton':
                 allThisStuff("getAllRightAndClinton.php");
                 break;
@@ -352,10 +366,10 @@ $(document).ready(function(){
         </div>
         <div class="form-check">
             <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="opponents" id="right-all-notrumpnorjohnson" value="right-all-notrumpnorjohnson" checked="">
+                <input type="radio" class="form-check-input" name="opponents" id="right-all-notrumpnorjohnson" value="right-all-notrumpnorjohnson">
                 All "Right" Except Donald Trump (Republican) and Gary Johnson (Libertarian)
             </label>
-        </div>        
+        </div>          
         <div class="form-check">
             <label class="form-check-label">
                 <input type="radio" class="form-check-input" name="opponents" id="right-all-vs-clinton" value="right-all-vs-clinton">
