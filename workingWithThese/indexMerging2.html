@@ -57,14 +57,14 @@
 
             // make a function that filters to just all right and Trump
             let filteredCandidates = [];
-            // let opponentsArray = something from the menu at bottom
+            let opponentsArray = something from the menu at bottom
 			
 			function filterCandidates (response, opponentsArray) {
 				// console.log (allRightNoTrump);
 				// First, get all right candidates except Trump
 				filteredCandidates = response.filter((candidateResult) => {
 					// console.log(candidateResult);
-					if(allRightNoTrumpNorJohnson.indexOf(candidateResult.candidateID) >= 0) {
+					if(opponentsArray.indexOf(candidateResult.candidateID) >= 0) {
 						return candidateResult;
 					};
 				});
