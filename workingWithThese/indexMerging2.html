@@ -44,16 +44,14 @@
                     .attr("width", w)
                     .attr("height", h);
 
-    let opponentsArray = allSocialists;
-
     function allThisStuff (opponents) {
 
         let winners = [];
-        // console.log(opponents);
+        console.log("array of opponents is " + opponents);
         fetch("everyone.php").then(function(response){           
             return response.json();
         }).then(function(response){
-            // console.log(response);
+            console.log(response);
 
             // make a function that filters to just all right and Trump
             let filteredCandidates = [];
@@ -72,7 +70,7 @@
             }
                         
             function wrangleWinners (filteredCandidates) {
-                console.log(filteredCandidates);
+                // console.log(filteredCandidates);
                 // console.log(states);
                 states.forEach(function (state){
                     let stateCandidates = filteredCandidates.filter(function (candidateResult){
@@ -83,7 +81,7 @@
 					
 					if (stateCandidates.length > 0) {
 						
-						console.log(stateCandidates);
+						// console.log(stateCandidates);
 						
                         let stateWinner = stateCandidates.reduce((max, candidate) => max && max.popVotes > candidate.popVotes ? max : candidate, null);
                         
@@ -101,7 +99,7 @@
                             };
                         };                        
 						
-						console.log(stateWinner);
+						// console.log(stateWinner);
 						winners.push(stateWinner);						
 						
 					} else {
@@ -126,7 +124,7 @@
 				console.log(winners);
             } // end of wrangleWinners  
             
-           filterCandidates(response, opponentsArray);
+           filterCandidates(response, opponents);
 
             wrangleWinners (filteredCandidates);
 
@@ -293,6 +291,8 @@
         });
     } // end of allThisStuff
 
+let opponentsArray = allSocialists;
+
 allThisStuff (opponentsArray);  
 
 $(document).ready(function(){
@@ -301,32 +301,31 @@ $(document).ready(function(){
         // console.log(buttonvalue);
         switch (buttonvalue) {
             case 'socialists-all':
-                allThisStuff("getSocialistResults.php");
+                allThisStuff(allSocialists);
                 break;
             case 'socialists-nogreen':
-                allThisStuff("getSocialistResultsNoGreen.php"); 
+                allThisStuff(noGreen); 
                 break;
             case 'everyone':
-                allThisStuff("everyone.php"); 
+                allThisStuff(everyone); 
                 break;                 
             case 'left-all-vs-trump':
-                allThisStuff("getAllLeftAndTrump.php");
+                allThisStuff(allLeftAndTrump);
                 break;
             case 'right-all-notrump':
-                allThisStuff("getAllRightNoTrump.php"); 
+                allThisStuff(allRightNoTrump); 
                 break;
             case 'right-all-notrumpnorjohnson':
-            // next line needs the appropriate function or argument for a function not a php file
-                allThisStuff(""); 
+                allThisStuff(allRightNoTrumpNorJohnson); 
                 break;            
             case 'right-all-vs-clinton':
-                allThisStuff("getAllRightAndClinton.php");
+                allThisStuff(allRightAndClinton);
                 break;
             case 'right-all-vs-left-all':
-                allThisStuff("getAllRightAndLeft.php"); 
+                allThisStuff(allLeftAndRight); 
                 break;                                
             default:
-                allThisStuff("getSocialistResults.php");
+                allThisStuff(allSocialists);
                 break;  
         }
     });

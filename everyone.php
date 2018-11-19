@@ -8,12 +8,12 @@ if (!$connekt) {
     echo 'Shit! Did not connect.';
 };
 
-$everyone = "SELECT y.*, c.candidateName, s.stateName, a.partyAbbr, a.partyName
-                    FROM (SELECT r.* FROM results2016 r WHERE r.popVotes > 0) y
-                    JOIN affiliations2 a ON y.candidateID = a.candidateID AND y.stateAbbr = a.stateAbbr
-                    JOIN candidates2016 c ON c.candidateID = y.candidateID
-                    JOIN states s ON s.stateAbbr = y.stateAbbr
-                ORDER BY y.stateAbbr";
+$everyone = "SELECT r.*, c.candidateName, s.stateName, a.partyAbbr, a.partyName
+                    FROM (SELECT * FROM results2016 WHERE popVotes > 0) r
+                    LEFT JOIN affiliations2 a ON r.candidateID = a.candidateID AND r.stateAbbr = a.stateAbbr
+                    JOIN candidates2016 c ON c.candidateID = r.candidateID
+                    JOIN states s ON s.stateAbbr = r.stateAbbr
+                ORDER BY r.stateAbbr";
 
 $result = mysqli_query($connekt, $everyone);
 

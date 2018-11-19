@@ -73,7 +73,7 @@
                         
             function wrangleWinners (response) {
                 console.log(response);
-                console.log(states);
+                // console.log(states);
                 states.forEach(function (state){
                     let stateCandidates = response.filter(function (candidateResult){
                         return candidateResult.stateAbbr === state;
