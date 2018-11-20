@@ -1,0 +1,9 @@
+enrApp.controller('HomeController', function ($scope, $rootScope, $http, $location) {
+    $('#subTabsBar').show();
+    $scope.redirectToRaces = function (officeID, officeType, districtID) {
+        $rootScope.selectedStatewideOffice = officeID;
+        $rootScope.selectedOfficeType = officeType;
+        $rootScope.selectedDistrictID = districtID;
+        $location.path('/races');
+    }
+});

@@ -1,0 +1,479 @@
+enrApp.run(function ($rootScope, $window, $routeParams, $http, $location, $filter, $timeout, $interval) {
+    $rootScope.dateFormat = function (date) {
+        var format = "AM";
+        var hour = date.getHours();
+        var min = date.getMinutes();
+        var sec = date.getSeconds();
+        if (hour > 11)
+            format = "PM";
+        if (hour > 12)
+            hour = hour - 12;
+        if (hour == 0)
+            hour = 12;
+        if (min < 10)
+            min = "0" + min;
+        if (sec < 10)
+            sec = "0" + sec;
+        return date.getMonth() + 1 + " / " + date.getDate() + " / " + date.getFullYear() + " " + hour + ":" + min + ":" + sec + " " + format;
+    };
+
+    $rootScope.nextdateFormat = function (date) {
+        date = new Date(new Date(date.getTime()).getTime() + 3 * 60000);
+        var format = "AM";
+        var hour = date.getHours();
+        var min = date.getMinutes();
+        var sec = date.getSeconds();
+        if (hour > 11)
+            format = "PM";
+        if (hour > 12)
+            hour = hour - 12;
+        if (hour == 0)
+            hour = 12;
+        if (min < 10)
+            min = "0" + min;
+        if (sec < 10)
+            sec = "0" + sec;
+        return date.getMonth() + 1 + " / " + date.getDate() + " / " + date.getFullYear() + " " + hour + ":" + min + ":" + sec + " " + format;
+    };
+    var todayDate = $rootScope.dateFormat(new Date());
+    var nextDate = $rootScope.nextdateFormat(new Date());
+    $rootScope.lastUpdatedTime = "Last Updated on: " + todayDate;
+    $rootScope.nextUpdatedTime = "Next Update on: " + nextDate;
+    $http.get("data/Elections.json").success(function (response) {
+        //$rootScope.electionsCount = 0;
+        //angular.forEach(response.election, function (key, value) {
+        //    $rootScope.electionsCount = $rootScope.electionsCount + 1;
+        //});
+        $rootScope.electionsCount = response.length;
+        if ($rootScope.electionsCount == 1) {
+            //angular.forEach(response.election, function (key, value) {
+            //    $rootScope.selectElection = value;
+            //});
+            angular.forEach(response, function (election) {
+                $rootScope.selectElection = election.ID;
+            });
+            var VersionID = 0, electionID = "", dataPath = "";
+            electionID = $rootScope.selectElection;
+            if (electionID != null || electionID != "") {
+                $rootScope.currentElectionID = electionID;
+                $http.get("data/election/" + electionID + "/Version.json").success(function (response) {
+                    VersionID = parseInt(response.Version);
+                    dataPath = "data/election/" + electionID + "/" + VersionID;
+                    $http.get(dataPath + "/Lookupdata.json").success(function (response) {
+                        $rootScope.officeList = response.officeList;
+                        $rootScope.candidateIds = response.candidateIds;
+                        $rootScope.electionStatic = response.election;
+                        $rootScope.partyIds = response.partyIds;
+                        $rootScope.counties = response.counties;
+                        $rootScope.townIds = response.townIds;
+                        $rootScope.countyTowns = response.countyTowns;
+                        $rootScope.pollingplaceIds = response.pollingplaceIds;
+                        $rootScope.pollingplaces = response.pollingplaceIds;
+                        $rootScope.townPollingPlaces = response.townPollingPlaces;
+                        $rootScope.electionName = $rootScope.electionStatic.NM;
+                        $rootScope.electionCategory = $rootScope.electionStatic.EC;
+                    });
+                    $http.get(dataPath + "/Electiondata.json").success(function (response) {
+                        $rootScope.stateVotes = response.stateVotes;
+                        $rootScope.electionDynamic = response.election;
+                        $rootScope.voterTurnout = response.voterTurnout;
+                        $rootScope.townVotes = response.townVotes;
+                        $rootScope.townStatus = response.townStatus;
+                        $rootScope.reports = response.reports;
+                        $rootScope.districts = response.districts;
+                        $rootScope.officePrecincts = response.officePrecincts;
+						 $rootScope.officetownVotes = response.officetownVotes;
+                    });
+                });
+            }
+            else {
+                $rootScope.officeList = undefined;
+                $rootScope.candidateIds = undefined;
+                $rootScope.electionStatic = undefined;
+                $rootScope.partyIds = undefined;
+                $rootScope.counties = undefined;
+                $rootScope.townIds = undefined;
+                $rootScope.countyTowns = undefined;
+                $rootScope.pollingplaceIds = undefined;
+                $rootScope.pollingplaces = undefined;
+                $rootScope.townPollingPlaces = undefined;
+                $rootScope.electionName = undefined;
+                $rootScope.electionCategory = undefined;
+                $rootScope.stateVotes = undefined;
+                $rootScope.electionDynamic = undefined;
+                $rootScope.voterTurnout = undefined;
+                $rootScope.townVotes = undefined;
+                $rootScope.townStatus = undefined;
+                $rootScope.reports = undefined;
+                $rootScope.districts = undefined;
+                $rootScope.officePrecincts = undefined;
+            }
+        }
+        $rootScope.elections = response;
+    });
+
+
+
+    $rootScope.selectElections = function () {
+        var VersionID = 0, electionID = "", dataPath = "";
+        electionID = $rootScope.selectElection;
+ 	
+        if (electionID != null || electionID != "") {
+            $rootScope.currentElectionID = electionID;
+            $http.get("data/election/" + electionID + "/Version.json").success(function (response) {
+                VersionID = parseInt(response.Version);
+                dataPath = "data/election/" + electionID + "/" + VersionID;
+                $http.get(dataPath + "/Lookupdata.json").success(function (response) {
+                    $rootScope.officeList = response.officeList;
+                    $rootScope.candidateIds = response.candidateIds;
+                    $rootScope.electionStatic = response.election;
+                    $rootScope.partyIds = response.partyIds;
+                    $rootScope.counties = response.counties;
+                    $rootScope.townIds = response.townIds;
+                    $rootScope.countyTowns = response.countyTowns;
+                    $rootScope.pollingplaceIds = response.pollingplaceIds;
+                    $rootScope.pollingplaces = response.pollingplaceIds;
+                    $rootScope.townPollingPlaces = response.townPollingPlaces;
+                    $rootScope.electionName = $rootScope.electionStatic.NM;
+                    $rootScope.electionCategory = $rootScope.electionStatic.EC;
+					
+					$rootScope.hideJudgeProbate = true;  // Not to show Judge of probate districts		
+			
+	                    //if ($rootScope.electionStatic.NM = "08/14/2018 -- August 2018 Democratic Primary") {		
+	                    //    $rootScope.hideJudgeProbate = true;		
+	                    //}		
+	                    //else {		
+	                    //    $rootScope.hideJudgeProbate = false;		
+	                    //}
+
+                    if (($rootScope.electionCategory == 'MP' || $rootScope.electionCategory == 'ME' ||
+                        $rootScope.electionCategory == 'TCP' || $rootScope.electionCategory == 'TCE') && ($rootScope.electionCategory)) {
+                        $rootScope.IsTownLoaded = '1';
+                        $("#tabs a")[0].id = "current_sub";
+                        $("#tabs a")[1].id = "current";
+                        $rootScope.selectTown = undefined;
+                        $location.path('/selectTown');
+                    }
+                    else {
+                        $rootScope.IsTownLoaded = undefined;
+                        $("#tabs a")[0].id = "current";
+                        $("#tabs a")[1].id = "current_sub";
+                        $location.path('/home');
+                    }
+                });
+                $http.get(dataPath + "/Electiondata.json").success(function (response) {
+                    $rootScope.stateVotes = response.stateVotes;
+                    $rootScope.electionDynamic = response.election;
+                    $rootScope.voterTurnout = response.voterTurnout;
+                    $rootScope.townVotes = response.townVotes;
+                    $rootScope.townStatus = response.townStatus;
+                    $rootScope.reports = response.reports;
+                    $rootScope.districts = response.districts;
+                    $rootScope.officePrecincts = response.officePrecincts;
+					$rootScope.officetownVotes = response.officetownVotes;
+                });
+            });
+        }
+        else {
+            $rootScope.officeList = undefined;
+            $rootScope.candidateIds = undefined;
+            $rootScope.electionStatic = undefined;
+            $rootScope.partyIds = undefined;
+            $rootScope.counties = undefined;
+            $rootScope.townIds = undefined;
+            $rootScope.countyTowns = undefined;
+            $rootScope.pollingplaceIds = undefined;
+            $rootScope.pollingplaces = undefined;
+            $rootScope.townPollingPlaces = undefined;
+            $rootScope.electionName = undefined;
+            $rootScope.electionCategory = undefined;
+            $rootScope.stateVotes = undefined;
+            $rootScope.electionDynamic = undefined;
+            $rootScope.voterTurnout = undefined;
+            $rootScope.townVotes = undefined;
+            $rootScope.townStatus = undefined;
+            $rootScope.reports = undefined;
+            $rootScope.districts = undefined;
+            $rootScope.officePrecincts = undefined;
+			$rootScope.officetownVotes = undefined;
+			if (($rootScope.electionCategory == 'MP' || $rootScope.electionCategory == 'ME' ||
+                 $rootScope.electionCategory == 'TCP' || $rootScope.electionCategory == 'TCE') && ($rootScope.electionCategory)) {
+                $rootScope.IsTownLoaded = '1';
+                $("#tabs a")[0].id = "current_sub";
+                $("#tabs a")[1].id = "current";
+                $rootScope.selectTown = undefined;
+                $location.path('/selectTown');
+            }
+            else {
+                $rootScope.IsTownLoaded = undefined;
+                $("#tabs a")[0].id = "current";
+                $("#tabs a")[1].id = "current_sub";
+                $location.path('/home');
+            }
+        }
+    };
+    // Refresh the JSON files 
+    $interval(function () {
+        var VersionID = 0, electionID = "", dataPath = "";
+        electionID = $rootScope.selectElection;
+        if (electionID != null || electionID != "") {
+            $rootScope.currentElectionID = electionID;
+            $http.get("data/election/" + electionID + "/Version.json").success(function (response) {
+                VersionID = parseInt(response.Version);
+                dataPath = "data/election/" + electionID + "/" + VersionID;
+                $http.get(dataPath + "/Lookupdata.json").success(function (response) {
+                    $rootScope.officeList = response.officeList;
+                    $rootScope.candidateIds = response.candidateIds;
+                    $rootScope.electionStatic = response.election;
+                    $rootScope.partyIds = response.partyIds;
+                    $rootScope.counties = response.counties;
+                    $rootScope.townIds = response.townIds;
+                    $rootScope.countyTowns = response.countyTowns;
+                    $rootScope.pollingplaceIds = response.pollingplaceIds;
+                    $rootScope.pollingplaces = response.pollingplaceIds;
+                    $rootScope.townPollingPlaces = response.townPollingPlaces;
+                    $rootScope.electionName = $rootScope.electionStatic.NM;
+                    $rootScope.electionCategory = $rootScope.electionStatic.EC;
+					
+                    if (($rootScope.electionCategory == 'MP' || $rootScope.electionCategory == 'ME' ||
+                $rootScope.electionCategory == 'TCP' || $rootScope.electionCategory == 'TCE') && ($rootScope.electionCategory)) {
+                        $rootScope.IsTownLoaded = '1';
+                        $("#tabs a")[0].id = "current_sub";
+                        $("#tabs a")[1].id = "current";
+                        $rootScope.selectTown = undefined;
+                        // $location.path('/selectTown');
+                    }
+                    else {
+                        $rootScope.IsTownLoaded = undefined;
+                        $("#tabs a")[0].id = "current";
+                        $("#tabs a")[1].id = "current_sub";
+                        // $location.path('/home');
+                    }
+                });
+                $http.get(dataPath + "/Electiondata.json").success(function (response) {
+                    $rootScope.stateVotes = response.stateVotes;
+                    $rootScope.electionDynamic = response.election;
+                    $rootScope.voterTurnout = response.voterTurnout;
+                    $rootScope.townVotes = response.townVotes;
+                    $rootScope.townStatus = response.townStatus;
+                    $rootScope.reports = response.reports;
+                    $rootScope.districts = response.districts;
+                    $rootScope.officePrecincts = response.officePrecincts;
+					$rootScope.officetownVotes = response.officetownVotes;
+                });
+            });
+			//$window.location.href = $('#subTabsBar')[0].baseURI;		
+            $window.location.href = window.location.href;
+        }
+        else {
+            $rootScope.officeList = undefined;
+            $rootScope.candidateIds = undefined;
+            $rootScope.electionStatic = undefined;
+            $rootScope.partyIds = undefined;
+            $rootScope.counties = undefined;
+            $rootScope.townIds = undefined;
+            $rootScope.countyTowns = undefined;
+            $rootScope.pollingplaceIds = undefined;
+            $rootScope.pollingplaces = undefined;
+            $rootScope.townPollingPlaces = undefined;
+            $rootScope.electionName = undefined;
+            $rootScope.electionCategory = undefined;
+            $rootScope.stateVotes = undefined;
+            $rootScope.electionDynamic = undefined;
+            $rootScope.voterTurnout = undefined;
+            $rootScope.townVotes = undefined;
+            $rootScope.townStatus = undefined;
+            $rootScope.reports = undefined;
+            $rootScope.districts = undefined;
+            $rootScope.officePrecincts = undefined;
+			
+            if (($rootScope.electionCategory == 'MP' || $rootScope.electionCategory == 'ME' ||
+                $rootScope.electionCategory == 'TCP' || $rootScope.electionCategory == 'TCE') && ($rootScope.electionCategory)) {
+                $rootScope.IsTownLoaded = '1';
+                $("#tabs a")[0].id = "current_sub";
+                $("#tabs a")[1].id = "current";
+                $rootScope.selectTown = undefined;
+                //$location.path('/selectTown');
+            }
+            else {
+                $rootScope.IsTownLoaded = undefined;
+                $("#tabs a")[0].id = "current";
+                $("#tabs a")[1].id = "current_sub";
+                //$location.path('/home');
+            }
+        }
+        var todayDate = $rootScope.dateFormat(new Date());
+        var nextDate = $rootScope.nextdateFormat(new Date());
+        $rootScope.lastUpdatedTime = "Last Updated on: " + todayDate;
+        $rootScope.nextUpdatedTime = "Next Update on: " + nextDate;
+		  //$window.location.href = $('#subTabsBar')[0].baseURI;		
+          $window.location.href = window.location.href;
+    }, 3 * 60 * 1000);
+
+    // change tab classes on tab button click
+    $rootScope.switchTab = function (event, tabNum) {
+        switch (event.target.parentElement.className) {
+            case "menu1":
+                angular.element(event.target).parent().removeClass('menu1');
+                angular.element(event.target).parent().addClass(tabNum == 1 ? "menu6" : "menu2");
+                if (tabNum == 1) {
+                    $('#mainTab2').removeClass($('#mainTab2').attr("class")).addClass("menu2alink");
+                    $('#mainTab1').removeClass($('#mainTab1').attr("class")).addClass("menu1link");
+                }
+                else {
+                    $('#mainTab2').removeClass($('#mainTab2').attr("class")).addClass("menu1link");
+                    $('#mainTab1').removeClass($('#mainTab1').attr("class")).addClass("menu6link");
+                }
+                $('#dvSubMainTab').removeClass($('#dvSubMainTab').attr("class")).addClass("menu3");
+                $('#subtab1').removeClass($('#subtab1').attr("class")).addClass("menu5link");
+                $('#subtab2').removeClass($('#subtab2').attr("class")).addClass("menu4link");
+                break;
+            case "menu2":
+                angular.element(event.target).parent().removeClass('menu2');
+                angular.element(event.target).parent().addClass(tabNum == 1 ? "menu6" : "menu1");
+                if (tabNum == 1) {
+                    $('#mainTab1').removeClass($('#mainTab1').attr("class")).addClass("menu1link");
+                    $('#mainTab2').removeClass($('#mainTab2').attr("class")).addClass("menu2alink");
+                }
+                else {
+                    $('#mainTab1').removeClass($('#mainTab1').attr("class")).addClass("menu6link");
+                    $('#mainTab2').removeClass($('#mainTab2').attr("class")).addClass("menu2link");
+                }
+                break;
+            case "menu3":
+                angular.element(event.target).parent().removeClass('menu3');
+                angular.element(event.target).parent().addClass(tabNum == 1 ? "menu5" : "menu4");
+                if (tabNum == 1) {
+                    $('#subtab1').removeClass($('#subtab1').attr("class")).addClass("menu3link");
+                    $('#subtab2').removeClass($('#subtab2').attr("class")).addClass("menu4alink");
+                }
+                else {
+                    $('#subtab1').removeClass($('#subtab1').attr("class")).addClass("menu5link");
+                    $('#subtab2').removeClass($('#subtab2').attr("class")).addClass("menu3link");
+                }
+                break;
+            case "menu4":
+                angular.element(event.target).parent().removeClass('menu4');
+                angular.element(event.target).parent().addClass(tabNum == 1 ? "menu5" : "menu3");
+                if (tabNum == 1) {
+                    $('#subtab1').removeClass($('#subtab1').attr("class")).addClass("menu3link");
+                    $('#subtab2').removeClass($('#subtab2').attr("class")).addClass("menu4alink");
+                }
+                else {
+                    $('#subtab1').removeClass($('#subtab1').attr("class")).addClass("menu5link");
+                    $('#subtab2').removeClass($('#subtab2').attr("class")).addClass("menu4link");
+                }
+                break;
+            case "menu5":
+                angular.element(event.target).parent().removeClass('menu5');
+                angular.element(event.target).parent().addClass(tabNum == 1 ? "menu3" : "menu4");
+                if (tabNum == 1) {
+                    $('#subtab1').removeClass($('#subtab1').attr("class")).addClass("menu5link");
+                    $('#subtab2').removeClass($('#subtab2').attr("class")).addClass("menu4link");
+                }
+                else {
+                    $('#subtab1').removeClass($('#subtab1').attr("class")).addClass("menu5link");
+                    $('#subtab2').removeClass($('#subtab2').attr("class")).addClass("menu3link");
+                }
+                break;
+            case "menu6":
+                angular.element(event.target).parent().removeClass('menu6');
+                angular.element(event.target).parent().addClass(tabNum == 1 ? "menu1" : "menu2");
+                if (tabNum == 1) {
+                    $('#mainTab1').removeClass($('#mainTab1').attr("class")).addClass("menu6link");
+                    $('#mainTab2').removeClass($('#mainTab2').attr("class")).addClass("menu2link");
+                }
+                else {
+                    $('#mainTab1').removeClass($('#mainTab1').attr("class")).addClass("menu6link");
+                    $('#mainTab2').removeClass($('#mainTab2').attr("class")).addClass("menu1link");
+                }
+                break;
+        }
+        $rootScope.tabOperation(event);
+    };
+
+    //screens load on Tab click
+    $rootScope.tabOperation = function (event) {
+        switch (event.target.parentElement.className) {
+            case "menu1":
+                $('#subTabsBar').show();
+                $location.path('/home');
+                break;
+            case "menu2":
+                $('#subTabsBar').hide();
+                $rootScope.selectTown = undefined;
+                $location.path('/selectTown');
+                break;
+            case "menu3":
+                $('#subTabsBar').show();
+                $location.path('/home');
+                break;
+            case "menu4":
+                $('#subTabsBar').show();
+                $location.path('/voterTurnout');
+                break;
+            case "menu5":
+                $('#subTabsBar').show();
+                $location.path('/reports');
+                break;
+            case "menu6":
+                $('#subTabsBar').hide();
+                $location.path('/races');
+                break;
+        }
+    };
+
+    $rootScope.swtichTabs = function ($event) {
+        if ($event.target.name == "statewide" || $event.target.name == "selectTown" || $event.target.name == "races") {
+            if ($event.target.name == "statewide") {
+                $("#tabs_sub a").attr("id", "");
+                $("#tabs_sub li:first a").attr("id", "current_sub"); // Activate first sub tab
+            }
+            else if ($event.target.name == "selectTown"){
+		$rootScope.loadTownTab = true;
+                $rootScope.selectTown = undefined;
+	    }
+            else if ($event.target.name == "races")
+                $rootScope.selectedStatewideOffice = undefined;
+            if ($event.target.id != "current") { //detection for current tab
+                $("#tabs a").attr("id", ""); //Reset id's
+                $event.target.id = "current";// Activate this
+            }
+        }
+        else {
+            if ($event.target.id != "current_sub") {//detection for current tab
+                $("#tabs_sub a").attr("id", ""); //Reset Sub id's
+                $event.target.id = "current_sub";// Activate this
+            }
+        }
+        $location.path("/" + $event.target.name == "statewide" ? "home" : $event.target.name);
+    };
+
+    $rootScope.statewideOffices = function (items) {
+        var result = [];
+        angular.forEach(items, function (item) {
+            angular.forEach(item, function (value, key) {
+                if (value.OT == "SW" || value.OT == "PD")
+                    result.push(item);
+            });
+        });
+        if (result.length == 0 && $rootScope.IsTownLoaded == undefined) {
+            $rootScope.IsTownLoaded = '1';
+            $("#tabs a")[0].id = "current_sub";
+            $("#tabs a")[1].id = "current";
+            $rootScope.selectTown = undefined;
+            $location.path('/selectTown');
+        }
+        return result;
+    }
+    $rootScope.congressionalOffices = function (items) {
+        var result = [];
+        angular.forEach(items, function (item) {
+            angular.forEach(item, function (value, key) {
+                if (value.OT == "C")
+                    result.push(item);
+            });
+        });
+        return result;
+    }
+});

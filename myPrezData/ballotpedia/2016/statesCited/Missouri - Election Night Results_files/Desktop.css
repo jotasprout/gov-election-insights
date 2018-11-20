@@ -1,0 +1,36 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/*over rides for desktop only*/
+
+
+#break-line2 {
+    display: none;
+}
+
+#hide {
+    display: none;
+}
+
+#slide-show2 {
+    display: none;
+}
+
+#mheader-text {
+    display: none;
+}
+
+#menu {
+    display: none;
+}
+
+#menu2 {
+    display: none;
+}
+
+div.line-units {
+    width: 100%;
+    background-color: #0A447D;
+    height: 8px;
+    float: left;
+}

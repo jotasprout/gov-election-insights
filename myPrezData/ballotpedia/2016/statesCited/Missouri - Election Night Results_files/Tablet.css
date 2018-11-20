@@ -1,0 +1,516 @@
+﻿@charset "utf-8";
+
+/* CSS Document */
+
+
+/*over rides for tablet screen*/
+
+.icon {
+    height: 34px;
+    width: 34px;
+}
+
+a h3 {
+    font-size: 22px;
+    text-align: center;
+}
+
+h4 {
+    font-size: 14px;
+    text-align: right;
+}
+
+#unit-content {
+    background-image: url(/SOSMasters/Images/LeftNavTablet.png);
+}
+
+
+/*slideshow*/
+
+#slider {
+    margin: auto;
+    width: 1080px;
+}
+
+#nav {
+    height: 115px;
+    width: 1080px;
+    background: rgb(249, 249, 249);
+    /* Old browsers */
+    background: linear-gradient(to bottom, rgba(249, 249, 249, 1) 59%, rgba(186, 199, 214, 1) 100%);
+    /* W3C */
+}
+
+#nav-holder {
+    width: 550px;
+    padding-left: 0px;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    font-size: 12px;
+    z-index: 10;
+    position: relative;
+    left: 7%;
+    margin: auto;
+    margin-bottom: 0px;
+}
+
+#nav-info {
+    width: 100%;
+}
+
+#nav-holder ul li a {
+    padding: 2px 2px;
+    font-size: 10px;
+}
+
+ul.icons {
+    margin-left: 2px;
+}
+
+#header {
+    padding-top: 13px;
+    margin: 0px;
+    font-family: "TrajanPro-Regular", "Times New Roman", Times, serif;
+    font-weight: normal;
+    font-size: 9px;
+    height: 35px;
+    width: 1080px;
+}
+
+#header-line {
+    width: 1080px;
+}
+
+.main-photo {
+    width: 550px;
+}
+
+#header-info {
+    width: 1080px;
+    margin: auto;
+}
+
+#mheader-text {
+    display: none;
+}
+
+#header-text a {
+    font-size: 11px;
+    font-family: "TrajanPro-Regular", "Times New Roman", Times, serif;
+    font-weight: lighter;
+}
+
+#logo {
+    float: left;
+    background-position: center right;
+    margin-right: -60px;
+}
+
+#home-kander {
+    width: 180px;
+    height: 25px;
+}
+
+#slide-show {
+    height: 325px;
+    width: 1080px;
+    background-image: url(/img/ss-back.png);
+    margin: auto;
+    background-repeat: repeat;
+    background-position: bottom;
+    margin-left: 0px;
+    overflow: hidden;
+}
+
+#slider {
+    margin: auto;
+    width: 1080px;
+    overflow: hidden;
+}
+
+#shortcuts a {
+    font-size: 12px;
+    font-weight: 100;
+    display: inline-block;
+    height: 40px;
+    width: 9%;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    float: none;
+}
+
+#shortcuts a:hover {
+    padding-bottom: 0px;
+}
+
+#shortcuts {
+    height: 110px;
+    width: 1080px;
+    margin: auto;
+    background-image: url(/img/shortcut-back.png);
+    margin-left: 0px;
+    background-repeat: no-repeat;
+    background-position: top;
+    text-align: center;
+    float: none;
+}
+
+.shortcut-line {
+    float: none;
+}
+
+#shortcuts-menu {
+    width: 1080px;
+    padding: 0px;
+    margin: auto;
+    text-align: center;
+    float: none;
+}
+
+#shortcuts-title {
+    width: 1080px;
+    text-align: center;
+}
+
+#stitle-holder {
+    width: 100px;
+    margin: auto;
+}
+
+#shortcuts-title h4 {
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 10px;
+    margin: 0px;
+}
+
+#twitter2 {
+    display: none;
+}
+
+#seal {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+
+ul.icons {
+    display: inline;
+    margin: auto;
+    text-align: center;
+    list-style-type: none;
+    margin-left: 0px;
+}
+
+#nav-holder ul li a {
+    display: block;
+    padding: 12px;
+    color: #444;
+    padding-bottom: 3px;
+}
+
+#nav-holder ul li a {
+    padding: 8px 8px;
+}
+
+#news table p a {
+    font-size: 11px;
+}
+
+#info {
+    width: 930px;
+}
+
+#news {
+    width: 225px;
+}
+
+#about {
+    width: 190px;
+    ;
+}
+
+#about img {
+    margin: 2px;
+    height: 105px;
+    width: 80px;
+}
+
+#about p {
+    font-size: 11px;
+}
+
+.info-line {
+    width: 185px;
+}
+
+#footer-links {
+    float: left;
+    text-align: right;
+    width: 39%;
+    margin-right: 1%;
+}
+
+#footer {
+    /*width: 1080px;*/
+}
+
+#line-units {
+    background-color: #0A447D;
+    height: 8px;
+    float: left;
+    width: 1080px;
+}
+
+#bottom-contact {
+    float: left;
+    text-align: left;
+    width: 39%;
+    margin-left: 2%;
+}
+
+#seal-box {
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%;
+    height: 15%;
+    width: 14%;
+}
+
+#shortcut-line {
+    display: none;
+}
+
+
+/* Left Unit Styles */
+
+
+/* ----------------------
+table of contents styles
+----------------------- */
+
+#left p a {
+    transition: All.3s ease;
+    color: #CCC;
+    font-size: 12px;
+    height: 24px;
+    padding-top: 5px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    text-indent: 10px;
+}
+
+#left li a {
+    transition: All.3s ease;
+    color: #CCC;
+    font-size: 12px;
+    height: 25px;
+    width: 120px;
+    padding-top: 5px;
+    width: 100%;
+    display: block;
+    text-align: left;
+    margin-left: -32px;
+}
+
+#left li ul li a {
+    transition: All.3s ease;
+    height: 40px;
+    width: 180px;
+    margin-left: -51px;
+}
+
+#left li {
+    list-style-type: none;
+}
+
+#left p a:hover {
+    transition: All.3s ease;
+    text-decoration: underline;
+}
+
+#left li a:hover {
+    transition: All.3s ease;
+    text-decoration: underline;
+}
+
+#left {
+    width: 208px;
+    float: left;
+    padding-right: 22px;
+    padding-left: 13px;
+    padding-top: 10px;
+    padding-bottom: 200px;
+    text-align: center;
+    list-style-type: none;
+}
+
+#right {
+    width: calc(100% - 245px);
+    margin-left: 225px;
+    overflow: hidden;
+}
+
+.div-info {
+    width: 208px;
+    margin: auto;
+    color: #CCC;
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.div-info a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+}
+
+#left h5 a,
+div.left-menu-header a {
+    font-size: 20px;
+}
+
+#midline {
+    width: 350px;
+}
+
+a.source-icons {
+    margin-bottom: 25px;
+    width: 49px;
+    height: 24px;
+    font-size: 9px;
+}
+
+#page-boxes {
+    width: 490px;
+    margin: auto;
+}
+
+.menu {
+    display: none;
+}
+
+#menu2 {
+    display: none;
+}
+
+.page-contact {
+    width: 60%;
+}
+
+#featured-items a {
+    font-size: 10px;
+}
+
+#featured-items {
+    width: 42%;
+    margin-left: 1%;
+    margin-right: 1%;
+    overflow: hidden;
+}
+
+#latest-news {
+    width: 42%;
+    margin-left: 1%;
+    margin-right: 1%;
+    overflow: hidden;
+}
+
+
+/* Caption styles for slideshow */
+
+div.mc-caption-bg,
+div.mc-caption-bg2 {}
+
+div.mc-caption {
+    margin-right: 32%;
+}
+
+#break-line {
+    height: 15px;
+    position: relative;
+    z-index: 4;
+    width: 1080px;
+}
+
+#search {
+    width: 350px;
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#footer-holder {
+    width: 600px;
+    margin: auto;
+}
+
+@media (max-width: 1017px) {
+    label[for="q"] {
+        display: none;
+    }
+    #social-media {
+        display: none;
+    }
+    a[accesskey="i"] {
+        display: none;
+    }
+    /*remove register to vote and about jason kander*/
+    #header-text img:nth-child(7) {
+        display: none;
+    }
+    #footer {
+        width: 100%;
+        min-width: 0px;
+    }
+}
+
+@media (max-width: 837px) {
+    #slide-show {
+        display: none;
+    }
+    .shortcut-line {
+        display: none;
+    }
+    #shortcuts a {
+        font-size: 14px;
+        font-weight: 100;
+        display: block;
+        float: left;
+        width: 100%;
+        height: 30px;
+        padding-top: 10px;
+        text-align: center;
+        color: #333;
+        transition-duration: .1s;
+    }
+    #shortcuts a:hover {
+        background-color: gray;
+        color: #CCC;
+    }
+    #shortcuts a:active {
+        background-color: gray;
+    }
+    #shortcuts {
+        height: 445px;
+        padding-top: 15px;
+        background-color: #CCC;
+        background-image: none;
+        padding: 0px;
+        float: left;
+        max-width: 700px;
+    }
+    #shortcuts-menu {
+        width: 100%;
+        padding: 0px;
+    }
+    #footer {
+        width: 100%;
+        min-width: 0px;
+    }
+    #rightcol .site-navigation {
+        width: 55%;
+    }
+}

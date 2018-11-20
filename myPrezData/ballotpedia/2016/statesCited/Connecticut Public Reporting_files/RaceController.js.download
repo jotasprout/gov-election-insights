@@ -1,0 +1,141 @@
+﻿enrApp.controller('RaceController', function ($scope, $rootScope, $http) {
+    $('#subTabsBar').hide();
+    $scope.performSearch = function () {
+        $scope.officeObj = [];
+        if ($rootScope.officeList != undefined) {
+            $.each($rootScope.officeList, function (k) {
+                $.each($rootScope.officeList[k], function (i, value) {
+                    $('input:checkbox[name="chkstateOffices"]').each(function () {
+                        if (this.checked && $rootScope.officeList[k][i].ID == this.value)
+                            $scope.officeObj.push($rootScope.officeList[k][i].ID);
+                    });
+                    if ($scope.Congressional != undefined) {
+                        $.each($scope.Congressional, function (j) {
+                            if ($rootScope.officeList[k][i].D == $scope.Congressional[j] && $rootScope.officeList[k][i].OT == "C")
+                                $scope.officeObj.push($rootScope.officeList[k][i].ID);
+                        })
+                    }
+                    if ($scope.Senatorial != undefined) {
+                        $.each($scope.Senatorial, function (j) {
+                            if ($rootScope.officeList[k][i].D == $scope.Senatorial[j] && $rootScope.officeList[k][i].OT == "S")
+                                $scope.officeObj.push($rootScope.officeList[k][i].ID);
+                        })
+                    }
+                    if ($scope.Assembly != undefined) {
+                        $.each($scope.Assembly, function (j) {
+                            if ($rootScope.officeList[k][i].D == $scope.Assembly[j] && $rootScope.officeList[k][i].OT == "A")
+                                $scope.officeObj.push($rootScope.officeList[k][i].ID);
+                        })
+                    }
+                    if ($scope.Probational != undefined) {
+                        $.each($scope.Probational, function (j) {
+                            if ($rootScope.officeList[k][i].D == $scope.Probational[j] && $rootScope.officeList[k][i].OT == "PD")
+                                $scope.officeObj.push($rootScope.officeList[k][i].ID);
+                        })
+                    }
+                })
+            });
+        }
+        $('#tblRaces').show();
+    }
+    $scope.clearSearch = function () {
+        $('input:checkbox[name="chkstateOffices"]').each(function () {
+            this.checked = false;
+        });
+        $('#ddlCongressional option').attr('selected', false);
+        $('#ddlSenatorial option').attr('selected', false);
+        $('#ddlAssembly option').attr('selected', false);
+        $('#ddlProbational option').attr('selected', false);
+        $scope.officeObj = [];
+        $scope.Congressional = undefined;
+        $scope.Senatorial = undefined;
+        $scope.Assembly = undefined;
+        $scope.Probational = undefined;
+        $('#tblRaces').hide();
+    }
+
+    //Add by AbdulSartaj Shaik
+    $scope.init = function () {
+        if ($rootScope.selectedStatewideOffice != undefined) {
+            $scope.officeObj = [];
+            if ($rootScope.selectedOfficeType == "SW")
+                $scope.officeObj.push($rootScope.selectedStatewideOffice);
+            else {
+                if ($rootScope.officeList != undefined) {
+                    $.each($rootScope.officeList, function (k) {
+                        $.each($rootScope.officeList[k], function (i, value) {
+                            if ($rootScope.selectedDistrictID != undefined) {
+                                if ($rootScope.officeList[k][i].D == $rootScope.selectedDistrictID && $rootScope.officeList[k][i].OT == $rootScope.selectedOfficeType) {
+                                    $scope.officeObj.push($rootScope.officeList[k][i].ID);
+                                    switch ($rootScope.selectedOfficeType) {
+                                        case "C":
+                                            $scope.Congressional = [];
+                                            $scope.Congressional.push($rootScope.selectedDistrictID);
+                                            break;
+                                        case "S":
+                                            $scope.Senatorial = [];
+                                            $scope.Senatorial.push($rootScope.selectedDistrictID);
+                                            break;
+                                        case "A":
+                                            $scope.Assembly = [];
+                                            $scope.Assembly.push($rootScope.selectedDistrictID);
+                                            break;
+                                        case "PD":
+                                            $scope.Probational = [];
+                                            $scope.Probational.push($rootScope.selectedDistrictID);
+                                            break;
+                                    }
+                                }
+                            }
+                        });
+                    });
+                }
+            }
+            $('#tblRaces').show();
+        }
+    };
+
+    $scope.dirtrictReport = function (officeId) {
+        var towns = "";
+        $.ajax({
+            type: "POST",
+            url: "Default.aspx/GetVotingDistrictValuesByOfficeID",
+            data: '{electionID: "' + $rootScope.currentElectionID + '",townID: "' + towns + '",officeId:"' + officeId + '"}',
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (response) {
+                window.location.href = "Default.aspx?action=VotingDistrictByOfficeID";
+                return true;
+            },
+            failure: function (response) {
+                return true;
+            }
+        });
+    }
+
+    // *** To get Candidate Details when display townwise data Begin  **///
+    $scope.getCandidateValues = function (obj) {
+        return obj[Object.keys(obj)[0]];
+    }
+
+    $scope.getCandidateID = function (obj) {
+        return Object.keys(obj)[0];
+    }
+    // *** End *** //
+    $scope.HideStateWideOfiicers = function (ofzvalue) {
+        var result = true;
+        angular.forEach($rootScope.officeList, function (value, key) {
+            if (value[Object.keys(value)[0]]['OT'] == 'SW' && (value[Object.keys(value)[0]]['NM'] == ofzvalue))
+                result = false;
+        });
+
+        return result;
+        //if (value == 'Governor' || value == 'Lieutenant Governor' || value == 'Treasurer' || value == 'Attorney General')
+        //    return false;
+        //else
+        //    return true
+    }
+    $scope.collapse = function () {
+        this.props.isExpanded = !this.props.isExpanded;
+    };
+});

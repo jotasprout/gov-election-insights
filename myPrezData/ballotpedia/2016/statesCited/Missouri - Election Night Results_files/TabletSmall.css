@@ -1,0 +1,432 @@
+﻿@charset "utf-8";
+
+/* CSS Document */
+
+
+/*over rides for tablet screen*/
+
+#wrapper {
+    width: 100%;
+    min-width: 700px;
+    overflow: hidden;
+}
+
+.icon {
+    height: 40px;
+    width: 40px;
+}
+
+a h3 {
+    font-size: 22px;
+    text-align: center;
+}
+
+h4 {
+    font-size: 14px;
+    text-align: center;
+}
+
+#nav {
+    height: 115px;
+    width: 100%;
+    max-width: 700px;
+    background: rgb(249, 249, 249);
+    /* Old browsers */
+    background: linear-gradient(to bottom, rgba(249, 249, 249, 1) 59%, rgba(186, 199, 214, 1) 100%);
+    /* W3C */
+}
+
+#nav-holder {
+    width: 600px;
+    padding-left: 0%;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    font-size: 11px;
+    z-index: 10;
+    position: relative;
+    left: inherit;
+}
+
+#header {
+    width: 100%;
+    padding-top: 7px;
+    font-family: "TrajanPro-Regular", "Times New Roman", Times, serif;
+    font-weight: normal;
+    font-size: 9px;
+    max-width: 700px;
+}
+
+
+/* Remove label text*/
+
+#header label[for="q"] {
+    left: -10000px;
+    position: absolute;
+}
+
+#header-info {
+    width: 600px;
+    margin: auto;
+    max-width: 700px;
+}
+
+#header-line {
+    width: 100%;
+    max-width: 700px;
+}
+
+#mheader-text {
+    display: none;
+}
+
+#header-text a {
+    font-size: 12px;
+    font-family: "TrajanPro-Regular", "Times New Roman", Times, serif;
+    font-weight: lighter;
+}
+
+
+/*remove everything except skip navigation*/
+
+#header-text a:nth-child(2n+4) {
+    display: none;
+}
+
+
+/*show contact us*/
+
+#header-text a:nth-child(10) {
+    display: inline;
+}
+
+
+/*remove register to vote and about jason kander*/
+
+#header-text img:nth-child(2n+5) {
+    display: none;
+}
+
+#social-media {
+    display: none;
+}
+
+#search {
+    margin: .4em 0 0 1em;
+}
+
+#logo {
+    width: 100%;
+    float: left;
+    background-position: center center;
+    max-width: 700px;
+    height: 95px;
+}
+
+div#top-menu-logo-text {
+    margin-right: 3em;
+}
+
+.shortcut-line {
+    display: none;
+}
+
+#shortcuts a {
+    font-size: 14px;
+    font-weight: 100;
+    display: block;
+    float: left;
+    width: 100%;
+    height: 30px;
+    padding-top: 10px;
+    text-align: center;
+    color: #333;
+    transition-duration: .1s;
+}
+
+#shortcuts a:hover {
+    background-color: gray;
+    color: #CCC;
+}
+
+#shortcuts a:active {
+    background-color: gray;
+}
+
+#shortcuts {
+    height: 445px;
+    padding-top: 15px;
+    background-color: #CCC;
+    background-image: none;
+    padding: 0px;
+    float: left;
+    max-width: 700px;
+}
+
+#shortcuts-menu {
+    width: 100%;
+    padding: 0px;
+}
+
+
+/* This class is added to any text being deleted in the mobile navigation only */
+
+.m {
+    display: none;
+}
+
+#shortcuts-title {
+    width: 100%;
+    margin-right: 0%;
+    margin-left: 0%;
+    max-width: 700px;
+}
+
+#shortcuts-title h4 {
+    text-align: center;
+    color: #666;
+}
+
+#seal {
+    width: 100px;
+    height: 100px;
+}
+
+ul.icons {
+    display: inline;
+    margin: auto;
+    text-align: center;
+    list-style-type: none;
+    margin-left: 0px;
+}
+
+#slide-show {
+    display: none;
+}
+
+#nav-holder ul li a {
+    display: block;
+    color: #444;
+    padding: 8px 8px;
+}
+
+#twitter2 {
+    display: none;
+}
+
+#about {
+    display: none;
+}
+
+#page-boxes {
+    width: 100%;
+    margin: auto;
+}
+
+#info {
+    width: 100%;
+}
+
+.info-box {
+    height: 290px;
+    width: 100%;
+    float: left;
+    margin: 15px;
+    padding-top: 0px;
+    padding: 10px;
+    margin-bottom: 25px;
+    text-align: center;
+    border: none;
+    max-width: 700px;
+}
+
+#news {
+    width: 90%;
+}
+
+#news-table2 table {
+    width: 85%;
+}
+
+#about img {
+    margin: 6px;
+}
+
+.info-line {
+    width: 200px;
+}
+
+#footer {
+    /*min-width: 700px;*/
+    width: 100%;
+}
+
+#line-units {
+    width: 700px;
+}
+
+#footer-holder {
+    width: 100%;
+    max-width: 700px;
+}
+
+#footer-links {
+    float: left;
+    text-align: right;
+    width: 39%;
+    margin-right: 0%;
+    max-width: 700px;
+}
+
+#bottom-contact {
+    float: left;
+    text-align: left;
+    width: 39%;
+    margin-left: 2%;
+}
+
+#seal-box {
+    float: left;
+    padding-left: 0%;
+    padding-right: 0%;
+    height: 15%;
+    width: 14%;
+}
+
+#nav-cont {
+    margin: auto;
+    width: 500px;
+    padding: 0px;
+}
+
+#shortcut-line {
+    display: none;
+}
+
+#slide-show2 {
+    display: none;
+}
+
+#left {
+    width: 230px;
+    float: left;
+    padding-right: 0px;
+    padding-left: 13px;
+    padding-top: 10px;
+    padding-bottom: 200px;
+    text-align: center;
+    list-style-type: none;
+}
+
+#right {
+    width: calc(100% - 245px);
+    margin-left: 230px;
+}
+
+#left h5 a,
+#left div.left-menu-header a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+#left p a {
+    font-size: 11px;
+    height: 33px;
+    display: block;
+    width: 100%;
+    display: block;
+    float: left;
+    margin-top: 0px;
+}
+
+#left li a {
+    font-size: 11px;
+    transition: All.3s ease;
+    height: 20px;
+    width: 150px;
+    margin-left: -40px;
+}
+
+#left li ul li a {
+    transition: All.3s ease;
+    height: 42px;
+    width: 128px;
+    margin-left: -68px;
+}
+
+.div-info {
+    margin: auto;
+    color: #CCC;
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 220px !important;
+}
+
+.div-info a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+}
+
+.menu {
+    display: none;
+}
+
+#menu2 {
+    display: none;
+}
+
+#right h5 {
+    font-size: 22px;
+}
+
+.head-photo {
+    display: none;
+}
+
+#midline {
+    width: 150px;
+}
+
+#unit-content {
+    border-top-width: thick;
+    border-top-style: solid;
+    border-top-color: #083767;
+    width: 100%;
+    float: left;
+    background-image: url(/SOSMasters/Images/LeftNavTablet.png);
+}
+
+a.source-icons {
+    margin-bottom: 25px;
+    width: 49px;
+    height: 24px;
+    font-size: 9px;
+}
+
+#featured-items a {
+    font-size: 10px;
+}
+
+#featured-items {
+    margin-top: 20px;
+    width: 60%;
+    margin-left: 17%;
+}
+
+#latest-news {
+    width: 60%;
+    margin-left: 17%;
+}
+
+.page-contact {
+    width: 60%;
+}
+
+
+/* Any image for mobile half size */
+
+.phoneimg {
+    width: 60%;
+    height: auto;
+    margin-left: 6%;
+}

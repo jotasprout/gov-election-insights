@@ -1,0 +1,227 @@
+﻿enrApp.controller('ReportController', function ($scope, $rootScope, $http) {
+    $('#subTabsBar').show();
+    $rootScope.pollingplaces = $rootScope.pollingplaceIds;
+    $scope.downLoadReport = function () {
+        var towns = "", congressional = "", senatorial = "", assembly = "", probational = "", pollingplaces = "", stateOffice = "";
+        if ($scope.selectedTowns != undefined) {
+            $.each($scope.selectedTowns, function (i) {
+                towns += $scope.selectedTowns[i] + "(";
+            });
+        }
+        if ($scope.selectedOffices != undefined) {
+            $.each($scope.selectedOffices, function (i) {
+                stateOffice += $scope.selectedOffices[i] + "(";
+            })
+        }
+        if ($scope.selectedPollingPlaces != undefined) {
+            $.each($scope.selectedPollingPlaces, function (i) {
+                pollingplaces += $scope.selectedPollingPlaces[i] + "(";
+            })
+        }
+        $("#ddlCongressional1 option:selected").each(function (i) { congressional += $(this).val() + "("; });
+        $("#ddlSenatorial1 option:selected").each(function (i) { senatorial += $(this).val() + "("; });
+        $("#ddlAssembly1 option:selected").each(function (i) { assembly += $(this).val() + "("; });
+        $("#ddlProbational1 option:selected").each(function (i) { probational += $(this).val() + "("; });
+
+        $.ajax({
+            type: "POST",
+            url: "Default.aspx/GetDownloadValues",
+            data: '{townID: "' + towns + '",fileType: "' + $('#ddlFileType').val() + '",Congressional: "' + congressional + '",Senatorial: "' + senatorial + '",Assembly: "' + assembly + '", Probational: "' + probational + '",pollingplaces: "' + pollingplaces + '",stateOffice: "' + stateOffice + '",electionID: "' + $rootScope.currentElectionID + '",electionName: "' + $rootScope.electionName + '"}',
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (response) {
+                window.location.href = "Default.aspx";
+                return true;
+            },
+            failure: function (response) {
+                return true;
+            }
+        });
+    }
+
+    $scope.DownLoadDistrictReport = function () {
+        var towns = "";
+        if ($scope.selectedTowns != undefined) {
+            $.each($scope.selectedTowns, function (i) {
+                towns += $scope.selectedTowns[i] + ",";
+            });
+        }
+
+        $.ajax({
+            type: "POST",
+            url: "Default.aspx/GetVotingDistrictValues",
+            data: '{electionID: "' + $rootScope.currentElectionID + '",townID: "' + towns + '"}',
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (response) {
+                window.location.href = "Default.aspx?action=VotingDistrict";
+                return true;
+            },
+            failure: function (response) {
+                return true;
+            }
+        });
+    }
+
+    $scope.DownLoadOfficeReport = function () {
+        var towns = "";
+        if ($scope.selectedTowns != undefined) {
+            $.each($scope.selectedTowns, function (i) {
+                towns += $scope.selectedTowns[i] + ",";
+            });
+        }
+
+        $.ajax({
+            type: "POST",
+            url: "Default.aspx/GetOfficeValues",
+            data: '{electionID: "' + $rootScope.currentElectionID + '",townID: "' + towns + '"}',
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (response) {
+                window.location.href = "Default.aspx?action=Offices";
+                return true;
+            },
+            failure: function (response) {
+                return true;
+            }
+        });
+    }
+
+    $scope.DownLoadCandidateReport = function () {
+        var towns = "";
+        if ($scope.selectedTowns != undefined) {
+            $.each($scope.selectedTowns, function (i) {
+                towns += $scope.selectedTowns[i] + ",";
+            });
+        }
+        $.ajax({
+            type: "POST",
+            url: "Default.aspx/GetCandidateValues",
+            data: '{electionID: "' + $rootScope.currentElectionID + '",townID: "' + towns + '",electionType:"' + $rootScope.electionCategory + '",electionName:"' + $rootScope.electionName + '"}',
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (response) {
+                window.location.href = "Default.aspx?action=Candidates";
+                return true;
+            },
+            failure: function (response) {
+                return true;
+            }
+        });
+    }
+
+    $scope.clearSearch = function () {
+        $('input:checkbox[name="chkstateOffices1"]').each(function () {
+            this.checked = false;
+        });
+        $('input:checkbox[name="chkTown"]').each(function () {
+            this.checked = false;
+        });
+        $('input:checkbox[name="chkPollingPlace"]').each(function () {
+            this.checked = false;
+        });
+        $('#chkTowns').attr('checked', false);
+        $('#ddlCongressional1 option').attr('selected', false);
+        $('#ddlSenatorial1 option').attr('selected', false);
+        $('#ddlAssembly1 option').attr('selected', false);
+        $('#ddlProbational1 option').attr('selected', false);
+        $scope.selectedTowns = undefined;
+        $scope.selectedOffices = undefined;
+        $scope.selectedPollingPlaces = undefined;
+    }
+    $scope.checkAll = function (event) {
+        $scope.selectedTowns = [];
+        if (event.target.checked == 1) {
+            $('input:checkbox[name="chkTown"]').each(function () {
+                this.checked = true;
+                $scope.selectedTowns.push(this.value);
+            });
+        }
+        else {
+            $('input:checkbox[name="chkTown"]').each(function () {
+                this.checked = false;
+                $scope.selectedTowns = undefined;
+            });
+        }
+        $scope.isTownChecked = $scope.selectedTowns != undefined && $scope.selectedTowns.length > 0 ? true : false;
+        //$scope.isTownAllChecked = $scope.selectedTowns != undefined && $scope.selectedTowns.length > 0 && $rootScope.pollingplaces != undefined && $rootScope.pollingplaces.length > 0 ? true : false;
+        $scope.fillpollingPlaces();
+    }
+
+    $scope.checkAllPollingPlaces = function (event) {
+        $scope.selectedPollingPlaces = [];
+        if (event.target.checked == 1) {
+            $('input:checkbox[name="chkPollingPlace"]').each(function () {
+                this.checked = true;
+                $scope.selectedPollingPlaces.push(this.value);
+            });
+        }
+        else {
+            $('input:checkbox[name="chkPollingPlace"]').each(function () {
+                this.checked = false;
+                $scope.selectedPollingPlaces = undefined;
+            });
+        }
+    }
+
+    $scope.selectPollingPlace = function () {
+        $scope.selectedTowns = [];
+        $('input:checkbox[name="chkTown"]').each(function () {
+            if (this.checked)
+                $scope.selectedTowns.push(this.value);
+        });
+        if ($scope.selectedTowns.length == 0)
+            $scope.selectedTowns = undefined;
+        $scope.isTownChecked = $scope.selectedTowns != undefined && $scope.selectedTowns.length > 0 ? true : false;
+        //$scope.isTownAllChecked = $scope.selectedTowns != undefined && $scope.selectedTowns.length > 0 && $rootScope.pollingplaces != undefined && $rootScope.pollingplaces.length > 0 ? true : false;
+        $scope.fillpollingPlaces();
+
+    }
+
+    $scope.stateOffices = function () {
+        $scope.selectedOffices = [];
+        $('input:checkbox[name="chkstateOffices1"]').each(function () {
+            if (this.checked)
+                $scope.selectedOffices.push(this.value);
+        });
+        if ($scope.selectedOffices.length == 0)
+            $scope.selectedOffices = undefined;
+    }
+
+    $scope.checkPollingPlace = function () {
+        $scope.selectedPollingPlaces = [];
+        $('input:checkbox[name="chkPollingPlace"]').each(function () {
+            if (this.checked)
+                $scope.selectedPollingPlaces.push(this.value);
+        });
+        if ($scope.selectedPollingPlaces.length == 0)
+            $scope.selectedPollingPlaces = undefined;
+    }
+
+    $scope.fillpollingPlaces = function () {
+        var townId = $scope.selectedTowns;
+        $rootScope.pollingplaces = {};
+        if (townId == undefined) {
+            if ($rootScope.townPollingPlaces != undefined) {
+                $.each($rootScope.townPollingPlaces, function (key) {
+                    $.each($rootScope.townPollingPlaces[key], function (i) {
+                        $rootScope.pollingplaces = $rootScope.pollingplaceIds;
+                        //$scope.selectedPollingPlaces = $rootScope.pollingplaceIds;
+                    })
+                })
+            }
+        }
+        else {
+            if ($rootScope.townPollingPlaces != undefined) {
+                $.each($rootScope.townPollingPlaces, function (key) {
+                    $.each($rootScope.townPollingPlaces[key], function (i) {
+                        $.each(townId, function (j) {
+                            if (townId[j] == key)
+                                $rootScope.pollingplaces[$rootScope.townPollingPlaces[key][i]] = $rootScope.pollingplaceIds[$rootScope.townPollingPlaces[key][i]];
+                        })
+                    })
+                })
+            }
+        }
+    }
+});

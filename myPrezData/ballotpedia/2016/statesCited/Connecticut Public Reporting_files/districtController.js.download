@@ -1,0 +1,7 @@
+enrApp.controller('districtController', function ($scope, $rootScope, $http, $location) {
+    $('#subTabsBar').show();
+    $scope.dirtrictTownReport = function (sender) {
+        $rootScope.selectTown = sender;
+        $location.path('/selectTown');
+    }
+});

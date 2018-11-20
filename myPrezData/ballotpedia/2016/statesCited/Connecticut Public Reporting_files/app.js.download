@@ -1,0 +1,37 @@
+var enrApp = angular.module("ct-enr", ['ngRoute']);
+enrApp.config(function ($routeProvider, $httpProvider) {
+    $httpProvider.defaults.cache = false;
+    if (!$httpProvider.defaults.headers.get) {
+        $httpProvider.defaults.headers.get = {};
+    }
+    //// disable IE ajax request caching
+    $httpProvider.defaults.headers.get['If-Modified-Since'] = 'Mon, 26 Jul 1997 05:00:00 GMT';
+
+	$routeProvider.when('/home', {
+	    templateUrl: 'ng-app/partial/Home.html',
+		controller: 'HomeController',
+		reloadOnSearch: false
+	}).when('/voterTurnout', {
+	    templateUrl: 'ng-app/partial/VoterTurnout.html',
+	    controller: 'VoterTurnoutController',
+	    reloadOnSearch: false
+	}).when('/reports', {
+	    templateUrl: 'ng-app/partial/Report.html',
+	    controller: 'ReportController',
+	    reloadOnSearch: false
+	}).when('/selectTown', {
+	    templateUrl: 'ng-app/partial/SelectTown.html',
+	    controller: 'SelectTownController',
+	    reloadOnSearch: false
+	}).when('/races', {
+	    templateUrl: 'ng-app/partial/MyRace.html',
+	    controller: 'RaceController',
+	    reloadOnSearch: false
+	}).when('/districts', {
+	    templateUrl: 'ng-app/partial/Districts.html',
+	    controller: 'districtController',
+	    reloadOnSearch: false
+	}).otherwise({
+		redirectTo: '/home'
+	});
+});

@@ -1,0 +1,437 @@
+/* CSS Document */
+
+
+/*over rides for tablet screen*/
+
+#wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.icon {
+    height: 25px;
+    width: 25px;
+}
+
+a h3 {
+    font-size: 22px;
+    text-align: center;
+}
+
+h4 {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+#nav {
+    height: 115px;
+    background: rgb(249, 249, 249);
+    /* Old browsers */
+    background: linear-gradient(to bottom, rgba(249, 249, 249, 1) 59%, rgba(186, 199, 214, 1) 100%);
+    /* W3C */
+}
+
+#nav-holder {
+    width: 100%;
+    left: 0%;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    font-size: 11px;
+    z-index: 10;
+    position: relative;
+}
+
+#nav-cont {
+    margin: auto;
+    width: 360px;
+}
+
+#header {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 9px;
+    height: 75px;
+    background-size: cover;
+}
+
+
+/* Remove label text*/
+
+#header label[for="q"] {
+    left: -10000px;
+    position: absolute;
+}
+
+#header-info {
+    width: 100%;
+}
+
+#mheader-text a {
+    font-size: 12px;
+    width: 30%;
+    text-align: center;
+    padding: 10px 0;
+    display: block;
+    float: left;
+    font-weight: lighter;
+    height: 17px;
+    -webkit-transition-duration: .6s;
+    transition-duration: .6s;
+    color: #CCC;
+}
+
+.carved-line {
+    display: none;
+}
+
+#header-text {
+    display: none;
+}
+
+#social-media {
+    display: none;
+}
+
+#search {
+    text-align: center;
+    float: left;
+    width: 350px;
+    min-width: 350px;
+    margin-top: 6px;
+}
+
+#logo {
+    float: left;
+    background-position: center center;
+    padding-bottom: 0px;
+}
+
+#shortcuts a {
+    width: 100%;
+    font-size: 12px;
+    font-weight: 100;
+    display: block;
+    float: left;
+    height: 25px;
+    padding-top: 5px;
+    color: #CCC;
+    text-align: center;
+    color: #333;
+}
+
+#shortcuts a:hover {
+    background-color: gray;
+    color: #CCC;
+}
+
+#shortcuts a:active {
+    background-color: gray;
+}
+
+#shortcuts {
+    width: 100%;
+    height: 320px;
+    padding-top: 5px;
+    background-color: #CCC;
+    background-image: none;
+    padding: 0px;
+    float: left;
+}
+
+#shortcuts-menu {
+    width: 100%;
+}
+
+#shortcuts-title {
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+
+#shortcuts-title h4 {
+    text-align: center;
+    color: #666;
+}
+
+#seal {
+    width: 100px;
+    height: 100px;
+}
+
+
+/*Firefox only search bar size hack*/
+
+#search,
+x:-moz-any-link {
+    width: 300px;
+    min-width: 310px;
+}
+
+.info-box#twitter2 {
+    display: none;
+}
+
+#slide-show {
+    display: none;
+}
+
+#nav-holder ul li a {
+    padding: 2px 2px;
+    font-size: 8px;
+    font-weight: lighter;
+    display: block;
+    color: #444;
+    padding-bottom: 3px;
+}
+
+#nav-holder ul li {
+    margin-left: 0px;
+}
+
+#about {
+    display: none;
+}
+
+#page-boxes {
+    width: 100%;
+    margin: auto;
+}
+
+#info {
+    height: 350px;
+    width: 85%;
+    margin: auto;
+}
+
+
+/* This class is added to any text being deleted in the mobile navigation only */
+
+.m {
+    display: none;
+}
+
+.info-box {
+    height: 290px;
+    width: 100%;
+    float: left;
+    margin: 15px;
+    padding-top: 0px;
+    padding: 10px;
+    margin-bottom: 25px;
+    text-align: center;
+    border: none;
+}
+
+#news {
+    width: 90%;
+}
+
+#news-table2 table {
+    width: 85%;
+}
+
+#bottom-contact p {
+    font-size: 11px;
+}
+
+#footer-links p {
+    font-size: 11px;
+}
+
+#footer-holder {
+    margin: auto;
+    width: 130px;
+}
+
+#bottom-contact {
+    text-align: center;
+    margin: auto;
+    width: 150px;
+}
+
+#seal-box {
+    display: none;
+}
+
+#footer-links {
+    display: none;
+}
+
+#sm-cont {
+    margin: auto;
+    width: 60px;
+}
+
+#footer {
+    height: 135px;
+    width: 100%;
+    padding-top: 2px;
+}
+
+.shortcut-line {
+    display: none;
+}
+
+#slide-show2 {
+    display: none;
+}
+
+#left {
+    width: 97%;
+    float: left;
+    padding-right: 1%;
+    padding-left: 1%;
+    display: none;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: #036;
+}
+
+#left h5,
+#left div.left-menu-header {
+    display: none;
+}
+
+#right {
+    width: 95%;
+    background-color: #F1F0EB;
+    margin-left: 0;
+    float: left;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+#left p a {
+    font-size: 11px;
+    height: 33px;
+    display: block;
+    width: 100%;
+    display: block;
+    float: left;
+    margin-top: 0px;
+    background-color: #036;
+}
+
+#left li a {
+    font-size: 11px;
+    height: 25px;
+}
+
+.div-info {
+    display: none;
+}
+
+#right h5 {
+    font-size: 22px;
+}
+
+.head-photo {
+    display: none;
+}
+
+#header-line {
+    height: 1px;
+    background-color: #000;
+    box-shadow: 0px 3px 5px rgba(50, 50, 50, 0.74);
+    border-top-style: outset;
+    border-top-color: #000;
+    border-right-color: #000;
+    border-bottom-color: #000;
+    border-left-color: #000;
+}
+
+#unit-content {
+    border-top-width: thick;
+    border-top-style: solid;
+    border-top-color: #083767;
+    width: 100%;
+    float: left;
+    background-image: none;
+    margin: 0px;
+}
+
+#content {
+    margin: 0px;
+    width: 100%;
+    float: left;
+    background-position: center top;
+}
+
+#featured-items {
+    width: 75%;
+    margin-left: 12%;
+    margin-top: 10px;
+}
+
+.info-line {
+    display: none;
+}
+
+#latest-news {
+    width: 75%;
+    margin-left: 12%;
+}
+
+p #menu {
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-left: 3px;
+}
+
+#menu {
+    margin-right: auto;
+    margin-top: 2px;
+    width: 50px;
+}
+
+#menu2 {
+    margin-left: 2%;
+    color: #036;
+    font-weight: bold;
+}
+
+.page-contact {
+    width: 60%;
+}
+
+
+/* SAFE at HOME logo */
+
+.sahlogo {
+    width: 90%;
+    height: auto;
+}
+
+
+/* SSBAC pages */
+
+#sbacquote {
+    width: 97%;
+}
+
+p.rc {
+    width: 90%;
+    margin-top: 200px;
+    font-size: 10px;
+}
+
+
+/* Any image for mobile or tablet half size */
+
+.phoneimg {
+    width: 60%;
+    height: auto;
+    margin-left: 3%;
+}
+
+#midline {
+    width: 70%;
+}
+
+#shortcuts h2 {
+    color: #122E58;
+    text-align: center;
+}

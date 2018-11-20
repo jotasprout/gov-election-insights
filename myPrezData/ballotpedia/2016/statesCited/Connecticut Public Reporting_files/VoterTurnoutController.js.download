@@ -1,0 +1,18 @@
+﻿enrApp.controller('VoterTurnoutController', function ($scope, $rootScope, $http, $location) {
+    $('#subTabsBar').show();
+    $scope.clickFunc = function (sender) {
+        $rootScope.selectTown = sender;
+        $location.path('/selectTown');
+    }
+    $scope.toggle = function (event) {
+        tr = document.getElementsByTagName('tr');
+        for (i = 0; i < tr.length; i++) {
+            if (tr[i].getAttribute('nameit') && tr[i].getAttribute('id') == event) {
+                if (tr[i].style.display == 'none')
+                    tr[i].style.display = '';
+                else
+                    tr[i].style.display = 'none';
+            }
+        }
+    }
+});

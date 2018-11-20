@@ -1,0 +1,70 @@
+﻿enrApp.controller('SelectTownController', function ($scope, $rootScope, $http, $timeout, $location) {
+    // load towns
+    $('#subTabsBar').hide();
+    $scope.redirectToRaces = function (officeID, officeType, districtID) {
+        $rootScope.selectedStatewideOffice = officeID;
+        $rootScope.selectedOfficeType = officeType;
+        $rootScope.selectedDistrictID = districtID;
+        $location.path('/races');
+    }
+    $timeout(function () {
+        $('.map').maphilight({ stroke: false });
+        $scope.st = function (str) {
+            if ($rootScope.countyTowns != undefined) {
+                $.each($rootScope.countyTowns, function (i) {
+                    if ($rootScope.countyTowns[i].TownName.toLowerCase() == str.toLowerCase()) {
+                        $('#scounty').val($rootScope.countyTowns[i].CountyID);
+                        $scope.filltowns();
+                        $('#ddlTown').val($rootScope.countyTowns[i].TownID);
+                        $rootScope.selectTown = $rootScope.countyTowns[i].TownID;
+                    }
+                })
+            }
+        }
+        if ($rootScope.selectTown != undefined) {
+            $('#ddlTown').val($rootScope.selectTown);
+            if ($rootScope.countyTowns != undefined) {
+                $.each($rootScope.countyTowns, function (i) {
+                    if ($rootScope.countyTowns[i].TownID == $rootScope.selectTown) {
+                        $('#scounty').val($rootScope.countyTowns[i].CountyID);
+                    }
+                })
+            }
+        }
+        else {
+            $('#ddlTown').val("");
+            $('#scounty').val("");
+        }
+    }, 100);
+    $scope.filltowns = function () {
+        var countyId = $('#scounty').val();
+        $('#ddlTown').empty().append($('<option>', { value: '', text: '-- Select Town --' }));
+        if (countyId == undefined || countyId == "") {
+            if ($rootScope.countyTowns != undefined) {
+                $.each($rootScope.countyTowns, function (j) {
+                    $('#ddlTown').append($('<option>', { value: $rootScope.countyTowns[j].TownID, text: $rootScope.countyTowns[j].TownName }));
+                })
+            }
+        }
+        else {
+            if ($rootScope.countyTowns != undefined) {
+                $.each($rootScope.countyTowns, function (j) {
+                    if (countyId == $rootScope.countyTowns[j].CountyID)
+                        $('#ddlTown').append($('<option>', { value: $rootScope.countyTowns[j].TownID, text: $rootScope.countyTowns[j].TownName }));
+                })
+            }
+        }
+    }
+    $scope.selectTowns = function () {
+        $rootScope.selectTown = $('#ddlTown').val();
+    };
+
+    $scope.UnofficialResultsMsg = function () {
+        var data = "<div class='unofficialtxt'>The results reported on the election night portion of the Connecticut Secretary of State's website are unofficial results. The county boards of elections must complete their official canvass. Our website will be updated with the official results of the Election after we have received the official results from the county boards of elections.</div>";
+        var dlg = jsMin.showDialog(data, 480, 150, "Unofficial Results Disclaimer", true, null, null, false);
+        dlg.maskLayer.style.backgroundColor = '#000';
+    }
+    $scope.DownLoadGridReport = function (electionID, electionName, townName, townID) {
+        window.location.href = "Default.aspx?action=Ballot&electionID=" + electionID + "&electionName=" + electionName + "&townName=" + townName + "&townID=" + townID;
+    }
+});
