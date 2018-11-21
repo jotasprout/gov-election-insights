@@ -1,5 +1,9 @@
 let allRight = [2,4,7,8,9,11,15,25,29];
 
+let clinton = [3];
+
+let trump = [29];
+
 let allRightAndClinton = [2,3,4,7,8,9,11,15,25,29];
 
 let allRightNoTrump = [2,4,7,8,9,11,15,25];

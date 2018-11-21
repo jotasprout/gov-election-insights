@@ -44,6 +44,22 @@
                     .attr("width", w)
                     .attr("height", h);
 
+
+function battlefield (side1, side2) {
+    fetch("everyone.php").then(function(response){           
+        return response.json();
+    }).then(function(response){ 
+        let filteredCandidates = [];
+        let filtered01 = filterCandidates(response, side1);
+        console.log(filtered01);
+        let filtered02 = filterCandidates(response, side2);
+        console.log(filtered02);
+        filteredCandidates = [...filtered01,...filtered02];
+        wrangleWinners (filteredCandidates);
+        getGeoJSON();    
+    });    
+}
+
     function allThisStuff (myFilter) {
 
         let winners = [];
