@@ -269,6 +269,12 @@ function battlefield (side1, side2) {
                             case 31:
                                 return "jerry-white"; // Jerry White 
                                 break;
+							case 32:
+								return "all-left"; // All Left
+								break;  
+							case 33:
+								return "all-right"; // All Right 
+								break;								
                             default:
                                 return "nope";
                                 break;  
@@ -296,6 +302,21 @@ let opponentsArray = allSocialists;
 
 allThisStuff (opponentsArray);  
 
+function battlefield (side1, side2) {
+    fetch("everyone.php").then(function(response){           
+        return response.json();
+    }).then(function(response){ 
+        let filteredCandidates = [];
+        let filtered01 = filterCandidates(response, side1);
+        console.log(filtered01);
+        let filtered02 = filterCandidates(response, side2);
+        console.log(filtered02);
+        filteredCandidates = [...filtered01,...filtered02];
+        wrangleWinners (filteredCandidates);
+        getGeoJSON();    
+    });    
+}	
+	
 $(document).ready(function(){
     $('input[type=radio]').click(function(){
         let buttonvalue = this.value;
@@ -553,18 +574,28 @@ $(document).ready(function(){
 
     <div class="row">
 
-        <div class="candi-legend col" id="tom-hoefling">
+		<div class="candi-legend col" id="tom-hoefling">
             <div class="candi-box tom-hoefling"></div>
             <div class="candi-name">Tom Hoefling</div>
+        </div>	
+		
+        <div class="candi-legend col" id="all-left">
+            <div class="candi-box all-left"></div>
+            <div class="candi-name">All Left</div>
         </div>  
 
-        <div class="candi-legend col"></div>  
-        <div class="candi-legend col"></div>  
+        <div class="candi-legend col" id="all-right">
+            <div class="candi-box all-right"></div>
+            <div class="candi-name">All Right</div>
+        </div>
+		
         <div class="candi-legend col"></div>  
         <div class="candi-legend col"></div>        
         
     </div><!-- End of Row -->
+	
 </div> <!-- End of Legend -->
+	
 </div> <!-- End of Container -->
 
 </body>

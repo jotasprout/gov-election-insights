@@ -45,24 +45,70 @@ const svg = d3.select("#mappymap")
                 .attr("height", h);
 
 let winners = [];
-
+let themResults = [];
+let themID = 0;
+let themName = '';
+	
 // Gets only the array of candidates I want to compare out of all 2016 results (the response)
 function filterCandidates (response, myFilter) {
+	console.log(myFilter);
+	let themCount = myFilter.length;
+	if (themCount == 9) {
+		themID = 33;
+		themName = 'All Right';
+	} else {
+		themID = 32;
+		themName = 'All Left';
+	}
+	
     filteredCandidates = response.filter((candidateResult) => {
         // console.log(candidateResult);
         if(myFilter.indexOf(candidateResult.candidateID) >= 0) {
             return candidateResult;
         };
     });
-    
+    // console.log("These are the filteredCandidates at end of filterCandidates " + filteredCandidates);
+	// do I need this next return?
     return filteredCandidates;
 }
 
+// Combine a group of candidates into a single candidate
+function combineThem (filteredCandidates) {
+    
+    // states are from array in separate js file
+    states.forEach(function (state){
+		
+        let stateCandidates = filteredCandidates.filter(function (candidateResult){
+            return candidateResult.stateAbbr === state.abbr;
+        });
+		
+		let theirVotes = stateCandidates.reduce((totalVotes, candidateResult, index, stateCandidates) => {
+			return totalVotes += candidateResult.popVotes
+		}, 0);
+            
+		let themThisState = {
+			'stateName': state.name,
+			'popVotes': theirVotes,
+			'candidateName': themName,
+			'candidateID': themID,
+			'candidateParty': '',
+			'candidatePartyAbbr': '',
+			'stateAbbr': state.abbr
+		};			
+		
+		themResults.push(themThisState);
+
+    });
+	
+	console.log(themResults);
+} // end of combineThem
+	
 // Gets candidate with highest popVotes from each state  
 function wrangleWinners (filteredCandidates) {
     console.log(filteredCandidates);
     // states are from array in separate js file
     states.forEach(function (state){
+		
         let stateCandidates = filteredCandidates.filter(function (candidateResult){
             return candidateResult.stateAbbr === state.abbr;
         });
@@ -104,6 +150,8 @@ function wrangleWinners (filteredCandidates) {
             
         };
     });
+	
+	console.log(winners);
 
 } // end of wrangleWinners  
 
@@ -247,6 +295,12 @@ function colorStates (usasvg) {
                 case 31:
                     return "jerry-white"; // Jerry White 
                     break;
+                case 32:
+                    return "all-left"; // All Left
+                    break;  
+                case 33:
+                    return "all-right"; // All Right 
+                    break;					
                 default:
                     return "nope";
                     break;  
@@ -278,6 +332,20 @@ function allThisStuff (myFilter) {
 let opponentsArray = allSocialists;
 
 allThisStuff (opponentsArray);  
+	
+function battlefield (them, person) {
+    fetch("everyone.php").then(function(response){           
+        return response.json();
+    }).then(function(response){ 
+        let filteredCandidates = [];
+        let filteredThem = filterCandidates(response, them);
+		combineThem (filteredThem);
+        let filteredPerson = filterCandidates(response, person);
+        filteredCandidates = [...themResults,...filteredPerson];
+        wrangleWinners (filteredCandidates);
+        getGeoJSON();    
+    });    
+}	
 
 // Updates map via AJAX when radio button selection changes
 $(document).ready(function(){
@@ -294,7 +362,7 @@ $(document).ready(function(){
                 allThisStuff(everyone); 
                 break;                 
             case 'left-all-vs-trump':
-                allThisStuff(allLeftAndTrump);
+				battlefield(allLeft, trump);
                 break;
             case 'right-all-notrump':
                 allThisStuff(allRightNoTrump); 
@@ -303,7 +371,7 @@ $(document).ready(function(){
                 allThisStuff(allRightNoTrumpNorJohnson); 
                 break;            
             case 'right-all-vs-clinton':
-                allThisStuff(allRightAndClinton);
+                battlefield(allRight, clinton);
                 break;
             case 'right-all-vs-left-all':
                 allThisStuff(allLeftAndRight); 
@@ -536,18 +604,28 @@ $(document).ready(function(){
 
     <div class="row">
 
-        <div class="candi-legend col" id="tom-hoefling">
+		<div class="candi-legend col" id="tom-hoefling">
             <div class="candi-box tom-hoefling"></div>
             <div class="candi-name">Tom Hoefling</div>
+        </div>	
+		
+        <div class="candi-legend col" id="all-left">
+            <div class="candi-box all-left"></div>
+            <div class="candi-name">All Left</div>
         </div>  
 
-        <div class="candi-legend col"></div>  
-        <div class="candi-legend col"></div>  
+        <div class="candi-legend col" id="all-right">
+            <div class="candi-box all-right"></div>
+            <div class="candi-name">All Right</div>
+        </div>
+		
         <div class="candi-legend col"></div>  
         <div class="candi-legend col"></div>        
         
     </div><!-- End of Row -->
+	
 </div> <!-- End of Legend -->
+	
 </div> <!-- End of Container -->
 
 </body>

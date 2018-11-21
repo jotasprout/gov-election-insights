@@ -33,6 +33,15 @@
     margin-right: 5px;
 }
 
+.all-left { 
+    background-color: #0000ff;
+    fill: #0000ff;
+}
+.all-right { 
+    background-color: #ff0000;
+    fill: #ff0000;
+}
+
 .alyson-kennedy { 
     background-color: #a9dfbf;
     fill: #a9dfbf;
@@ -54,8 +63,8 @@
     fill: #641e16;
 }
 .donald-trump { 
-    background-color: #78281f;
-    fill: #78281f;
+    background-color: #ff4500;
+    fill: #ff4500;
 }
 .emidio-soltysik { 
     background-color: #5499c7;
