@@ -46,13 +46,12 @@ const svg = d3.select("#mappymap")
 
 let winners = [];
 let themResults = [];
-let filteredCandidateResults = [];
+let filteredCandidates = [];
 let themID = 0;
 let themName = '';
 	
 // Gets only the array of candidates I want to compare out of all 2016 results (the response)
-function filterCandidateResults (response, myFilter) {
-	filteredCandidateResults = [];
+function filterCandidates (response, myFilter) {
 	let themCount = myFilter.length;
 	if (themCount == 9) {
 		themID = 33;
@@ -62,15 +61,15 @@ function filterCandidateResults (response, myFilter) {
 		themName = 'All Left';
 	}
 	
-    filteredCandidateResults = response.filter((candidateResult) => {
+    filteredCandidates = response.filter((candidateResult) => {
         // console.log(candidateResult);
         if(myFilter.indexOf(candidateResult.candidateID) >= 0) {
             return candidateResult;
         };
     });
-    // console.log("These are the filteredCandidates at end of filterCandidateResults " + filteredCandidates);
+    console.log("These are the filteredCandidates at end of filterCandidates " + filteredCandidates);
 	// do I need this next return?
-    return filteredCandidateResults;
+    return filteredCandidates;
 }
 
 // Combine a group of candidates into a single candidate
@@ -325,7 +324,7 @@ function allThisStuff (myFilter) {
     fetch("everyone.php").then(function(response){           
         return response.json();
     }).then(function(response){ 
-        filteredCandidates = filterCandidateResults(response, myFilter);
+        filteredCandidates = filterCandidates(response, myFilter);
         wrangleWinners (filteredCandidates);
         getGeoJSON();    
     });
@@ -339,11 +338,11 @@ function battlefield (them, person) {
     fetch("everyone.php").then(function(response){           
         return response.json();
     }).then(function(response){ 
-        
-        let filteredThem = filterCandidateResults(response, them);
+        filteredCandidates = [];
+        let filteredThem = filterCandidates(response, them);
 		combineThem (filteredThem);
-        let filteredPerson = filterCandidateResults(response, person);
-        filteredCandidates = [...filteredThem,...filteredPerson];
+        let filteredPerson = filterCandidates(response, person);
+        filteredCandidates = [...themResults,...filteredPerson];
         wrangleWinners (filteredCandidates);
         getGeoJSON();    
     });    
@@ -353,10 +352,10 @@ function battlefield2 (left, right) {
     fetch("everyone.php").then(function(response){           
         return response.json();
     }).then(function(response){ 
-		
-        let filteredLeft = filterCandidateResults(response, left);
+		filteredCandidates = [];
+        let filteredLeft = filterCandidates(response, left);
 		combineThem (filteredLeft);
-        let filteredRight = filterCandidateResults(response, right);
+        let filteredRight = filterCandidates(response, right);
 		combineThem (filteredRight);
         filteredCandidates = [...filteredLeft,...filteredRight];
 		console.log(filteredCandidates);
@@ -393,7 +392,7 @@ $(document).ready(function(){
                 battlefield(allRight, clinton);
                 break;
             case 'right-all-vs-left-all':
-                battlefield2(allLeft, allRight); 
+                battlefield2(allRight, allLeft); 
                 break;                                
             default:
                 allThisStuff(allSocialists);
