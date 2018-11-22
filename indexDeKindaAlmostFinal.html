@@ -321,7 +321,8 @@ function getGeoJSON () {
 
 function allThisStuff (myFilter) {
 	console.log("allThisStuff has started and myFilter = " + myFilter);
-    fetch("everyone.php").then(function(response){           
+    fetch("everyone.php").then(function(response){   
+        console.log("RESPONSE at start of allThisStuff = " + response);        
         return response.json();
     }).then(function(response){ 
         filteredCandidates = filterCandidates(response, myFilter);
@@ -335,14 +336,20 @@ let opponentsArray = allSocialists;
 allThisStuff (opponentsArray);  
 	
 function battlefield (them, person) {
-    fetch("everyone.php").then(function(response){           
+    fetch("everyone.php").then(function(response){  
+        console.log("RESPONSE at start of BATTLEFIELD = " + response);          
         return response.json();
     }).then(function(response){ 
         filteredCandidates = [];
         let filteredThem = filterCandidates(response, them);
-		combineThem (filteredThem);
+        console.log("filteredThem before combining are " + filteredCandidates);
+        combineThem (filteredThem);
+        console.log("filteredThem after combining are " + filteredCandidates);
         let filteredPerson = filterCandidates(response, person);
+        console.log("themResults are " + themResults);
+        // Changing next line from themResults to filteredThem BUT NOT YET
         filteredCandidates = [...themResults,...filteredPerson];
+        console.log("filteredCandidates after concatenating are " + filteredCandidates);
         wrangleWinners (filteredCandidates);
         getGeoJSON();    
     });    
@@ -392,7 +399,7 @@ $(document).ready(function(){
                 battlefield(allRight, clinton);
                 break;
             case 'right-all-vs-left-all':
-                battlefield2(allRight, allLeft); 
+                battlefield2(allLeft, allRight); 
                 break;                                
             default:
                 allThisStuff(allSocialists);

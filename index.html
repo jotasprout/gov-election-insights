@@ -51,8 +51,10 @@ function battlefield (side1, side2) {
     }).then(function(response){ 
         let filteredCandidates = [];
         let filtered01 = filterCandidates(response, side1);
+        combineThem (filtered01);
         console.log(filtered01);
         let filtered02 = filterCandidates(response, side2);
+        combineThem (filtered02);
         console.log(filtered02);
         filteredCandidates = [...filtered01,...filtered02];
         wrangleWinners (filteredCandidates);
@@ -301,21 +303,6 @@ function battlefield (side1, side2) {
 let opponentsArray = allSocialists;
 
 allThisStuff (opponentsArray);  
-
-function battlefield (side1, side2) {
-    fetch("everyone.php").then(function(response){           
-        return response.json();
-    }).then(function(response){ 
-        let filteredCandidates = [];
-        let filtered01 = filterCandidates(response, side1);
-        console.log(filtered01);
-        let filtered02 = filterCandidates(response, side2);
-        console.log(filtered02);
-        filteredCandidates = [...filtered01,...filtered02];
-        wrangleWinners (filteredCandidates);
-        getGeoJSON();    
-    });    
-}	
 	
 $(document).ready(function(){
     $('input[type=radio]').click(function(){

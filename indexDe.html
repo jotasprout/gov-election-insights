@@ -339,11 +339,14 @@ function battlefield (them, person) {
     fetch("everyone.php").then(function(response){           
         return response.json();
     }).then(function(response){ 
-        
+        filteredCandidates = [];
         let filteredThem = filterCandidateResults(response, them);
-		combineThem (filteredThem);
+        console.log(filteredThem);
+        let combinedThem = [];
+		combinedThem = combineThem (filteredThem);
         let filteredPerson = filterCandidateResults(response, person);
-        filteredCandidates = [...filteredThem,...filteredPerson];
+        console.log(filteredPerson);
+        filteredCandidates = [...combinedThem,...filteredPerson];
         wrangleWinners (filteredCandidates);
         getGeoJSON();    
     });    
@@ -353,12 +356,14 @@ function battlefield2 (left, right) {
     fetch("everyone.php").then(function(response){           
         return response.json();
     }).then(function(response){ 
-		
+		filteredCandidates = [];
         let filteredLeft = filterCandidateResults(response, left);
-		combineThem (filteredLeft);
+        console.log(filteredLeft);
+		let combinedLeft = combineThem (filteredLeft);
         let filteredRight = filterCandidateResults(response, right);
-		combineThem (filteredRight);
-        filteredCandidates = [...filteredLeft,...filteredRight];
+        console.log(filteredright);
+		let combinedright = combineThem (filteredRight);
+        filteredCandidates = [...combinedLeft,...combinedright];
 		console.log(filteredCandidates);
         wrangleWinners (filteredCandidates);
         getGeoJSON();    
