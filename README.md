@@ -16,7 +16,9 @@ The below map shows socialist candidates except for Jill Stein (Green).
 Gray states are those with no socialist candidates (or there were socialist candidates but they received zero votes).
 
 ### Coming Soon
-Other choices will reflect these options.
+- Menu will be dynamic. Only candidates used for map will appear in legend. A candidate may appear in the legend but not in the map because they were a candidate in a state but they did not win.
+- User will be able to click candidate(s) in the legend to add or remove them from map.
+
 <img src="https://jotascript.files.wordpress.com/2018/10/choiceslegend.png" width="640">
 
 ## Schema

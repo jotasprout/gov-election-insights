@@ -25,289 +25,378 @@
     <div id="mappymap"></div>
 <script>
 
-    // Width and Height
-    const w = 1110;
-    const h = 650;
+// Width and Height
+const w = 1110;
+const h = 650;
 
-    // Map projection
-    const projection = d3.geoAlbersUsa()
-                            .translate([w/2, h/2])
-                            .scale([1000]);
+// Map projection
+const projection = d3.geoAlbersUsa()
+                        .translate([w/2, h/2])
+                        .scale([1000]);
 
-    // Path Generator
-    const path = d3.geoPath()
-                    .projection(projection);
+// Path Generator
+const path = d3.geoPath()
+                .projection(projection);
 
-    // Create SVG
-    const svg = d3.select("#mappymap")
-                    .append("svg")
-                    .attr("width", w)
-                    .attr("height", h);
+// Create SVG
+const svg = d3.select("#mappymap")
+                .append("svg")
+                .attr("width", w)
+                .attr("height", h);
 
-
-function battlefield (side1, side2) {
-    fetch("everyone.php").then(function(response){           
-        return response.json();
-    }).then(function(response){ 
-        let filteredCandidates = [];
-        let filtered01 = filterCandidates(response, side1);
-        combineThem (filtered01);
-        console.log(filtered01);
-        let filtered02 = filterCandidates(response, side2);
-        combineThem (filtered02);
-        console.log(filtered02);
-        filteredCandidates = [...filtered01,...filtered02];
-        wrangleWinners (filteredCandidates);
-        getGeoJSON();    
-    });    
+let winners = [];
+let themResults = [];
+let filteredCandidates = [];
+let themID = 0;
+let themName = '';
+	
+// Gets only the array of candidates I want to compare out of all 2016 results (the response)
+function filterCandidates (response, myFilter) {
+	let themCount = myFilter.length;
+	if (themCount == 9) {
+		themID = 33;
+		themName = 'All Right';
+	} else {
+		themID = 32;
+		themName = 'All Left';
+	}
+	
+    filteredCandidates = response.filter((candidateResult) => {
+        // console.log(candidateResult);
+        if(myFilter.indexOf(candidateResult.candidateID) >= 0) {
+            return candidateResult;
+        };
+    });
+    console.log("These are the filteredCandidates at end of filterCandidates " + filteredCandidates);
+	// do I need this next return?
+    return filteredCandidates;
 }
 
-    function allThisStuff (myFilter) {
-
-        let winners = [];
-        console.log("array of myFilter is " + myFilter);
-        fetch("everyone.php").then(function(response){           
-            return response.json();
-        }).then(function(response){
-            console.log(response);
-
-            let filteredCandidates = [];
-			// Gets only the array of candidates I want to compare out of all 2016 results (the response)
-			function filterCandidates (response, myFilter) {
-
-				filteredCandidates = response.filter((candidateResult) => {
-					if(myFilter.indexOf(candidateResult.candidateID) >= 0) {
-						return candidateResult;
-					};
-				});
-				return filteredCandidates;
-            }
-
-            // Gets candidate with highest popVotes from each state               
-            function wrangleWinners (filteredCandidates) {
-                // states are from array in separate js file
-                states.forEach(function (state){
-                    let stateCandidates = filteredCandidates.filter(function (candidateResult){
-                        return candidateResult.stateAbbr === state.abbr;
-                    });
-					
-					// What if there are no stateCandidates?
-					if (stateCandidates.length > 0) {						
-                        let stateWinner = stateCandidates.reduce((max, candidate) => max && max.popVotes > candidate.popVotes ? max : candidate, null);
-                        
-                        if (stateWinner.popVotes == 0) {
-                            stateWinner = {
-                                'stateName': stateWinner.stateName,
-                                'popVotes': 0,
-                                'candidateName': 'None',
-                                'candidateID': 0,
-                                'candidateParty': 'None',
-                                'candidatePartyAbbr': 'None',
-                                'stateAbbr': stateWinner.stateAbbr
-                            };
-                        };                        
-						
-						winners.push(stateWinner);						
-						
-					} else {
-						
-						let stateWinner = {
-                            'stateName': state.name,
-                            'popVotes': 0,
-                            'candidateName': 'None',
-                            'candidateID': 0,
-                            'candidateParty': 'None',
-                            'candidatePartyAbbr': 'None',
-                            'stateAbbr': state.abbr
-                        };
-						
-						console.log (state.name + " has no votes or candidates");
-						console.log(stateWinner);
-						winners.push(stateWinner);						
-						
-					};
-                });
-				console.log(winners);
-            } // end of wrangleWinners  
-            
-           filterCandidates(response, myFilter);
-
-            wrangleWinners (filteredCandidates);
-
-            function attachWinnersToMap (json) {
-                //Merge results data with GeoJSON
-                //Loop through once for each result data value
-                for (var i = 0; i < winners.length; i++) {
-                    // Get the state name
-                    let dataState = winners[i].stateName;
-                    // Get winning candidate
-                    let dataWinner = winners[i].candidateID;
-                    let winnerName = winners[i].candidateName;
-                    let winnerParty = winners[i].partyName;
-                    let winnerPartyAbbr = winners[i].partyAbbr;
-                    //Find the corresponding state inside the GeoJSON
-                    for (var j = 0; j < json.features.length; j++) {
-                        let jsonState = json.features[j].properties.name;
-                        if (dataState == jsonState) {
-                        // console.log(dataState + " equals " + jsonState);
-                            json.features[j].properties.winner = dataWinner;
-                            json.features[j].properties.winnerName = winnerName;
-                            json.features[j].properties.partyName = winnerParty;
-                            json.features[j].properties.partyAbbr = winnerPartyAbbr;
-                        }
-                        else {
-                        };
-                    };
-                    
-                };
-               // console.log(json);
-               return json;
-            } // end of attachWinnersToMap   
-
-            // Colors map based on winning candidate
-            function colorStates (json) {
-                // reset svg map as suggested by redditor
-                d3.select('svg').html('');
-                
-                svg.selectAll("path")
-                    .data(json.features)
-                    .enter()
-                    .append("path")
-                    .attr("d", path)
-                    .style("stroke", "#e0e0e0")
-                    .attr("class", function(d) {
-                        let value = d.properties.winner;
-                        switch (value) {
-                            case 1:
-                                return "frank-atwood"; // frank-atwood
-                                break;
-                            case 2:
-                                return "darrell-castle"; // darrell-castle
-                                break;
-                            case 3:
-                                return "hillary-clinton"; // hillary-clinton
-                                break;
-                            case 4:
-                                return "scott-copeland"; // scott-copeland
-                                break;   
-                            case 5:
-                                return "roque-delafuente"; // roque-delafuente
-                                break;   
-                            case 6:
-                                return "richard-duncan"; // richard-duncan
-                                break; 
-                            case 7:
-                                return "rocky-giordani"; // rocky-giordani
-                                break;      
-                            case 8:
-                                return "james-hedges"; // james-hedges
-                                break;
-                            case 9:
-                                return "tom-hoefling"; // tom-hoefling
-                                break; 
-                            case 10:
-                                return "princess-jacob"; // princess-jacob
-                                break;  
-                            case 11:
-                                return "gary-johnson"; // gary-johnson
-                                break;                                
-                            case 12:
-                                return "lynn-kahn"; // Lynn S. Kahn
-                                break;
-                            case 13:
-                                return "chris-keniston"; // Chris Keniston
-                                break;
-                            case 14:
-                                return "alyson-kennedy"; // Alyson Kennedy
-                                break;
-                            case 15:
-                                return "kyle-kopitke"; // kyle-kopitke
-                                break;   
-                            case 16:
-                                return "laurence-kotlikoff"; // laurence-kotlikoff
-                                break;   
-                            case 17:
-                                return "gloria-estelalariva"; // Gloria Estela La Riva
-                                break;   
-                            case 18:
-                                return "bradford-lyttle"; // Bradford Lyttle
-                                break; 
-                            case 19:
-                                return "joseph-maldonado"; // joseph-maldonado
-                                break;   
-                            case 20:
-                                return "michael-maturen"; // Michael A. Maturen
-                                break;   
-                            case 21:
-                                return "evan-mcmullin"; // evan-mcmullin
-                                break;
-                            case 22:
-                                return "monica-moorehead"; // Monica Moorehead
-                                break;
-                            case 23:
-                                return "ryan-scott"; // ryan-scott
-                                break;       
-                            case 24:
-                                return "rod-silva"; // rod-silva
-                                break;
-                            case 25:
-                                return "peter-skewes"; // peter-skewes
-                                break;  
-                            case 26:
-                                return "mike-smith"; // mike-smith
-                                break;
-                            case 27:
-                                return "emidio-soltysik"; // Emidio Soltysik
-                                break;       
-                            case 28:
-                                return "jill-stein"; // Jill Stein
-                                break;
-                            case 29:
-                                return "donald-trump"; // Donald Trump
-                                break;
-                            case 30:
-                                return "dan-r-vacek"; // Dan R. Vacek
-                                break;  
-                            case 31:
-                                return "jerry-white"; // Jerry White 
-                                break;
-							case 32:
-								return "all-left"; // All Left
-								break;  
-							case 33:
-								return "all-right"; // All Right 
-								break;								
-                            default:
-                                return "nope";
-                                break;  
-                        }
-                    })
-                    .append("title")
-                    .text(function(d){
-                        return d.properties.name + ": " + d.properties.winnerName + ", " + d.properties.partyName + ", (" + d.properties.partyAbbr + ")";
-                    }); 
-            } // end of colorStates   
-
-        function getGeoJSON () {
-            d3.json("myPrezData/us-states.json", function(json) {
-                // console.log(json);
-               $.when(attachWinnersToMap(json)).then(colorStates(json));
-            });
-        }; // end of getGeoJSON
-
-        getGeoJSON(); 
-                
+// Combine a group of candidates into a single candidate
+function combineThem (filteredCandidates) {
+	themResults = [];
+    
+    // states are from array in separate js file
+    states.forEach(function (state){
+		
+        let stateCandidates = filteredCandidates.filter(function (candidateResult){
+            return candidateResult.stateAbbr === state.abbr;
         });
-    } // end of allThisStuff
+		
+		let theirVotes = stateCandidates.reduce((totalVotes, candidateResult, index, stateCandidates) => {
+			return totalVotes += candidateResult.popVotes
+		}, 0);
+            
+		let themThisState = {
+			'stateName': state.name,
+			'popVotes': theirVotes,
+			'candidateName': themName,
+			'candidateID': themID,
+			'candidateParty': '',
+			'candidatePartyAbbr': '',
+			'stateAbbr': state.abbr
+		};			
+		
+		themResults.push(themThisState);
+
+    });
+	
+	return themResults;
+	
+	// console.log(themResults);
+} // end of combineThem
+	
+// Gets candidate with highest popVotes from each state  
+function wrangleWinners (filteredCandidates) {
+	winners = [];
+    // console.log(filteredCandidates);
+    // states are from array in separate js file
+    states.forEach(function (state){
+		
+        let stateCandidates = filteredCandidates.filter(function (candidateResult){
+            return candidateResult.stateAbbr === state.abbr;
+        });
+        
+        // What if there are no stateCandidates?
+        if (stateCandidates.length > 0) {	
+            let stateWinner = stateCandidates.reduce((max, candidate) => max && max.popVotes > candidate.popVotes ? max : candidate, null);
+            
+            if (stateWinner.popVotes == 0) {
+                stateWinner = {
+                    'stateName': stateWinner.stateName,
+                    'popVotes': 0,
+                    'candidateName': 'None',
+                    'candidateID': 0,
+                    'candidateParty': 'None',
+                    'candidatePartyAbbr': 'None',
+                    'stateAbbr': stateWinner.stateAbbr
+                };
+            };                        
+            
+            winners.push(stateWinner);						
+            
+        } else {
+            
+            let stateWinner = {
+                'stateName': state.name,
+                'popVotes': 0,
+                'candidateName': 'None',
+                'candidateID': 0,
+                'candidateParty': 'None',
+                'candidatePartyAbbr': 'None',
+                // next line breaks styling because CSS needs stateName
+                'stateAbbr': state.abbr
+            };
+            
+            // console.log (state.name + " has no votes or candidates");
+
+            winners.push(stateWinner);						
+            
+        };
+    });
+	
+	console.log(winners);
+
+} // end of wrangleWinners  
+
+// Adds winning candidate info to each state object
+function attachWinnersToMap (json) {
+    //Merge results data with GeoJSON
+    //Loop through once for each result data value
+    for (var i = 0; i < winners.length; i++) {
+        // Get the state name
+        let dataState = winners[i].stateName;
+        // Get winning candidate
+        let dataWinner = winners[i].candidateID;
+        let winnerName = winners[i].candidateName;
+        let winnerParty = winners[i].partyName;
+        let winnerPartyAbbr = winners[i].partyAbbr;
+        // console.log(dataWinner + " won " + dataState);
+        //Find the corresponding state inside the GeoJSON
+        for (var j = 0; j < json.features.length; j++) {
+            let jsonState = json.features[j].properties.name;
+            if (dataState == jsonState) {
+            // console.log(dataState + " equals " + jsonState);
+                json.features[j].properties.winner = dataWinner;
+                json.features[j].properties.winnerName = winnerName;
+                json.features[j].properties.partyName = winnerParty;
+                json.features[j].properties.partyAbbr = winnerPartyAbbr;
+            }
+            else {
+            // console.log(dataState + " does not equal " + jsonState);
+            };
+        };
+        
+    };
+    // console.log(json);
+    return json;
+} // end of attachWinnersToMap  
+
+// Colors map based on winning candidates
+function colorStates (usasvg) {
+    // resets svg map so it updates when changing sets of candidates
+    d3.select('svg').html('');
+    
+    svg.selectAll("path")
+        .data(usasvg.features)
+        .enter()
+        .append("path")
+        .attr("d", path)
+        .style("stroke", "#e0e0e0")
+        .attr("class", function(d) {
+            let value = d.properties.winner;
+            switch (value) {
+                case 1:
+                    return "frank-atwood"; // frank-atwood
+                    break;
+                case 2:
+                    return "darrell-castle"; // darrell-castle
+                    break;
+                case 3:
+                    return "hillary-clinton"; // hillary-clinton
+                    break;
+                case 4:
+                    return "scott-copeland"; // scott-copeland
+                    break;   
+                case 5:
+                    return "roque-delafuente"; // roque-delafuente
+                    break;   
+                case 6:
+                    return "richard-duncan"; // richard-duncan
+                    break; 
+                case 7:
+                    return "rocky-giordani"; // rocky-giordani
+                    break;      
+                case 8:
+                    return "james-hedges"; // james-hedges
+                    break;
+                case 9:
+                    return "tom-hoefling"; // tom-hoefling
+                    break; 
+                case 10:
+                    return "princess-jacob"; // princess-jacob
+                    break;  
+                case 11:
+                    return "gary-johnson"; // gary-johnson
+                    break;                                
+                case 12:
+                    return "lynn-kahn"; // Lynn S. Kahn
+                    break;
+                case 13:
+                    return "chris-keniston"; // Chris Keniston
+                    break;
+                case 14:
+                    return "alyson-kennedy"; // Alyson Kennedy
+                    break;
+                case 15:
+                    return "kyle-kopitke"; // kyle-kopitke
+                    break;   
+                case 16:
+                    return "laurence-kotlikoff"; // laurence-kotlikoff
+                    break;   
+                case 17:
+                    return "gloria-estelalariva"; // Gloria Estela La Riva
+                    break;   
+                case 18:
+                    return "bradford-lyttle"; // Bradford Lyttle
+                    break; 
+                case 19:
+                    return "joseph-maldonado"; // joseph-maldonado
+                    break;   
+                case 20:
+                    return "michael-maturen"; // Michael A. Maturen
+                    break;   
+                case 21:
+                    return "evan-mcmullin"; // evan-mcmullin
+                    break;
+                case 22:
+                    return "monica-moorehead"; // Monica Moorehead
+                    break;
+                case 23:
+                    return "ryan-scott"; // ryan-scott
+                    break;       
+                case 24:
+                    return "rod-silva"; // rod-silva
+                    break;
+                case 25:
+                    return "peter-skewes"; // peter-skewes
+                    break;  
+                case 26:
+                    return "mike-smith"; // mike-smith
+                    break;
+                case 27:
+                    return "emidio-soltysik"; // Emidio Soltysik
+                    break;       
+                case 28:
+                    return "jill-stein"; // Jill Stein
+                    break;
+                case 29:
+                    return "donald-trump"; // Donald Trump
+                    break;
+                case 30:
+                    return "dan-r-vacek"; // Dan R. Vacek
+                    break;  
+                case 31:
+                    return "jerry-white"; // Jerry White 
+                    break;
+                case 32:
+                    return "all-left"; // All Left
+                    break;  
+                case 33:
+                    return "all-right"; // All Right 
+                    break;					
+                default:
+                    return "nope";
+                    break;  
+            }
+        })
+        .append("title")
+        .text(function(d){
+            return d.properties.name + ": " + d.properties.winnerName + ", " + d.properties.partyName + ", (" + d.properties.partyAbbr + ")";
+        }); 
+} // end of colorStates 
+
+function getGeoJSON () {
+    d3.json("myPrezData/us-states.json", function(json) {
+        $.when(attachWinnersToMap(json)).then(colorStates(json));
+    });
+}; // end of getGeoJSON
+
+function allThisStuff (myFilter) {
+	console.log("allThisStuff has started and myFilter = " + myFilter);
+    fetch("everyone.php").then(function(response){   
+        console.log("RESPONSE at start of allThisStuff = " + response);        
+        return response.json();
+    }).then(function(response){ 
+        filteredCandidates = filterCandidates(response, myFilter);
+        wrangleWinners (filteredCandidates);
+        getGeoJSON();    
+    });
+} // end of allThisStuff
 
 let opponentsArray = allSocialists;
 
 allThisStuff (opponentsArray);  
 	
+function battlefield (them, person) {
+    fetch("everyone.php").then(function(response){  
+        console.log("RESPONSE at start of BATTLEFIELD = " + response);          
+        return response.json();
+    }).then(function(response){ 
+        filteredCandidates = [];
+        let filteredThem = filterCandidates(response, them);
+        console.log("filteredThem before combining are " + filteredCandidates);
+        combineThem (filteredThem);
+        console.log("filteredThem after combining are " + filteredCandidates);
+        let filteredPerson = filterCandidates(response, person);
+        console.log("themResults are " + themResults);
+        // Changing next line from themResults to filteredThem BUT NOT YET
+        filteredCandidates = [...themResults,...filteredPerson];
+        console.log("filteredCandidates after concatenating are " + filteredCandidates);
+        wrangleWinners (filteredCandidates);
+        getGeoJSON();    
+    });    
+}	
+	
+function battlefield3 (left, right) {
+    fetch("everyone.php").then(function(response){           
+        return response.json();
+    }).then(function(response){ 
+		filteredCandidates = [];
+		// let finalLeft = [];
+		// let finalRight = [];
+        let filteredLeft = filterCandidates(response, left);
+		let finalLeft = combineThem (filteredLeft);
+        let filteredRight = filterCandidates(response, right);
+		let finalRight = combineThem (filteredRight);
+        filteredCandidates = [...finalLeft,...finalRight];
+		console.log(filteredCandidates);
+        wrangleWinners (filteredCandidates);
+        getGeoJSON();    
+    });    
+}		
+/*	
+function battlefield2 (left, right) {
+    fetch("everyone.php").then(function(response){           
+        return response.json();
+    }).then(function(response){ 
+		filteredCandidates = [];
+        let filteredLeft = filterCandidates(response, left);
+		combineThem (filteredLeft);
+        let filteredRight = filterCandidates(response, right);
+		combineThem (filteredRight);
+        filteredCandidates = [...filteredLeft,...filteredRight];
+		console.log(filteredCandidates);
+        wrangleWinners (filteredCandidates);
+        getGeoJSON();    
+    });    
+}		
+*/
+// Updates map via AJAX when radio button selection changes
 $(document).ready(function(){
     $('input[type=radio]').click(function(){
         let buttonvalue = this.value;
-        // console.log(buttonvalue);
+		console.log(buttonvalue);
         switch (buttonvalue) {
             case 'socialists-all':
                 allThisStuff(allSocialists);
@@ -319,7 +408,7 @@ $(document).ready(function(){
                 allThisStuff(everyone); 
                 break;                 
             case 'left-all-vs-trump':
-                allThisStuff(allLeftAndTrump);
+				battlefield(allLeft, trump);
                 break;
             case 'right-all-notrump':
                 allThisStuff(allRightNoTrump); 
@@ -328,10 +417,10 @@ $(document).ready(function(){
                 allThisStuff(allRightNoTrumpNorJohnson); 
                 break;            
             case 'right-all-vs-clinton':
-                allThisStuff(allRightAndClinton);
+                battlefield(allRight, clinton);
                 break;
             case 'right-all-vs-left-all':
-                allThisStuff(allLeftAndRight); 
+                battlefield3(allLeft, allRight); 
                 break;                                
             default:
                 allThisStuff(allSocialists);
@@ -345,53 +434,53 @@ $(document).ready(function(){
 <form id="selectCandidates" action="" method="post">
 
     <fieldset class="form-group">
-        <legend>myFilter</legend>
+        <legend>Opponents</legend>
 
         <div class="form-check">
             <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="myFilter" id="socialists-all" value="socialists-all" checked="">
+                <input type="radio" class="form-check-input" name="opponents" id="socialists-all" value="socialists-all" checked="">
                 All Socialists
             </label>
         </div>
         <div class="form-check">
             <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="myFilter" id="socialists-nogreen" value="socialists-nogreen">
+                <input type="radio" class="form-check-input" name="opponents" id="socialists-nogreen" value="socialists-nogreen">
                 All Socialists Except Jill Stein (Green)
             </label>
         </div>            
         <div class="form-check">
             <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="myFilter" id="left-all-vs-trump" value="left-all-vs-trump">
+                <input type="radio" class="form-check-input" name="opponents" id="left-all-vs-trump" value="left-all-vs-trump">
                 All "Left" vs Trump (Republican)
             </label>
         </div>
         <div class="form-check">
             <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="myFilter" id="right-all-notrump" value="right-all-notrump">
+                <input type="radio" class="form-check-input" name="opponents" id="right-all-notrump" value="right-all-notrump">
                 All "Right" Except Donald Trump (Republican)
             </label>
         </div>
         <div class="form-check">
             <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="myFilter" id="right-all-notrumpnorjohnson" value="right-all-notrumpnorjohnson">
+                <input type="radio" class="form-check-input" name="opponents" id="right-all-notrumpnorjohnson" value="right-all-notrumpnorjohnson">
                 All "Right" Except Donald Trump (Republican) and Gary Johnson (Libertarian)
             </label>
         </div>          
         <div class="form-check">
             <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="myFilter" id="right-all-vs-clinton" value="right-all-vs-clinton">
+                <input type="radio" class="form-check-input" name="opponents" id="right-all-vs-clinton" value="right-all-vs-clinton">
                 All "Right" vs Clinton (Democratic)
             </label>
         </div>
         <div class="form-check">
             <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="myFilter" id="right-all-vs-left-all" value="right-all-vs-left-all"> 
+                <input type="radio" class="form-check-input" name="opponents" id="right-all-vs-left-all" value="right-all-vs-left-all"> 
                 All Left vs All Right
             </label>
         </div>  
         <div class="form-check">
             <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="myFilter" id="everyone" value="everyone"> 
+                <input type="radio" class="form-check-input" name="opponents" id="everyone" value="everyone"> 
                 Everyone
             </label>
         </div>          
