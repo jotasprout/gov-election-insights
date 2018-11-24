@@ -377,23 +377,7 @@ function battlefield3 (left, right) {
         getGeoJSON();    
     });    
 }		
-/*	
-function battlefield2 (left, right) {
-    fetch("everyone.php").then(function(response){           
-        return response.json();
-    }).then(function(response){ 
-		filteredCandidates = [];
-        let filteredLeft = filterCandidates(response, left);
-		combineThem (filteredLeft);
-        let filteredRight = filterCandidates(response, right);
-		combineThem (filteredRight);
-        filteredCandidates = [...filteredLeft,...filteredRight];
-		console.log(filteredCandidates);
-        wrangleWinners (filteredCandidates);
-        getGeoJSON();    
-    });    
-}		
-*/
+
 // Updates map via AJAX when radio button selection changes
 $(document).ready(function(){
     $('input[type=radio]').click(function(){
