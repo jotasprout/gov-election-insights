@@ -1,4 +1,4 @@
-# Prez Play Pro
+# Election Insights
 See my _interactive data visualization of presidential election results_ [here](http://roxorsoxor.com/prezplaypro/index.html).
 
 * Python scripts for scraping various data sources
