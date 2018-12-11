@@ -1,0 +1,264 @@
+[
+{
+    "name": "states",
+    "data": 
+[
+{
+    "abbr": "AL",
+    "name": "Alabama",
+    "ec": "9"
+},
+{
+    "abbr": "AK",
+    "name": "Alaska",
+    "ec": "3"
+},
+{
+    "abbr": "AZ",
+    "name": "Arizona",
+    "ec": "11"
+},
+{
+    "abbr": "AR",
+    "name": "Arkansas",
+    "ec": "6"
+},
+{
+    "abbr": "CA",
+    "name": "California",
+    "ec": "55"
+},
+{
+    "abbr": "CO",
+    "name": "Colorado",
+    "ec": "9"
+},
+{
+    "abbr": "CT",
+    "name": "Connecticut",
+    "ec": "7"
+},
+{
+    "abbr": "DE",
+    "name": "Delaware",
+    "ec": "3"
+},
+{
+    "abbr": "DC",
+    "name": "District of Columbia",
+    "ec": "3"
+},
+{
+    "abbr": "FL",
+    "name": "Florida",
+    "ec": "29"
+},
+{
+    "abbr": "GA",
+    "name": "Georgia",
+    "ec": "16"
+},
+{
+    "abbr": "HI",
+    "name": "Hawaii",
+    "ec": "4"
+},
+{
+    "abbr": "ID",
+    "name": "Idaho",
+    "ec": "4"
+},
+{
+    "abbr": "IL",
+    "name": "Illinois",
+    "ec": "20"
+},
+{
+    "abbr": "IN",
+    "name": "Indiana",
+    "ec": "11"
+},
+{
+    "abbr": "IA",
+    "name": "Iowa",
+    "ec": "6"
+},
+{
+    "abbr": "KS",
+    "name": "Kansas",
+    "ec": "6"
+},
+{
+    "abbr": "KY",
+    "name": "Kentucky",
+    "ec": "8"
+},
+{
+    "abbr": "LA",
+    "name": "Louisiana",
+    "ec": "8"
+},
+{
+    "abbr": "ME",
+    "name": "Maine",
+    "ec": "4"
+},
+{
+    "abbr": "MD",
+    "name": "Maryland",
+    "ec": "10"
+},
+{
+    "abbr": "MA",
+    "name": "Massachusetts",
+    "ec": "11"
+},
+{
+    "abbr": "MI",
+    "name": "Michigan",
+    "ec": "16"
+},
+{
+    "abbr": "MN",
+    "name": "Minnesota",
+    "ec": "10"
+},
+{
+    "abbr": "MS",
+    "name": "Mississippi",
+    "ec": "6"
+},
+{
+    "abbr": "MO",
+    "name": "Missouri",
+    "ec": "10"
+},
+{
+    "abbr": "MT",
+    "name": "Montana",
+    "ec": "3"
+},
+{
+    "abbr": "NE",
+    "name": "Nebraska",
+    "ec": "5"
+},
+{
+    "abbr": "NV",
+    "name": "Nevada",
+    "ec": "6"
+},
+{
+    "abbr": "NH",
+    "name": "New Hampshire",
+    "ec": "4"
+},
+{
+    "abbr": "NJ",
+    "name": "New Jersey",
+    "ec": "14"
+},
+{
+    "abbr": "NM",
+    "name": "New Mexico",
+    "ec": "5"
+},
+{
+    "abbr": "NY",
+    "name": "New York",
+    "ec": "29"
+},
+{
+    "abbr": "NC",
+    "name": "North Carolina",
+    "ec": "15"
+},
+{
+    "abbr": "ND",
+    "name": "North Dakota",
+    "ec": "3"
+},
+{
+    "abbr": "OH",
+    "name": "Ohio",
+    "ec": "18"
+},
+{
+    "abbr": "OK",
+    "name": "Oklahoma",
+    "ec": "7"
+},
+{
+    "abbr": "OR",
+    "name": "Oregon",
+    "ec": "7"
+},
+{
+    "abbr": "PA",
+    "name": "Pennsylvania",
+    "ec": "20"
+},
+{
+    "abbr": "RI",
+    "name": "Rhode Island",
+    "ec": "4"
+},
+{
+    "abbr": "SC",
+    "name": "South Carolina",
+    "ec": "9"
+},
+{
+    "abbr": "SD",
+    "name": "South Dakota",
+    "ec": "3"
+},
+{
+    "abbr": "TN",
+    "name": "Tennessee",
+    "ec": "11"
+},
+{
+    "abbr": "TX",
+    "name": "Texas",
+    "ec": "38"
+},
+{
+    "abbr": "UT",
+    "name": "Utah",
+    "ec": "6"
+},
+{
+    "abbr": "VT",
+    "name": "Vermont",
+    "ec": "3"
+},
+{
+    "abbr": "VA",
+    "name": "Virginia",
+    "ec": "13"
+},
+{
+    "abbr": "WA",
+    "name": "Washington",
+    "ec": "12"
+},
+{
+    "abbr": "WV",
+    "name": "West Virginia",
+    "ec": "5"
+},
+{
+    "abbr": "WI",
+    "name": "Wisconsin",
+    "ec": "10"
+},
+{
+    "abbr": "WY",
+    "name": "Wyoming",
+    "ec": "3"
+}
+]
+
+}
+]

@@ -1,0 +1,4293 @@
+[
+{
+    "name": "candidates",
+    "data": 
+[
+{
+    "stateAbbr": "CO",
+    "candidateID": "14",
+    "popVotes": "452",
+    "candidateName": "Alyson Kennedy",
+    "stateName": "Colorado",
+    "partyAbbr": "SWP",
+    "partyName": "Socialist Workers Party"
+},
+{
+    "stateAbbr": "LA",
+    "candidateID": "14",
+    "popVotes": "480",
+    "candidateName": "Alyson Kennedy",
+    "stateName": "Louisiana",
+    "partyAbbr": "SWP",
+    "partyName": "Socialist Workers Party"
+},
+{
+    "stateAbbr": "MN",
+    "candidateID": "14",
+    "popVotes": "1672",
+    "candidateName": "Alyson Kennedy",
+    "stateName": "Minnesota",
+    "partyAbbr": "SWP",
+    "partyName": "Socialist Workers Party"
+},
+{
+    "stateAbbr": "NJ",
+    "candidateID": "14",
+    "popVotes": "2156",
+    "candidateName": "Alyson Kennedy",
+    "stateName": "New Jersey",
+    "partyAbbr": "SWP",
+    "partyName": "Socialist Workers Party"
+},
+{
+    "stateAbbr": "TN",
+    "candidateID": "14",
+    "popVotes": "2877",
+    "candidateName": "Alyson Kennedy",
+    "stateName": "Tennessee",
+    "partyAbbr": "IND",
+    "partyName": "Independent"
+},
+{
+    "stateAbbr": "UT",
+    "candidateID": "14",
+    "popVotes": "521",
+    "candidateName": "Alyson Kennedy",
+    "stateName": "Utah",
+    "partyAbbr": "UN",
+    "partyName": "Unaffiliated"
+},
+{
+    "stateAbbr": "VT",
+    "candidateID": "14",
+    "popVotes": "2",
+    "candidateName": "Alyson Kennedy",
+    "stateName": "Vermont",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "WA",
+    "candidateID": "14",
+    "popVotes": "4307",
+    "candidateName": "Alyson Kennedy",
+    "stateName": "Washington",
+    "partyAbbr": "SWP",
+    "partyName": "Socialist Workers Party"
+},
+{
+    "stateAbbr": "CO",
+    "candidateID": "18",
+    "popVotes": "382",
+    "candidateName": "Bradford Lyttle",
+    "stateName": "Colorado",
+    "partyAbbr": "NRP",
+    "partyName": "Nonviolent Resistance\/Pacifist"
+},
+{
+    "stateAbbr": "CO",
+    "candidateID": "13",
+    "popVotes": "5028",
+    "candidateName": "Chris Keniston",
+    "stateName": "Colorado",
+    "partyAbbr": "VP",
+    "partyName": "Veterans Party"
+},
+{
+    "stateAbbr": "KY",
+    "candidateID": "13",
+    "popVotes": "22",
+    "candidateName": "Chris Keniston",
+    "stateName": "Kentucky",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "LA",
+    "candidateID": "13",
+    "popVotes": "1881",
+    "candidateName": "Chris Keniston",
+    "stateName": "Louisiana",
+    "partyAbbr": "SWP",
+    "partyName": "Socialist Workers Party"
+},
+{
+    "stateAbbr": "NY",
+    "candidateID": "13",
+    "popVotes": "90",
+    "candidateName": "Chris Keniston",
+    "stateName": "New York",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "OH",
+    "candidateID": "13",
+    "popVotes": "114",
+    "candidateName": "Chris Keniston",
+    "stateName": "Ohio",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "VT",
+    "candidateID": "13",
+    "popVotes": "3",
+    "candidateName": "Chris Keniston",
+    "stateName": "Vermont",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "WI",
+    "candidateID": "13",
+    "popVotes": "67",
+    "candidateName": "Chris Keniston",
+    "stateName": "Wisconsin",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "IA",
+    "candidateID": "30",
+    "popVotes": "2246",
+    "candidateName": "Dan R. Vacek",
+    "stateName": "Iowa",
+    "partyAbbr": "LMN",
+    "partyName": "Legal Marijuana Now"
+},
+{
+    "stateAbbr": "MN",
+    "candidateID": "30",
+    "popVotes": "11291",
+    "candidateName": "Dan R. Vacek",
+    "stateName": "Minnesota",
+    "partyAbbr": "LMN",
+    "partyName": "Legal Marijuana Now"
+},
+{
+    "stateAbbr": "AK",
+    "candidateID": "2",
+    "popVotes": "3866",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "Alaska",
+    "partyAbbr": "CON",
+    "partyName": "Constitution"
+},
+{
+    "stateAbbr": "AZ",
+    "candidateID": "2",
+    "popVotes": "1058",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "Arizona",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "AR",
+    "candidateID": "2",
+    "popVotes": "4613",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "Arkansas",
+    "partyAbbr": "CON",
+    "partyName": "Constitution"
+},
+{
+    "stateAbbr": "CO",
+    "candidateID": "2",
+    "popVotes": "11699",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "Colorado",
+    "partyAbbr": "AMC",
+    "partyName": "American Constitution Party"
+},
+{
+    "stateAbbr": "CT",
+    "candidateID": "2",
+    "popVotes": "147",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "Connecticut",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "DE",
+    "candidateID": "2",
+    "popVotes": "74",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "Delaware",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "FL",
+    "candidateID": "2",
+    "popVotes": "16475",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "Florida",
+    "partyAbbr": "CON",
+    "partyName": "Constitution"
+},
+{
+    "stateAbbr": "GA",
+    "candidateID": "2",
+    "popVotes": "1110",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "Georgia",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "HI",
+    "candidateID": "2",
+    "popVotes": "4508",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "Hawaii",
+    "partyAbbr": "CON",
+    "partyName": "Constitution"
+},
+{
+    "stateAbbr": "ID",
+    "candidateID": "2",
+    "popVotes": "4403",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "Idaho",
+    "partyAbbr": "IND",
+    "partyName": "Independent"
+},
+{
+    "stateAbbr": "IL",
+    "candidateID": "2",
+    "popVotes": "1138",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "Illinois",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "IN",
+    "candidateID": "2",
+    "popVotes": "1937",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "Indiana",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "IA",
+    "candidateID": "2",
+    "popVotes": "5335",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "Iowa",
+    "partyAbbr": "CON",
+    "partyName": "Constitution"
+},
+{
+    "stateAbbr": "KS",
+    "candidateID": "2",
+    "popVotes": "646",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "Kansas",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "KY",
+    "candidateID": "2",
+    "popVotes": "438",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "Kentucky",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "LA",
+    "candidateID": "2",
+    "popVotes": "3129",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "Louisiana",
+    "partyAbbr": "CON",
+    "partyName": "Constitution"
+},
+{
+    "stateAbbr": "ME",
+    "candidateID": "2",
+    "popVotes": "333",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "Maine",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "MD",
+    "candidateID": "2",
+    "popVotes": "566",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "Maryland",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "MI",
+    "candidateID": "2",
+    "popVotes": "16139",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "Michigan",
+    "partyAbbr": "UST",
+    "partyName": "U.S. Taxpayers"
+},
+{
+    "stateAbbr": "MN",
+    "candidateID": "2",
+    "popVotes": "9456",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "Minnesota",
+    "partyAbbr": "CON",
+    "partyName": "Constitution"
+},
+{
+    "stateAbbr": "MS",
+    "candidateID": "2",
+    "popVotes": "3987",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "Mississippi",
+    "partyAbbr": "CON",
+    "partyName": "Constitution"
+},
+{
+    "stateAbbr": "MO",
+    "candidateID": "2",
+    "popVotes": "13092",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "Missouri",
+    "partyAbbr": "CON",
+    "partyName": "Constitution"
+},
+{
+    "stateAbbr": "MT",
+    "candidateID": "2",
+    "popVotes": "296",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "Montana",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "NV",
+    "candidateID": "2",
+    "popVotes": "5268",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "Nevada",
+    "partyAbbr": "IAP",
+    "partyName": "Independent American  Party"
+},
+{
+    "stateAbbr": "NJ",
+    "candidateID": "2",
+    "popVotes": "6161",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "New Jersey",
+    "partyAbbr": "CON",
+    "partyName": "Constitution"
+},
+{
+    "stateAbbr": "NM",
+    "candidateID": "2",
+    "popVotes": "1514",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "New Mexico",
+    "partyAbbr": "CON",
+    "partyName": "Constitution"
+},
+{
+    "stateAbbr": "NY",
+    "candidateID": "2",
+    "popVotes": "897",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "New York",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "ND",
+    "candidateID": "2",
+    "popVotes": "1833",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "North Dakota",
+    "partyAbbr": "CON",
+    "partyName": "Constitution"
+},
+{
+    "stateAbbr": "OH",
+    "candidateID": "2",
+    "popVotes": "1887",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "Ohio",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "PA",
+    "candidateID": "2",
+    "popVotes": "21572",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "Pennsylvania",
+    "partyAbbr": "CON",
+    "partyName": "Constitution"
+},
+{
+    "stateAbbr": "RI",
+    "candidateID": "2",
+    "popVotes": "30",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "Rhode Island",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "SC",
+    "candidateID": "2",
+    "popVotes": "5765",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "South Carolina",
+    "partyAbbr": "CON",
+    "partyName": "Constitution"
+},
+{
+    "stateAbbr": "SD",
+    "candidateID": "2",
+    "popVotes": "4064",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "South Dakota",
+    "partyAbbr": "CON",
+    "partyName": "Constitution"
+},
+{
+    "stateAbbr": "TN",
+    "candidateID": "2",
+    "popVotes": "1584",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "Tennessee",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "TX",
+    "candidateID": "2",
+    "popVotes": "4261",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "Texas",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "UT",
+    "candidateID": "2",
+    "popVotes": "8032",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "Utah",
+    "partyAbbr": "CON",
+    "partyName": "Constitution"
+},
+{
+    "stateAbbr": "VT",
+    "candidateID": "2",
+    "popVotes": "63",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "Vermont",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "WA",
+    "candidateID": "2",
+    "popVotes": "17623",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "Washington",
+    "partyAbbr": "CON",
+    "partyName": "Constitution"
+},
+{
+    "stateAbbr": "WV",
+    "candidateID": "2",
+    "popVotes": "3807",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "West Virginia",
+    "partyAbbr": "CON",
+    "partyName": "Constitution"
+},
+{
+    "stateAbbr": "WI",
+    "candidateID": "2",
+    "popVotes": "12162",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "Wisconsin",
+    "partyAbbr": "CON",
+    "partyName": "Constitution"
+},
+{
+    "stateAbbr": "WY",
+    "candidateID": "2",
+    "popVotes": "2042",
+    "candidateName": "Darrell L. Castle",
+    "stateName": "Wyoming",
+    "partyAbbr": "CON",
+    "partyName": "Constitution"
+},
+{
+    "stateAbbr": "AL",
+    "candidateID": "29",
+    "popVotes": "1318255",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Alabama",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "AK",
+    "candidateID": "29",
+    "popVotes": "163387",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Alaska",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "AZ",
+    "candidateID": "29",
+    "popVotes": "1252401",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Arizona",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "AR",
+    "candidateID": "29",
+    "popVotes": "684872",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Arkansas",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "CA",
+    "candidateID": "29",
+    "popVotes": "4483810",
+    "candidateName": "Donald J. Trump",
+    "stateName": "California",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "CO",
+    "candidateID": "29",
+    "popVotes": "1202484",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Colorado",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "CT",
+    "candidateID": "29",
+    "popVotes": "673215",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Connecticut",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "DE",
+    "candidateID": "29",
+    "popVotes": "185127",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Delaware",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "DC",
+    "candidateID": "29",
+    "popVotes": "12723",
+    "candidateName": "Donald J. Trump",
+    "stateName": "District of Columbia",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "FL",
+    "candidateID": "29",
+    "popVotes": "4617886",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Florida",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "GA",
+    "candidateID": "29",
+    "popVotes": "2089104",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Georgia",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "HI",
+    "candidateID": "29",
+    "popVotes": "128847",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Hawaii",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "ID",
+    "candidateID": "29",
+    "popVotes": "409055",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Idaho",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "IL",
+    "candidateID": "29",
+    "popVotes": "2146015",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Illinois",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "IN",
+    "candidateID": "29",
+    "popVotes": "1557286",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Indiana",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "IA",
+    "candidateID": "29",
+    "popVotes": "800983",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Iowa",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "KS",
+    "candidateID": "29",
+    "popVotes": "671018",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Kansas",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "KY",
+    "candidateID": "29",
+    "popVotes": "1202971",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Kentucky",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "LA",
+    "candidateID": "29",
+    "popVotes": "1178638",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Louisiana",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "ME",
+    "candidateID": "29",
+    "popVotes": "335593",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Maine",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "MD",
+    "candidateID": "29",
+    "popVotes": "943169",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Maryland",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "MA",
+    "candidateID": "29",
+    "popVotes": "1090893",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Massachusetts",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "MI",
+    "candidateID": "29",
+    "popVotes": "2279543",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Michigan",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "MN",
+    "candidateID": "29",
+    "popVotes": "1322951",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Minnesota",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "MS",
+    "candidateID": "29",
+    "popVotes": "700714",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Mississippi",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "MO",
+    "candidateID": "29",
+    "popVotes": "1594511",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Missouri",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "MT",
+    "candidateID": "29",
+    "popVotes": "279240",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Montana",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "NE",
+    "candidateID": "29",
+    "popVotes": "495961",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Nebraska",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "NV",
+    "candidateID": "29",
+    "popVotes": "512058",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Nevada",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "NH",
+    "candidateID": "29",
+    "popVotes": "345790",
+    "candidateName": "Donald J. Trump",
+    "stateName": "New Hampshire",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "NJ",
+    "candidateID": "29",
+    "popVotes": "1601933",
+    "candidateName": "Donald J. Trump",
+    "stateName": "New Jersey",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "NM",
+    "candidateID": "29",
+    "popVotes": "319667",
+    "candidateName": "Donald J. Trump",
+    "stateName": "New Mexico",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "NY",
+    "candidateID": "29",
+    "popVotes": "2819534",
+    "candidateName": "Donald J. Trump",
+    "stateName": "New York",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "NC",
+    "candidateID": "29",
+    "popVotes": "2362631",
+    "candidateName": "Donald J. Trump",
+    "stateName": "North Carolina",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "ND",
+    "candidateID": "29",
+    "popVotes": "216794",
+    "candidateName": "Donald J. Trump",
+    "stateName": "North Dakota",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "OH",
+    "candidateID": "29",
+    "popVotes": "2841005",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Ohio",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "OK",
+    "candidateID": "29",
+    "popVotes": "949136",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Oklahoma",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "OR",
+    "candidateID": "29",
+    "popVotes": "782403",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Oregon",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "PA",
+    "candidateID": "29",
+    "popVotes": "2970733",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Pennsylvania",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "RI",
+    "candidateID": "29",
+    "popVotes": "180543",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Rhode Island",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "SC",
+    "candidateID": "29",
+    "popVotes": "1155389",
+    "candidateName": "Donald J. Trump",
+    "stateName": "South Carolina",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "SD",
+    "candidateID": "29",
+    "popVotes": "227721",
+    "candidateName": "Donald J. Trump",
+    "stateName": "South Dakota",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "TN",
+    "candidateID": "29",
+    "popVotes": "1522925",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Tennessee",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "TX",
+    "candidateID": "29",
+    "popVotes": "4685047",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Texas",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "UT",
+    "candidateID": "29",
+    "popVotes": "515231",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Utah",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "VT",
+    "candidateID": "29",
+    "popVotes": "95369",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Vermont",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "VA",
+    "candidateID": "29",
+    "popVotes": "1769443",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Virginia",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "WA",
+    "candidateID": "29",
+    "popVotes": "1221747",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Washington",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "WV",
+    "candidateID": "29",
+    "popVotes": "489371",
+    "candidateName": "Donald J. Trump",
+    "stateName": "West Virginia",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "WI",
+    "candidateID": "29",
+    "popVotes": "1405284",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Wisconsin",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "WY",
+    "candidateID": "29",
+    "popVotes": "174419",
+    "candidateName": "Donald J. Trump",
+    "stateName": "Wyoming",
+    "partyAbbr": "R",
+    "partyName": "Republican"
+},
+{
+    "stateAbbr": "CO",
+    "candidateID": "27",
+    "popVotes": "271",
+    "candidateName": "Emidio Soltysik",
+    "stateName": "Colorado",
+    "partyAbbr": "SOC",
+    "partyName": "Socialist Party USA"
+},
+{
+    "stateAbbr": "IN",
+    "candidateID": "27",
+    "popVotes": "57",
+    "candidateName": "Emidio Soltysik",
+    "stateName": "Indiana",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "MD",
+    "candidateID": "27",
+    "popVotes": "6",
+    "candidateName": "Emidio Soltysik",
+    "stateName": "Maryland",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "MI",
+    "candidateID": "27",
+    "popVotes": "2209",
+    "candidateName": "Emidio Soltysik",
+    "stateName": "Michigan",
+    "partyAbbr": "NLP",
+    "partyName": "Natural Law Party"
+},
+{
+    "stateAbbr": "MT",
+    "candidateID": "27",
+    "popVotes": "1",
+    "candidateName": "Emidio Soltysik",
+    "stateName": "Montana",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "NY",
+    "candidateID": "27",
+    "popVotes": "36",
+    "candidateName": "Emidio Soltysik",
+    "stateName": "New York",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "RI",
+    "candidateID": "27",
+    "popVotes": "2",
+    "candidateName": "Emidio Soltysik",
+    "stateName": "Rhode Island",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "TX",
+    "candidateID": "27",
+    "popVotes": "72",
+    "candidateName": "Emidio Soltysik",
+    "stateName": "Texas",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "UT",
+    "candidateID": "27",
+    "popVotes": "4",
+    "candidateName": "Emidio Soltysik",
+    "stateName": "Utah",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "VT",
+    "candidateID": "27",
+    "popVotes": "2",
+    "candidateName": "Emidio Soltysik",
+    "stateName": "Vermont",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "WI",
+    "candidateID": "27",
+    "popVotes": "33",
+    "candidateName": "Emidio Soltysik",
+    "stateName": "Wisconsin",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "AZ",
+    "candidateID": "21",
+    "popVotes": "17449",
+    "candidateName": "Evan McMullin",
+    "stateName": "Arizona",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "AR",
+    "candidateID": "21",
+    "popVotes": "13255",
+    "candidateName": "Evan McMullin",
+    "stateName": "Arkansas",
+    "partyAbbr": "BFA",
+    "partyName": "Better for America"
+},
+{
+    "stateAbbr": "CA",
+    "candidateID": "21",
+    "popVotes": "39596",
+    "candidateName": "Evan McMullin",
+    "stateName": "California",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "CO",
+    "candidateID": "21",
+    "popVotes": "28917",
+    "candidateName": "Evan McMullin",
+    "stateName": "Colorado",
+    "partyAbbr": "UN",
+    "partyName": "Unaffiliated"
+},
+{
+    "stateAbbr": "CT",
+    "candidateID": "21",
+    "popVotes": "2108",
+    "candidateName": "Evan McMullin",
+    "stateName": "Connecticut",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "DE",
+    "candidateID": "21",
+    "popVotes": "706",
+    "candidateName": "Evan McMullin",
+    "stateName": "Delaware",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "GA",
+    "candidateID": "21",
+    "popVotes": "13017",
+    "candidateName": "Evan McMullin",
+    "stateName": "Georgia",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "ID",
+    "candidateID": "21",
+    "popVotes": "46476",
+    "candidateName": "Evan McMullin",
+    "stateName": "Idaho",
+    "partyAbbr": "IND",
+    "partyName": "Independent"
+},
+{
+    "stateAbbr": "IL",
+    "candidateID": "21",
+    "popVotes": "11655",
+    "candidateName": "Evan McMullin",
+    "stateName": "Illinois",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "IA",
+    "candidateID": "21",
+    "popVotes": "12366",
+    "candidateName": "Evan McMullin",
+    "stateName": "Iowa",
+    "partyAbbr": "NP",
+    "partyName": "Nominated by Petition"
+},
+{
+    "stateAbbr": "KS",
+    "candidateID": "21",
+    "popVotes": "6520",
+    "candidateName": "Evan McMullin",
+    "stateName": "Kansas",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "KY",
+    "candidateID": "21",
+    "popVotes": "22780",
+    "candidateName": "Evan McMullin",
+    "stateName": "Kentucky",
+    "partyAbbr": "IND",
+    "partyName": "Independent"
+},
+{
+    "stateAbbr": "LA",
+    "candidateID": "21",
+    "popVotes": "8547",
+    "candidateName": "Evan McMullin",
+    "stateName": "Louisiana",
+    "partyAbbr": "CCS",
+    "partyName": "Courage Character Service"
+},
+{
+    "stateAbbr": "ME",
+    "candidateID": "21",
+    "popVotes": "1887",
+    "candidateName": "Evan McMullin",
+    "stateName": "Maine",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "MD",
+    "candidateID": "21",
+    "popVotes": "9630",
+    "candidateName": "Evan McMullin",
+    "stateName": "Maryland",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "MA",
+    "candidateID": "21",
+    "popVotes": "2719",
+    "candidateName": "Evan McMullin",
+    "stateName": "Massachusetts",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "MI",
+    "candidateID": "21",
+    "popVotes": "8177",
+    "candidateName": "Evan McMullin",
+    "stateName": "Michigan",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "MN",
+    "candidateID": "21",
+    "popVotes": "53076",
+    "candidateName": "Evan McMullin",
+    "stateName": "Minnesota",
+    "partyAbbr": "IDP",
+    "partyName": "Independence"
+},
+{
+    "stateAbbr": "MO",
+    "candidateID": "21",
+    "popVotes": "7071",
+    "candidateName": "Evan McMullin",
+    "stateName": "Missouri",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "MT",
+    "candidateID": "21",
+    "popVotes": "2297",
+    "candidateName": "Evan McMullin",
+    "stateName": "Montana",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "NH",
+    "candidateID": "21",
+    "popVotes": "1064",
+    "candidateName": "Evan McMullin",
+    "stateName": "New Hampshire",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "NM",
+    "candidateID": "21",
+    "popVotes": "5825",
+    "candidateName": "Evan McMullin",
+    "stateName": "New Mexico",
+    "partyAbbr": "BFA",
+    "partyName": "Better for America"
+},
+{
+    "stateAbbr": "NY",
+    "candidateID": "21",
+    "popVotes": "10373",
+    "candidateName": "Evan McMullin",
+    "stateName": "New York",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "OH",
+    "candidateID": "21",
+    "popVotes": "12574",
+    "candidateName": "Evan McMullin",
+    "stateName": "Ohio",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "PA",
+    "candidateID": "21",
+    "popVotes": "6472",
+    "candidateName": "Evan McMullin",
+    "stateName": "Pennsylvania",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "RI",
+    "candidateID": "21",
+    "popVotes": "516",
+    "candidateName": "Evan McMullin",
+    "stateName": "Rhode Island",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "SC",
+    "candidateID": "21",
+    "popVotes": "21016",
+    "candidateName": "Evan McMullin",
+    "stateName": "South Carolina",
+    "partyAbbr": "IDP",
+    "partyName": "Independence"
+},
+{
+    "stateAbbr": "TN",
+    "candidateID": "21",
+    "popVotes": "11991",
+    "candidateName": "Evan McMullin",
+    "stateName": "Tennessee",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "TX",
+    "candidateID": "21",
+    "popVotes": "42366",
+    "candidateName": "Evan McMullin",
+    "stateName": "Texas",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "UT",
+    "candidateID": "21",
+    "popVotes": "243690",
+    "candidateName": "Evan McMullin",
+    "stateName": "Utah",
+    "partyAbbr": "IND",
+    "partyName": "Independent"
+},
+{
+    "stateAbbr": "VT",
+    "candidateID": "21",
+    "popVotes": "639",
+    "candidateName": "Evan McMullin",
+    "stateName": "Vermont",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "VA",
+    "candidateID": "21",
+    "popVotes": "54054",
+    "candidateName": "Evan McMullin",
+    "stateName": "Virginia",
+    "partyAbbr": "IND",
+    "partyName": "Independent"
+},
+{
+    "stateAbbr": "WV",
+    "candidateID": "21",
+    "popVotes": "1104",
+    "candidateName": "Evan McMullin",
+    "stateName": "West Virginia",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "WI",
+    "candidateID": "21",
+    "popVotes": "11855",
+    "candidateName": "Evan McMullin",
+    "stateName": "Wisconsin",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "CO",
+    "candidateID": "1",
+    "popVotes": "337",
+    "candidateName": "Frank Atwood",
+    "stateName": "Colorado",
+    "partyAbbr": "APV",
+    "partyName": "Approval Voting Party"
+},
+{
+    "stateAbbr": "AL",
+    "candidateID": "11",
+    "popVotes": "44467",
+    "candidateName": "Gary Johnson",
+    "stateName": "Alabama",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "AK",
+    "candidateID": "11",
+    "popVotes": "18725",
+    "candidateName": "Gary Johnson",
+    "stateName": "Alaska",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "AZ",
+    "candidateID": "11",
+    "popVotes": "106327",
+    "candidateName": "Gary Johnson",
+    "stateName": "Arizona",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "AR",
+    "candidateID": "11",
+    "popVotes": "29829",
+    "candidateName": "Gary Johnson",
+    "stateName": "Arkansas",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "CA",
+    "candidateID": "11",
+    "popVotes": "478500",
+    "candidateName": "Gary Johnson",
+    "stateName": "California",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "CO",
+    "candidateID": "11",
+    "popVotes": "144121",
+    "candidateName": "Gary Johnson",
+    "stateName": "Colorado",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "CT",
+    "candidateID": "11",
+    "popVotes": "48676",
+    "candidateName": "Gary Johnson",
+    "stateName": "Connecticut",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "DE",
+    "candidateID": "11",
+    "popVotes": "14757",
+    "candidateName": "Gary Johnson",
+    "stateName": "Delaware",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "DC",
+    "candidateID": "11",
+    "popVotes": "4906",
+    "candidateName": "Gary Johnson",
+    "stateName": "District of Columbia",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "FL",
+    "candidateID": "11",
+    "popVotes": "207043",
+    "candidateName": "Gary Johnson",
+    "stateName": "Florida",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "GA",
+    "candidateID": "11",
+    "popVotes": "125306",
+    "candidateName": "Gary Johnson",
+    "stateName": "Georgia",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "HI",
+    "candidateID": "11",
+    "popVotes": "15954",
+    "candidateName": "Gary Johnson",
+    "stateName": "Hawaii",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "ID",
+    "candidateID": "11",
+    "popVotes": "28331",
+    "candidateName": "Gary Johnson",
+    "stateName": "Idaho",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "IL",
+    "candidateID": "11",
+    "popVotes": "209596",
+    "candidateName": "Gary Johnson",
+    "stateName": "Illinois",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "IN",
+    "candidateID": "11",
+    "popVotes": "133993",
+    "candidateName": "Gary Johnson",
+    "stateName": "Indiana",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "IA",
+    "candidateID": "11",
+    "popVotes": "59186",
+    "candidateName": "Gary Johnson",
+    "stateName": "Iowa",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "KS",
+    "candidateID": "11",
+    "popVotes": "55406",
+    "candidateName": "Gary Johnson",
+    "stateName": "Kansas",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "KY",
+    "candidateID": "11",
+    "popVotes": "53752",
+    "candidateName": "Gary Johnson",
+    "stateName": "Kentucky",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "LA",
+    "candidateID": "11",
+    "popVotes": "37978",
+    "candidateName": "Gary Johnson",
+    "stateName": "Louisiana",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "ME",
+    "candidateID": "11",
+    "popVotes": "38105",
+    "candidateName": "Gary Johnson",
+    "stateName": "Maine",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "MD",
+    "candidateID": "11",
+    "popVotes": "79605",
+    "candidateName": "Gary Johnson",
+    "stateName": "Maryland",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "MA",
+    "candidateID": "11",
+    "popVotes": "138018",
+    "candidateName": "Gary Johnson",
+    "stateName": "Massachusetts",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "MI",
+    "candidateID": "11",
+    "popVotes": "172136",
+    "candidateName": "Gary Johnson",
+    "stateName": "Michigan",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "MN",
+    "candidateID": "11",
+    "popVotes": "112972",
+    "candidateName": "Gary Johnson",
+    "stateName": "Minnesota",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "MS",
+    "candidateID": "11",
+    "popVotes": "14435",
+    "candidateName": "Gary Johnson",
+    "stateName": "Mississippi",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "MO",
+    "candidateID": "11",
+    "popVotes": "97359",
+    "candidateName": "Gary Johnson",
+    "stateName": "Missouri",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "MT",
+    "candidateID": "11",
+    "popVotes": "28037",
+    "candidateName": "Gary Johnson",
+    "stateName": "Montana",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "NE",
+    "candidateID": "11",
+    "popVotes": "38946",
+    "candidateName": "Gary Johnson",
+    "stateName": "Nebraska",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "NV",
+    "candidateID": "11",
+    "popVotes": "37384",
+    "candidateName": "Gary Johnson",
+    "stateName": "Nevada",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "NH",
+    "candidateID": "11",
+    "popVotes": "30777",
+    "candidateName": "Gary Johnson",
+    "stateName": "New Hampshire",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "NJ",
+    "candidateID": "11",
+    "popVotes": "72477",
+    "candidateName": "Gary Johnson",
+    "stateName": "New Jersey",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "NM",
+    "candidateID": "11",
+    "popVotes": "74541",
+    "candidateName": "Gary Johnson",
+    "stateName": "New Mexico",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "NY",
+    "candidateID": "11",
+    "popVotes": "176598",
+    "candidateName": "Gary Johnson",
+    "stateName": "New York",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "NC",
+    "candidateID": "11",
+    "popVotes": "130126",
+    "candidateName": "Gary Johnson",
+    "stateName": "North Carolina",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "ND",
+    "candidateID": "11",
+    "popVotes": "21434",
+    "candidateName": "Gary Johnson",
+    "stateName": "North Dakota",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "OH",
+    "candidateID": "11",
+    "popVotes": "174498",
+    "candidateName": "Gary Johnson",
+    "stateName": "Ohio",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "OK",
+    "candidateID": "11",
+    "popVotes": "83481",
+    "candidateName": "Gary Johnson",
+    "stateName": "Oklahoma",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "OR",
+    "candidateID": "11",
+    "popVotes": "94231",
+    "candidateName": "Gary Johnson",
+    "stateName": "Oregon",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "PA",
+    "candidateID": "11",
+    "popVotes": "146715",
+    "candidateName": "Gary Johnson",
+    "stateName": "Pennsylvania",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "RI",
+    "candidateID": "11",
+    "popVotes": "14746",
+    "candidateName": "Gary Johnson",
+    "stateName": "Rhode Island",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "SC",
+    "candidateID": "11",
+    "popVotes": "49204",
+    "candidateName": "Gary Johnson",
+    "stateName": "South Carolina",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "SD",
+    "candidateID": "11",
+    "popVotes": "20850",
+    "candidateName": "Gary Johnson",
+    "stateName": "South Dakota",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "TN",
+    "candidateID": "11",
+    "popVotes": "70397",
+    "candidateName": "Gary Johnson",
+    "stateName": "Tennessee",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "TX",
+    "candidateID": "11",
+    "popVotes": "283492",
+    "candidateName": "Gary Johnson",
+    "stateName": "Texas",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "UT",
+    "candidateID": "11",
+    "popVotes": "39608",
+    "candidateName": "Gary Johnson",
+    "stateName": "Utah",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "VT",
+    "candidateID": "11",
+    "popVotes": "10078",
+    "candidateName": "Gary Johnson",
+    "stateName": "Vermont",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "VA",
+    "candidateID": "11",
+    "popVotes": "118274",
+    "candidateName": "Gary Johnson",
+    "stateName": "Virginia",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "WA",
+    "candidateID": "11",
+    "popVotes": "160879",
+    "candidateName": "Gary Johnson",
+    "stateName": "Washington",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "WV",
+    "candidateID": "11",
+    "popVotes": "23004",
+    "candidateName": "Gary Johnson",
+    "stateName": "West Virginia",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "WI",
+    "candidateID": "11",
+    "popVotes": "106674",
+    "candidateName": "Gary Johnson",
+    "stateName": "Wisconsin",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "WY",
+    "candidateID": "11",
+    "popVotes": "13287",
+    "candidateName": "Gary Johnson",
+    "stateName": "Wyoming",
+    "partyAbbr": "LIB",
+    "partyName": "Libertarian"
+},
+{
+    "stateAbbr": "CA",
+    "candidateID": "17",
+    "popVotes": "66101",
+    "candidateName": "Gloria Estela La Riva",
+    "stateName": "California",
+    "partyAbbr": "PAF",
+    "partyName": "Peace and Freedom"
+},
+{
+    "stateAbbr": "CO",
+    "candidateID": "17",
+    "popVotes": "531",
+    "candidateName": "Gloria Estela La Riva",
+    "stateName": "Colorado",
+    "partyAbbr": "SLP",
+    "partyName": "Socialism and Liberation Party"
+},
+{
+    "stateAbbr": "CT",
+    "candidateID": "17",
+    "popVotes": "41",
+    "candidateName": "Gloria Estela La Riva",
+    "stateName": "Connecticut",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "DE",
+    "candidateID": "17",
+    "popVotes": "3",
+    "candidateName": "Gloria Estela La Riva",
+    "stateName": "Delaware",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "IA",
+    "candidateID": "17",
+    "popVotes": "323",
+    "candidateName": "Gloria Estela La Riva",
+    "stateName": "Iowa",
+    "partyAbbr": "SLP",
+    "partyName": "Socialism and Liberation Party"
+},
+{
+    "stateAbbr": "KS",
+    "candidateID": "17",
+    "popVotes": "7",
+    "candidateName": "Gloria Estela La Riva",
+    "stateName": "Kansas",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "LA",
+    "candidateID": "17",
+    "popVotes": "446",
+    "candidateName": "Gloria Estela La Riva",
+    "stateName": "Louisiana",
+    "partyAbbr": "SLP",
+    "partyName": "Socialism and Liberation Party"
+},
+{
+    "stateAbbr": "MD",
+    "candidateID": "17",
+    "popVotes": "48",
+    "candidateName": "Gloria Estela La Riva",
+    "stateName": "Maryland",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "NJ",
+    "candidateID": "17",
+    "popVotes": "1682",
+    "candidateName": "Gloria Estela La Riva",
+    "stateName": "New Jersey",
+    "partyAbbr": "SLP",
+    "partyName": "Socialism and Liberation Party"
+},
+{
+    "stateAbbr": "NM",
+    "candidateID": "17",
+    "popVotes": "1184",
+    "candidateName": "Gloria Estela La Riva",
+    "stateName": "New Mexico",
+    "partyAbbr": "SLP",
+    "partyName": "Socialism and Liberation Party"
+},
+{
+    "stateAbbr": "NY",
+    "candidateID": "17",
+    "popVotes": "174",
+    "candidateName": "Gloria Estela La Riva",
+    "stateName": "New York",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "VT",
+    "candidateID": "17",
+    "popVotes": "327",
+    "candidateName": "Gloria Estela La Riva",
+    "stateName": "Vermont",
+    "partyAbbr": "LBU",
+    "partyName": "Liberty Union"
+},
+{
+    "stateAbbr": "WA",
+    "candidateID": "17",
+    "popVotes": "3523",
+    "candidateName": "Gloria Estela La Riva",
+    "stateName": "Washington",
+    "partyAbbr": "SLP",
+    "partyName": "Socialism and Liberation Party"
+},
+{
+    "stateAbbr": "WV",
+    "candidateID": "17",
+    "popVotes": "2",
+    "candidateName": "Gloria Estela La Riva",
+    "stateName": "West Virginia",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "AL",
+    "candidateID": "3",
+    "popVotes": "729547",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Alabama",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "AK",
+    "candidateID": "3",
+    "popVotes": "116454",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Alaska",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "AZ",
+    "candidateID": "3",
+    "popVotes": "1161167",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Arizona",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "AR",
+    "candidateID": "3",
+    "popVotes": "380494",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Arkansas",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "CA",
+    "candidateID": "3",
+    "popVotes": "8753788",
+    "candidateName": "Hillary Clinton",
+    "stateName": "California",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "CO",
+    "candidateID": "3",
+    "popVotes": "1338870",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Colorado",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "CT",
+    "candidateID": "3",
+    "popVotes": "897572",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Connecticut",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "DE",
+    "candidateID": "3",
+    "popVotes": "235603",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Delaware",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "DC",
+    "candidateID": "3",
+    "popVotes": "282830",
+    "candidateName": "Hillary Clinton",
+    "stateName": "District of Columbia",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "FL",
+    "candidateID": "3",
+    "popVotes": "4504975",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Florida",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "GA",
+    "candidateID": "3",
+    "popVotes": "1877963",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Georgia",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "HI",
+    "candidateID": "3",
+    "popVotes": "266891",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Hawaii",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "ID",
+    "candidateID": "3",
+    "popVotes": "189765",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Idaho",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "IL",
+    "candidateID": "3",
+    "popVotes": "3090729",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Illinois",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "IN",
+    "candidateID": "3",
+    "popVotes": "1033126",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Indiana",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "IA",
+    "candidateID": "3",
+    "popVotes": "653669",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Iowa",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "KS",
+    "candidateID": "3",
+    "popVotes": "427005",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Kansas",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "KY",
+    "candidateID": "3",
+    "popVotes": "628854",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Kentucky",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "LA",
+    "candidateID": "3",
+    "popVotes": "780154",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Louisiana",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "ME",
+    "candidateID": "3",
+    "popVotes": "357735",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Maine",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "MD",
+    "candidateID": "3",
+    "popVotes": "1677928",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Maryland",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "MA",
+    "candidateID": "3",
+    "popVotes": "1995196",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Massachusetts",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "MI",
+    "candidateID": "3",
+    "popVotes": "2268839",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Michigan",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "MN",
+    "candidateID": "3",
+    "popVotes": "1367716",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Minnesota",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "MS",
+    "candidateID": "3",
+    "popVotes": "485131",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Mississippi",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "MO",
+    "candidateID": "3",
+    "popVotes": "1071068",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Missouri",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "MT",
+    "candidateID": "3",
+    "popVotes": "177709",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Montana",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "NE",
+    "candidateID": "3",
+    "popVotes": "284494",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Nebraska",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "NV",
+    "candidateID": "3",
+    "popVotes": "539260",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Nevada",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "NH",
+    "candidateID": "3",
+    "popVotes": "348526",
+    "candidateName": "Hillary Clinton",
+    "stateName": "New Hampshire",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "NJ",
+    "candidateID": "3",
+    "popVotes": "2148278",
+    "candidateName": "Hillary Clinton",
+    "stateName": "New Jersey",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "NM",
+    "candidateID": "3",
+    "popVotes": "385234",
+    "candidateName": "Hillary Clinton",
+    "stateName": "New Mexico",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "NY",
+    "candidateID": "3",
+    "popVotes": "4556124",
+    "candidateName": "Hillary Clinton",
+    "stateName": "New York",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "NC",
+    "candidateID": "3",
+    "popVotes": "2189316",
+    "candidateName": "Hillary Clinton",
+    "stateName": "North Carolina",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "ND",
+    "candidateID": "3",
+    "popVotes": "93758",
+    "candidateName": "Hillary Clinton",
+    "stateName": "North Dakota",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "OH",
+    "candidateID": "3",
+    "popVotes": "2394164",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Ohio",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "OK",
+    "candidateID": "3",
+    "popVotes": "420375",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Oklahoma",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "OR",
+    "candidateID": "3",
+    "popVotes": "1002106",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Oregon",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "PA",
+    "candidateID": "3",
+    "popVotes": "2926441",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Pennsylvania",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "RI",
+    "candidateID": "3",
+    "popVotes": "252525",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Rhode Island",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "SC",
+    "candidateID": "3",
+    "popVotes": "855373",
+    "candidateName": "Hillary Clinton",
+    "stateName": "South Carolina",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "SD",
+    "candidateID": "3",
+    "popVotes": "117458",
+    "candidateName": "Hillary Clinton",
+    "stateName": "South Dakota",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "TN",
+    "candidateID": "3",
+    "popVotes": "870695",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Tennessee",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "TX",
+    "candidateID": "3",
+    "popVotes": "3877868",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Texas",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "UT",
+    "candidateID": "3",
+    "popVotes": "310676",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Utah",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "VT",
+    "candidateID": "3",
+    "popVotes": "178573",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Vermont",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "VA",
+    "candidateID": "3",
+    "popVotes": "1981473",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Virginia",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "WA",
+    "candidateID": "3",
+    "popVotes": "1742718",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Washington",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "WV",
+    "candidateID": "3",
+    "popVotes": "188794",
+    "candidateName": "Hillary Clinton",
+    "stateName": "West Virginia",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "WI",
+    "candidateID": "3",
+    "popVotes": "1382536",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Wisconsin",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "WY",
+    "candidateID": "3",
+    "popVotes": "55973",
+    "candidateName": "Hillary Clinton",
+    "stateName": "Wyoming",
+    "partyAbbr": "D",
+    "partyName": "Democratic"
+},
+{
+    "stateAbbr": "AR",
+    "candidateID": "8",
+    "popVotes": "4709",
+    "candidateName": "James \"Jim\" Hedges",
+    "stateName": "Arkansas",
+    "partyAbbr": "IND",
+    "partyName": "Independent"
+},
+{
+    "stateAbbr": "CO",
+    "candidateID": "8",
+    "popVotes": "185",
+    "candidateName": "James \"Jim\" Hedges",
+    "stateName": "Colorado",
+    "partyAbbr": "P",
+    "partyName": "Prohibition Party"
+},
+{
+    "stateAbbr": "KS",
+    "candidateID": "8",
+    "popVotes": "3",
+    "candidateName": "James \"Jim\" Hedges",
+    "stateName": "Kansas",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "MD",
+    "candidateID": "8",
+    "popVotes": "5",
+    "candidateName": "James \"Jim\" Hedges",
+    "stateName": "Maryland",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "MS",
+    "candidateID": "8",
+    "popVotes": "715",
+    "candidateName": "James \"Jim\" Hedges",
+    "stateName": "Mississippi",
+    "partyAbbr": "P",
+    "partyName": "Prohibition Party"
+},
+{
+    "stateAbbr": "CA",
+    "candidateID": "31",
+    "popVotes": "84",
+    "candidateName": "Jerry White",
+    "stateName": "California",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "DE",
+    "candidateID": "31",
+    "popVotes": "2",
+    "candidateName": "Jerry White",
+    "stateName": "Delaware",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "KY",
+    "candidateID": "31",
+    "popVotes": "4",
+    "candidateName": "Jerry White",
+    "stateName": "Kentucky",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "LA",
+    "candidateID": "31",
+    "popVotes": "370",
+    "candidateName": "Jerry White",
+    "stateName": "Louisiana",
+    "partyAbbr": "SEA",
+    "partyName": "Socialism Equality Anti-War"
+},
+{
+    "stateAbbr": "MD",
+    "candidateID": "31",
+    "popVotes": "11",
+    "candidateName": "Jerry White",
+    "stateName": "Maryland",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "VT",
+    "candidateID": "31",
+    "popVotes": "2",
+    "candidateName": "Jerry White",
+    "stateName": "Vermont",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "WV",
+    "candidateID": "31",
+    "popVotes": "2",
+    "candidateName": "Jerry White",
+    "stateName": "West Virginia",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "AL",
+    "candidateID": "28",
+    "popVotes": "9391",
+    "candidateName": "Jill Stein",
+    "stateName": "Alabama",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "AK",
+    "candidateID": "28",
+    "popVotes": "5735",
+    "candidateName": "Jill Stein",
+    "stateName": "Alaska",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "AZ",
+    "candidateID": "28",
+    "popVotes": "34345",
+    "candidateName": "Jill Stein",
+    "stateName": "Arizona",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "AR",
+    "candidateID": "28",
+    "popVotes": "9473",
+    "candidateName": "Jill Stein",
+    "stateName": "Arkansas",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "CA",
+    "candidateID": "28",
+    "popVotes": "278657",
+    "candidateName": "Jill Stein",
+    "stateName": "California",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "CO",
+    "candidateID": "28",
+    "popVotes": "38437",
+    "candidateName": "Jill Stein",
+    "stateName": "Colorado",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "CT",
+    "candidateID": "28",
+    "popVotes": "22841",
+    "candidateName": "Jill Stein",
+    "stateName": "Connecticut",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "DE",
+    "candidateID": "28",
+    "popVotes": "6103",
+    "candidateName": "Jill Stein",
+    "stateName": "Delaware",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "DC",
+    "candidateID": "28",
+    "popVotes": "4258",
+    "candidateName": "Jill Stein",
+    "stateName": "District of Columbia",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "FL",
+    "candidateID": "28",
+    "popVotes": "64399",
+    "candidateName": "Jill Stein",
+    "stateName": "Florida",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "GA",
+    "candidateID": "28",
+    "popVotes": "7674",
+    "candidateName": "Jill Stein",
+    "stateName": "Georgia",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "HI",
+    "candidateID": "28",
+    "popVotes": "12737",
+    "candidateName": "Jill Stein",
+    "stateName": "Hawaii",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "ID",
+    "candidateID": "28",
+    "popVotes": "8496",
+    "candidateName": "Jill Stein",
+    "stateName": "Idaho",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "IL",
+    "candidateID": "28",
+    "popVotes": "76802",
+    "candidateName": "Jill Stein",
+    "stateName": "Illinois",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "IN",
+    "candidateID": "28",
+    "popVotes": "7841",
+    "candidateName": "Jill Stein",
+    "stateName": "Indiana",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "IA",
+    "candidateID": "28",
+    "popVotes": "11479",
+    "candidateName": "Jill Stein",
+    "stateName": "Iowa",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "KS",
+    "candidateID": "28",
+    "popVotes": "23506",
+    "candidateName": "Jill Stein",
+    "stateName": "Kansas",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "KY",
+    "candidateID": "28",
+    "popVotes": "13913",
+    "candidateName": "Jill Stein",
+    "stateName": "Kentucky",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "LA",
+    "candidateID": "28",
+    "popVotes": "14031",
+    "candidateName": "Jill Stein",
+    "stateName": "Louisiana",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "ME",
+    "candidateID": "28",
+    "popVotes": "14251",
+    "candidateName": "Jill Stein",
+    "stateName": "Maine",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "MD",
+    "candidateID": "28",
+    "popVotes": "35945",
+    "candidateName": "Jill Stein",
+    "stateName": "Maryland",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "MA",
+    "candidateID": "28",
+    "popVotes": "47661",
+    "candidateName": "Jill Stein",
+    "stateName": "Massachusetts",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "MI",
+    "candidateID": "28",
+    "popVotes": "51463",
+    "candidateName": "Jill Stein",
+    "stateName": "Michigan",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "MN",
+    "candidateID": "28",
+    "popVotes": "36985",
+    "candidateName": "Jill Stein",
+    "stateName": "Minnesota",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "MS",
+    "candidateID": "28",
+    "popVotes": "3731",
+    "candidateName": "Jill Stein",
+    "stateName": "Mississippi",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "MO",
+    "candidateID": "28",
+    "popVotes": "25419",
+    "candidateName": "Jill Stein",
+    "stateName": "Missouri",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "MT",
+    "candidateID": "28",
+    "popVotes": "7970",
+    "candidateName": "Jill Stein",
+    "stateName": "Montana",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "NE",
+    "candidateID": "28",
+    "popVotes": "8775",
+    "candidateName": "Jill Stein",
+    "stateName": "Nebraska",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "NH",
+    "candidateID": "28",
+    "popVotes": "6496",
+    "candidateName": "Jill Stein",
+    "stateName": "New Hampshire",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "NJ",
+    "candidateID": "28",
+    "popVotes": "37772",
+    "candidateName": "Jill Stein",
+    "stateName": "New Jersey",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "NM",
+    "candidateID": "28",
+    "popVotes": "9879",
+    "candidateName": "Jill Stein",
+    "stateName": "New Mexico",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "NY",
+    "candidateID": "28",
+    "popVotes": "107934",
+    "candidateName": "Jill Stein",
+    "stateName": "New York",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "NC",
+    "candidateID": "28",
+    "popVotes": "12105",
+    "candidateName": "Jill Stein",
+    "stateName": "North Carolina",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "ND",
+    "candidateID": "28",
+    "popVotes": "3780",
+    "candidateName": "Jill Stein",
+    "stateName": "North Dakota",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "OH",
+    "candidateID": "28",
+    "popVotes": "46271",
+    "candidateName": "Jill Stein",
+    "stateName": "Ohio",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "OR",
+    "candidateID": "28",
+    "popVotes": "50002",
+    "candidateName": "Jill Stein",
+    "stateName": "Oregon",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "PA",
+    "candidateID": "28",
+    "popVotes": "49941",
+    "candidateName": "Jill Stein",
+    "stateName": "Pennsylvania",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "RI",
+    "candidateID": "28",
+    "popVotes": "6220",
+    "candidateName": "Jill Stein",
+    "stateName": "Rhode Island",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "SC",
+    "candidateID": "28",
+    "popVotes": "13034",
+    "candidateName": "Jill Stein",
+    "stateName": "South Carolina",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "TN",
+    "candidateID": "28",
+    "popVotes": "15993",
+    "candidateName": "Jill Stein",
+    "stateName": "Tennessee",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "TX",
+    "candidateID": "28",
+    "popVotes": "71558",
+    "candidateName": "Jill Stein",
+    "stateName": "Texas",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "UT",
+    "candidateID": "28",
+    "popVotes": "9438",
+    "candidateName": "Jill Stein",
+    "stateName": "Utah",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "VT",
+    "candidateID": "28",
+    "popVotes": "6758",
+    "candidateName": "Jill Stein",
+    "stateName": "Vermont",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "VA",
+    "candidateID": "28",
+    "popVotes": "27638",
+    "candidateName": "Jill Stein",
+    "stateName": "Virginia",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "WA",
+    "candidateID": "28",
+    "popVotes": "58417",
+    "candidateName": "Jill Stein",
+    "stateName": "Washington",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "WV",
+    "candidateID": "28",
+    "popVotes": "8075",
+    "candidateName": "Jill Stein",
+    "stateName": "West Virginia",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "WI",
+    "candidateID": "28",
+    "popVotes": "31072",
+    "candidateName": "Jill Stein",
+    "stateName": "Wisconsin",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "WY",
+    "candidateID": "28",
+    "popVotes": "2515",
+    "candidateName": "Jill Stein",
+    "stateName": "Wyoming",
+    "partyAbbr": "GRE",
+    "partyName": "Green"
+},
+{
+    "stateAbbr": "AZ",
+    "candidateID": "19",
+    "popVotes": "20",
+    "candidateName": "Joseph Allen Maldonado",
+    "stateName": "Arizona",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "CO",
+    "candidateID": "19",
+    "popVotes": "872",
+    "candidateName": "Joseph Allen Maldonado",
+    "stateName": "Colorado",
+    "partyAbbr": "IPC",
+    "partyName": "Independent People of Colorado"
+},
+{
+    "stateAbbr": "CT",
+    "candidateID": "19",
+    "popVotes": "4",
+    "candidateName": "Joseph Allen Maldonado",
+    "stateName": "Connecticut",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "DE",
+    "candidateID": "19",
+    "popVotes": "1",
+    "candidateName": "Joseph Allen Maldonado",
+    "stateName": "Delaware",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "IL",
+    "candidateID": "19",
+    "popVotes": "20",
+    "candidateName": "Joseph Allen Maldonado",
+    "stateName": "Illinois",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "IN",
+    "candidateID": "19",
+    "popVotes": "7",
+    "candidateName": "Joseph Allen Maldonado",
+    "stateName": "Indiana",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "KY",
+    "candidateID": "19",
+    "popVotes": "2",
+    "candidateName": "Joseph Allen Maldonado",
+    "stateName": "Kentucky",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "MD",
+    "candidateID": "19",
+    "popVotes": "12",
+    "candidateName": "Joseph Allen Maldonado",
+    "stateName": "Maryland",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "MT",
+    "candidateID": "19",
+    "popVotes": "1",
+    "candidateName": "Joseph Allen Maldonado",
+    "stateName": "Montana",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "OH",
+    "candidateID": "19",
+    "popVotes": "18",
+    "candidateName": "Joseph Allen Maldonado",
+    "stateName": "Ohio",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "WV",
+    "candidateID": "19",
+    "popVotes": "1",
+    "candidateName": "Joseph Allen Maldonado",
+    "stateName": "West Virginia",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "WI",
+    "candidateID": "19",
+    "popVotes": "4",
+    "candidateName": "Joseph Allen Maldonado",
+    "stateName": "Wisconsin",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "CO",
+    "candidateID": "15",
+    "popVotes": "1096",
+    "candidateName": "Kyle Kenley Kopitke",
+    "stateName": "Colorado",
+    "partyAbbr": "IAP",
+    "partyName": "Independent American  Party"
+},
+{
+    "stateAbbr": "AZ",
+    "candidateID": "16",
+    "popVotes": "52",
+    "candidateName": "Laurence Kotlikoff",
+    "stateName": "Arizona",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "CA",
+    "candidateID": "16",
+    "popVotes": "402",
+    "candidateName": "Laurence Kotlikoff",
+    "stateName": "California",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "CO",
+    "candidateID": "16",
+    "popVotes": "392",
+    "candidateName": "Laurence Kotlikoff",
+    "stateName": "Colorado",
+    "partyAbbr": "KFP",
+    "partyName": "Kotlikoff for President"
+},
+{
+    "stateAbbr": "CT",
+    "candidateID": "16",
+    "popVotes": "23",
+    "candidateName": "Laurence Kotlikoff",
+    "stateName": "Connecticut",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "FL",
+    "candidateID": "16",
+    "popVotes": "74",
+    "candidateName": "Laurence Kotlikoff",
+    "stateName": "Florida",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "GA",
+    "candidateID": "16",
+    "popVotes": "34",
+    "candidateName": "Laurence Kotlikoff",
+    "stateName": "Georgia",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "IL",
+    "candidateID": "16",
+    "popVotes": "82",
+    "candidateName": "Laurence Kotlikoff",
+    "stateName": "Illinois",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "IN",
+    "candidateID": "16",
+    "popVotes": "49",
+    "candidateName": "Laurence Kotlikoff",
+    "stateName": "Indiana",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "KY",
+    "candidateID": "16",
+    "popVotes": "8",
+    "candidateName": "Laurence Kotlikoff",
+    "stateName": "Kentucky",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "LA",
+    "candidateID": "16",
+    "popVotes": "1048",
+    "candidateName": "Laurence Kotlikoff",
+    "stateName": "Louisiana",
+    "partyAbbr": "IOC",
+    "partyName": "Its Our Children"
+},
+{
+    "stateAbbr": "ME",
+    "candidateID": "16",
+    "popVotes": "16",
+    "candidateName": "Laurence Kotlikoff",
+    "stateName": "Maine",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "MD",
+    "candidateID": "16",
+    "popVotes": "73",
+    "candidateName": "Laurence Kotlikoff",
+    "stateName": "Maryland",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "MA",
+    "candidateID": "16",
+    "popVotes": "28",
+    "candidateName": "Laurence Kotlikoff",
+    "stateName": "Massachusetts",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "MI",
+    "candidateID": "16",
+    "popVotes": "87",
+    "candidateName": "Laurence Kotlikoff",
+    "stateName": "Michigan",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "MO",
+    "candidateID": "16",
+    "popVotes": "28",
+    "candidateName": "Laurence Kotlikoff",
+    "stateName": "Missouri",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "MT",
+    "candidateID": "16",
+    "popVotes": "7",
+    "candidateName": "Laurence Kotlikoff",
+    "stateName": "Montana",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "OH",
+    "candidateID": "16",
+    "popVotes": "90",
+    "candidateName": "Laurence Kotlikoff",
+    "stateName": "Ohio",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "TN",
+    "candidateID": "16",
+    "popVotes": "20",
+    "candidateName": "Laurence Kotlikoff",
+    "stateName": "Tennessee",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "TX",
+    "candidateID": "16",
+    "popVotes": "1037",
+    "candidateName": "Laurence Kotlikoff",
+    "stateName": "Texas",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "UT",
+    "candidateID": "16",
+    "popVotes": "9",
+    "candidateName": "Laurence Kotlikoff",
+    "stateName": "Utah",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "VT",
+    "candidateID": "16",
+    "popVotes": "3",
+    "candidateName": "Laurence Kotlikoff",
+    "stateName": "Vermont",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "WV",
+    "candidateID": "16",
+    "popVotes": "4",
+    "candidateName": "Laurence Kotlikoff",
+    "stateName": "West Virginia",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "WI",
+    "candidateID": "16",
+    "popVotes": "15",
+    "candidateName": "Laurence Kotlikoff",
+    "stateName": "Wisconsin",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "AR",
+    "candidateID": "12",
+    "popVotes": "3390",
+    "candidateName": "Lynn S. Kahn",
+    "stateName": "Arkansas",
+    "partyAbbr": "IND",
+    "partyName": "Independent"
+},
+{
+    "stateAbbr": "DE",
+    "candidateID": "12",
+    "popVotes": "1",
+    "candidateName": "Lynn S. Kahn",
+    "stateName": "Delaware",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "IA",
+    "candidateID": "12",
+    "popVotes": "2247",
+    "candidateName": "Lynn S. Kahn",
+    "stateName": "Iowa",
+    "partyAbbr": "NPI",
+    "partyName": "New Independent Party Iowa"
+},
+{
+    "stateAbbr": "KS",
+    "candidateID": "12",
+    "popVotes": "2",
+    "candidateName": "Lynn S. Kahn",
+    "stateName": "Kansas",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "MD",
+    "candidateID": "12",
+    "popVotes": "18",
+    "candidateName": "Lynn S. Kahn",
+    "stateName": "Maryland",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "NY",
+    "candidateID": "12",
+    "popVotes": "72",
+    "candidateName": "Lynn S. Kahn",
+    "stateName": "New York",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "PA",
+    "candidateID": "12",
+    "popVotes": "3",
+    "candidateName": "Lynn S. Kahn",
+    "stateName": "Pennsylvania",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "CA",
+    "candidateID": "20",
+    "popVotes": "1316",
+    "candidateName": "Michael A. Maturen",
+    "stateName": "California",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "CO",
+    "candidateID": "20",
+    "popVotes": "862",
+    "candidateName": "Michael A. Maturen",
+    "stateName": "Colorado",
+    "partyAbbr": "ASP",
+    "partyName": "American Solidarity Party"
+},
+{
+    "stateAbbr": "GA",
+    "candidateID": "20",
+    "popVotes": "151",
+    "candidateName": "Michael A. Maturen",
+    "stateName": "Georgia",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "KS",
+    "candidateID": "20",
+    "popVotes": "214",
+    "candidateName": "Michael A. Maturen",
+    "stateName": "Kansas",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "KY",
+    "candidateID": "20",
+    "popVotes": "155",
+    "candidateName": "Michael A. Maturen",
+    "stateName": "Kentucky",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "MD",
+    "candidateID": "20",
+    "popVotes": "504",
+    "candidateName": "Michael A. Maturen",
+    "stateName": "Maryland",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "MI",
+    "candidateID": "20",
+    "popVotes": "517",
+    "candidateName": "Michael A. Maturen",
+    "stateName": "Michigan",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "NY",
+    "candidateID": "20",
+    "popVotes": "458",
+    "candidateName": "Michael A. Maturen",
+    "stateName": "New York",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "OH",
+    "candidateID": "20",
+    "popVotes": "552",
+    "candidateName": "Michael A. Maturen",
+    "stateName": "Ohio",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "RI",
+    "candidateID": "20",
+    "popVotes": "46",
+    "candidateName": "Michael A. Maturen",
+    "stateName": "Rhode Island",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "TX",
+    "candidateID": "20",
+    "popVotes": "1401",
+    "candidateName": "Michael A. Maturen",
+    "stateName": "Texas",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "VT",
+    "candidateID": "20",
+    "popVotes": "14",
+    "candidateName": "Michael A. Maturen",
+    "stateName": "Vermont",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "WI",
+    "candidateID": "20",
+    "popVotes": "284",
+    "candidateName": "Michael A. Maturen",
+    "stateName": "Wisconsin",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "AZ",
+    "candidateID": "26",
+    "popVotes": "62",
+    "candidateName": "Mike Smith",
+    "stateName": "Arizona",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "CO",
+    "candidateID": "26",
+    "popVotes": "1819",
+    "candidateName": "Mike Smith",
+    "stateName": "Colorado",
+    "partyAbbr": "UN",
+    "partyName": "Unaffiliated"
+},
+{
+    "stateAbbr": "CT",
+    "candidateID": "26",
+    "popVotes": "12",
+    "candidateName": "Mike Smith",
+    "stateName": "Connecticut",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "DE",
+    "candidateID": "26",
+    "popVotes": "3",
+    "candidateName": "Mike Smith",
+    "stateName": "Delaware",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "GA",
+    "candidateID": "26",
+    "popVotes": "53",
+    "candidateName": "Mike Smith",
+    "stateName": "Georgia",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "KS",
+    "candidateID": "26",
+    "popVotes": "6",
+    "candidateName": "Mike Smith",
+    "stateName": "Kansas",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "KY",
+    "candidateID": "26",
+    "popVotes": "9",
+    "candidateName": "Mike Smith",
+    "stateName": "Kentucky",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "MD",
+    "candidateID": "26",
+    "popVotes": "13",
+    "candidateName": "Mike Smith",
+    "stateName": "Maryland",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "MT",
+    "candidateID": "26",
+    "popVotes": "1",
+    "candidateName": "Mike Smith",
+    "stateName": "Montana",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "OH",
+    "candidateID": "26",
+    "popVotes": "62",
+    "candidateName": "Mike Smith",
+    "stateName": "Ohio",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "TN",
+    "candidateID": "26",
+    "popVotes": "7276",
+    "candidateName": "Mike Smith",
+    "stateName": "Tennessee",
+    "partyAbbr": "IND",
+    "partyName": "Independent"
+},
+{
+    "stateAbbr": "UT",
+    "candidateID": "26",
+    "popVotes": "19",
+    "candidateName": "Mike Smith",
+    "stateName": "Utah",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "VT",
+    "candidateID": "26",
+    "popVotes": "1",
+    "candidateName": "Mike Smith",
+    "stateName": "Vermont",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "WV",
+    "candidateID": "26",
+    "popVotes": "2",
+    "candidateName": "Mike Smith",
+    "stateName": "West Virginia",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "MA",
+    "candidateID": "22",
+    "popVotes": "15",
+    "candidateName": "Monica Moorehead",
+    "stateName": "Massachusetts",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "MI",
+    "candidateID": "22",
+    "popVotes": "30",
+    "candidateName": "Monica Moorehead",
+    "stateName": "Michigan",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "NJ",
+    "candidateID": "22",
+    "popVotes": "1749",
+    "candidateName": "Monica Moorehead",
+    "stateName": "New Jersey",
+    "partyAbbr": "WW",
+    "partyName": "Workers World"
+},
+{
+    "stateAbbr": "NY",
+    "candidateID": "22",
+    "popVotes": "68",
+    "candidateName": "Monica Moorehead",
+    "stateName": "New York",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "OH",
+    "candidateID": "22",
+    "popVotes": "19",
+    "candidateName": "Monica Moorehead",
+    "stateName": "Ohio",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "TX",
+    "candidateID": "22",
+    "popVotes": "122",
+    "candidateName": "Monica Moorehead",
+    "stateName": "Texas",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "UT",
+    "candidateID": "22",
+    "popVotes": "544",
+    "candidateName": "Monica Moorehead",
+    "stateName": "Utah",
+    "partyAbbr": "UN",
+    "partyName": "Unaffiliated"
+},
+{
+    "stateAbbr": "WI",
+    "candidateID": "22",
+    "popVotes": "1770",
+    "candidateName": "Monica Moorehead",
+    "stateName": "Wisconsin",
+    "partyAbbr": "WW",
+    "partyName": "Workers World"
+},
+{
+    "stateAbbr": "CT",
+    "candidateID": "25",
+    "popVotes": "4",
+    "candidateName": "Peter Skewes",
+    "stateName": "Connecticut",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "SC",
+    "candidateID": "25",
+    "popVotes": "3246",
+    "candidateName": "Peter Skewes",
+    "stateName": "South Carolina",
+    "partyAbbr": "AM",
+    "partyName": "American Party"
+},
+{
+    "stateAbbr": "LA",
+    "candidateID": "10",
+    "popVotes": "749",
+    "candidateName": "Princess Jacob",
+    "stateName": "Louisiana",
+    "partyAbbr": "LTC",
+    "partyName": "Loyal Trustworthy Compassion"
+},
+{
+    "stateAbbr": "DE",
+    "candidateID": "6",
+    "popVotes": "1",
+    "candidateName": "Richard Duncan",
+    "stateName": "Delaware",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "FL",
+    "candidateID": "6",
+    "popVotes": "25",
+    "candidateName": "Richard Duncan",
+    "stateName": "Florida",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "IN",
+    "candidateID": "6",
+    "popVotes": "25",
+    "candidateName": "Richard Duncan",
+    "stateName": "Indiana",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "KY",
+    "candidateID": "6",
+    "popVotes": "2",
+    "candidateName": "Richard Duncan",
+    "stateName": "Kentucky",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "MD",
+    "candidateID": "6",
+    "popVotes": "18",
+    "candidateName": "Richard Duncan",
+    "stateName": "Maryland",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "OH",
+    "candidateID": "6",
+    "popVotes": "24235",
+    "candidateName": "Richard Duncan",
+    "stateName": "Ohio",
+    "partyAbbr": "N",
+    "partyName": "Nonpartisan"
+},
+{
+    "stateAbbr": "WV",
+    "candidateID": "6",
+    "popVotes": "1",
+    "candidateName": "Richard Duncan",
+    "stateName": "West Virginia",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "UT",
+    "candidateID": "7",
+    "popVotes": "2752",
+    "candidateName": "Rocky Giordani",
+    "stateName": "Utah",
+    "partyAbbr": "IAP",
+    "partyName": "Independent American  Party"
+},
+{
+    "stateAbbr": "CO",
+    "candidateID": "24",
+    "popVotes": "751",
+    "candidateName": "Rod Silva",
+    "stateName": "Colorado",
+    "partyAbbr": "NTP",
+    "partyName": "Nutrition Party"
+},
+{
+    "stateAbbr": "AK",
+    "candidateID": "5",
+    "popVotes": "1240",
+    "candidateName": "Roque \"Rocky\" De La Fuente",
+    "stateName": "Alaska",
+    "partyAbbr": "NAF",
+    "partyName": "Nonaffiliated"
+},
+{
+    "stateAbbr": "AZ",
+    "candidateID": "5",
+    "popVotes": "29",
+    "candidateName": "Roque \"Rocky\" De La Fuente",
+    "stateName": "Arizona",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "CO",
+    "candidateID": "5",
+    "popVotes": "1255",
+    "candidateName": "Roque \"Rocky\" De La Fuente",
+    "stateName": "Colorado",
+    "partyAbbr": "ADP",
+    "partyName": "American Delta Party"
+},
+{
+    "stateAbbr": "CT",
+    "candidateID": "5",
+    "popVotes": "12",
+    "candidateName": "Roque \"Rocky\" De La Fuente",
+    "stateName": "Connecticut",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "DE",
+    "candidateID": "5",
+    "popVotes": "3",
+    "candidateName": "Roque \"Rocky\" De La Fuente",
+    "stateName": "Delaware",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "FL",
+    "candidateID": "5",
+    "popVotes": "9108",
+    "candidateName": "Roque \"Rocky\" De La Fuente",
+    "stateName": "Florida",
+    "partyAbbr": "RPF",
+    "partyName": "Reform Party of Florida"
+},
+{
+    "stateAbbr": "ID",
+    "candidateID": "5",
+    "popVotes": "1373",
+    "candidateName": "Roque \"Rocky\" De La Fuente",
+    "stateName": "Idaho",
+    "partyAbbr": "IND",
+    "partyName": "Independent"
+},
+{
+    "stateAbbr": "IN",
+    "candidateID": "5",
+    "popVotes": "21",
+    "candidateName": "Roque \"Rocky\" De La Fuente",
+    "stateName": "Indiana",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "IA",
+    "candidateID": "5",
+    "popVotes": "451",
+    "candidateName": "Roque \"Rocky\" De La Fuente",
+    "stateName": "Iowa",
+    "partyAbbr": "NP",
+    "partyName": "Nominated by Petition"
+},
+{
+    "stateAbbr": "KS",
+    "candidateID": "5",
+    "popVotes": "3",
+    "candidateName": "Roque \"Rocky\" De La Fuente",
+    "stateName": "Kansas",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "KY",
+    "candidateID": "5",
+    "popVotes": "1128",
+    "candidateName": "Roque \"Rocky\" De La Fuente",
+    "stateName": "Kentucky",
+    "partyAbbr": "ADP",
+    "partyName": "American Delta Party"
+},
+{
+    "stateAbbr": "MD",
+    "candidateID": "5",
+    "popVotes": "14",
+    "candidateName": "Roque \"Rocky\" De La Fuente",
+    "stateName": "Maryland",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "MN",
+    "candidateID": "5",
+    "popVotes": "1431",
+    "candidateName": "Roque \"Rocky\" De La Fuente",
+    "stateName": "Minnesota",
+    "partyAbbr": "ADP",
+    "partyName": "American Delta Party"
+},
+{
+    "stateAbbr": "MS",
+    "candidateID": "5",
+    "popVotes": "644",
+    "candidateName": "Roque \"Rocky\" De La Fuente",
+    "stateName": "Mississippi",
+    "partyAbbr": "ADP",
+    "partyName": "American Delta Party"
+},
+{
+    "stateAbbr": "MO",
+    "candidateID": "5",
+    "popVotes": "6",
+    "candidateName": "Roque \"Rocky\" De La Fuente",
+    "stateName": "Missouri",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "MT",
+    "candidateID": "5",
+    "popVotes": "1570",
+    "candidateName": "Roque \"Rocky\" De La Fuente",
+    "stateName": "Montana",
+    "partyAbbr": "ADP",
+    "partyName": "American Delta Party"
+},
+{
+    "stateAbbr": "NV",
+    "candidateID": "5",
+    "popVotes": "2552",
+    "candidateName": "Roque \"Rocky\" De La Fuente",
+    "stateName": "Nevada",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "NH",
+    "candidateID": "5",
+    "popVotes": "678",
+    "candidateName": "Roque \"Rocky\" De La Fuente",
+    "stateName": "New Hampshire",
+    "partyAbbr": "ADP",
+    "partyName": "American Delta Party"
+},
+{
+    "stateAbbr": "NJ",
+    "candidateID": "5",
+    "popVotes": "1838",
+    "candidateName": "Roque \"Rocky\" De La Fuente",
+    "stateName": "New Jersey",
+    "partyAbbr": "ADP",
+    "partyName": "American Delta Party"
+},
+{
+    "stateAbbr": "NM",
+    "candidateID": "5",
+    "popVotes": "475",
+    "candidateName": "Roque \"Rocky\" De La Fuente",
+    "stateName": "New Mexico",
+    "partyAbbr": "ADP",
+    "partyName": "American Delta Party"
+},
+{
+    "stateAbbr": "NY",
+    "candidateID": "5",
+    "popVotes": "35",
+    "candidateName": "Roque \"Rocky\" De La Fuente",
+    "stateName": "New York",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "ND",
+    "candidateID": "5",
+    "popVotes": "364",
+    "candidateName": "Roque \"Rocky\" De La Fuente",
+    "stateName": "North Dakota",
+    "partyAbbr": "ADP",
+    "partyName": "American Delta Party"
+},
+{
+    "stateAbbr": "RI",
+    "candidateID": "5",
+    "popVotes": "671",
+    "candidateName": "Roque \"Rocky\" De La Fuente",
+    "stateName": "Rhode Island",
+    "partyAbbr": "ADP",
+    "partyName": "American Delta Party"
+},
+{
+    "stateAbbr": "TN",
+    "candidateID": "5",
+    "popVotes": "4075",
+    "candidateName": "Roque \"Rocky\" De La Fuente",
+    "stateName": "Tennessee",
+    "partyAbbr": "IND",
+    "partyName": "Independent"
+},
+{
+    "stateAbbr": "UT",
+    "candidateID": "5",
+    "popVotes": "883",
+    "candidateName": "Roque \"Rocky\" De La Fuente",
+    "stateName": "Utah",
+    "partyAbbr": "UN",
+    "partyName": "Unaffiliated"
+},
+{
+    "stateAbbr": "VT",
+    "candidateID": "5",
+    "popVotes": "1063",
+    "candidateName": "Roque \"Rocky\" De La Fuente",
+    "stateName": "Vermont",
+    "partyAbbr": "IND",
+    "partyName": "Independent"
+},
+{
+    "stateAbbr": "WV",
+    "candidateID": "5",
+    "popVotes": "3",
+    "candidateName": "Roque \"Rocky\" De La Fuente",
+    "stateName": "West Virginia",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "WI",
+    "candidateID": "5",
+    "popVotes": "1502",
+    "candidateName": "Roque \"Rocky\" De La Fuente",
+    "stateName": "Wisconsin",
+    "partyAbbr": "ADP",
+    "partyName": "American Delta Party"
+},
+{
+    "stateAbbr": "WY",
+    "candidateID": "5",
+    "popVotes": "709",
+    "candidateName": "Roque \"Rocky\" De La Fuente",
+    "stateName": "Wyoming",
+    "partyAbbr": "IND",
+    "partyName": "Independent"
+},
+{
+    "stateAbbr": "CO",
+    "candidateID": "23",
+    "popVotes": "749",
+    "candidateName": "Ryan Alan Scott",
+    "stateName": "Colorado",
+    "partyAbbr": "UN",
+    "partyName": "Unaffiliated"
+},
+{
+    "stateAbbr": "DE",
+    "candidateID": "23",
+    "popVotes": "2",
+    "candidateName": "Ryan Alan Scott",
+    "stateName": "Delaware",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "NY",
+    "candidateID": "23",
+    "popVotes": "3",
+    "candidateName": "Ryan Alan Scott",
+    "stateName": "New York",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "ID",
+    "candidateID": "4",
+    "popVotes": "2356",
+    "candidateName": "Scott Copeland",
+    "stateName": "Idaho",
+    "partyAbbr": "CON",
+    "partyName": "Constitution"
+},
+{
+    "stateAbbr": "AZ",
+    "candidateID": "9",
+    "popVotes": "85",
+    "candidateName": "Tom Hoefling",
+    "stateName": "Arizona",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "CO",
+    "candidateID": "9",
+    "popVotes": "710",
+    "candidateName": "Tom Hoefling",
+    "stateName": "Colorado",
+    "partyAbbr": "AMP",
+    "partyName": "Americas Party"
+},
+{
+    "stateAbbr": "CT",
+    "candidateID": "9",
+    "popVotes": "31",
+    "candidateName": "Tom Hoefling",
+    "stateName": "Connecticut",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "DE",
+    "candidateID": "9",
+    "popVotes": "7",
+    "candidateName": "Tom Hoefling",
+    "stateName": "Delaware",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "GA",
+    "candidateID": "9",
+    "popVotes": "70",
+    "candidateName": "Tom Hoefling",
+    "stateName": "Georgia",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "IL",
+    "candidateID": "9",
+    "popVotes": "175",
+    "candidateName": "Tom Hoefling",
+    "stateName": "Illinois",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "IN",
+    "candidateID": "9",
+    "popVotes": "269",
+    "candidateName": "Tom Hoefling",
+    "stateName": "Indiana",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "KS",
+    "candidateID": "9",
+    "popVotes": "45",
+    "candidateName": "Tom Hoefling",
+    "stateName": "Kansas",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "KY",
+    "candidateID": "9",
+    "popVotes": "39",
+    "candidateName": "Tom Hoefling",
+    "stateName": "Kentucky",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "LA",
+    "candidateID": "9",
+    "popVotes": "1581",
+    "candidateName": "Tom Hoefling",
+    "stateName": "Louisiana",
+    "partyAbbr": "LFC",
+    "partyName": "Life Family Constitution"
+},
+{
+    "stateAbbr": "MD",
+    "candidateID": "9",
+    "popVotes": "42",
+    "candidateName": "Tom Hoefling",
+    "stateName": "Maryland",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "MI",
+    "candidateID": "9",
+    "popVotes": "95",
+    "candidateName": "Tom Hoefling",
+    "stateName": "Michigan",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "MO",
+    "candidateID": "9",
+    "popVotes": "48",
+    "candidateName": "Tom Hoefling",
+    "stateName": "Missouri",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "MT",
+    "candidateID": "9",
+    "popVotes": "10",
+    "candidateName": "Tom Hoefling",
+    "stateName": "Montana",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "NY",
+    "candidateID": "9",
+    "popVotes": "136",
+    "candidateName": "Tom Hoefling",
+    "stateName": "New York",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "OH",
+    "candidateID": "9",
+    "popVotes": "268",
+    "candidateName": "Tom Hoefling",
+    "stateName": "Ohio",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "TN",
+    "candidateID": "9",
+    "popVotes": "132",
+    "candidateName": "Tom Hoefling",
+    "stateName": "Tennessee",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "TX",
+    "candidateID": "9",
+    "popVotes": "932",
+    "candidateName": "Tom Hoefling",
+    "stateName": "Texas",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "UT",
+    "candidateID": "9",
+    "popVotes": "6",
+    "candidateName": "Tom Hoefling",
+    "stateName": "Utah",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "WV",
+    "candidateID": "9",
+    "popVotes": "10",
+    "candidateName": "Tom Hoefling",
+    "stateName": "West Virginia",
+    "partyAbbr": null,
+    "partyName": null
+},
+{
+    "stateAbbr": "WI",
+    "candidateID": "9",
+    "popVotes": "80",
+    "candidateName": "Tom Hoefling",
+    "stateName": "Wisconsin",
+    "partyAbbr": null,
+    "partyName": null
+}
+]
+
+}
+]
