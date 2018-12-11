@@ -6,257 +6,308 @@
 {
     "abbr": "AL",
     "name": "Alabama",
-    "ec": "9"
+    "ec": "9",
+    "candidates": []
 },
 {
     "abbr": "AK",
     "name": "Alaska",
-    "ec": "3"
+    "ec": "3",
+    "candidates": []
 },
 {
     "abbr": "AZ",
     "name": "Arizona",
-    "ec": "11"
+    "ec": "11",
+    "candidates": []
 },
 {
     "abbr": "AR",
     "name": "Arkansas",
-    "ec": "6"
+    "ec": "6",
+    "candidates": []
 },
 {
     "abbr": "CA",
     "name": "California",
-    "ec": "55"
+    "ec": "55",
+    "candidates": []
 },
 {
     "abbr": "CO",
     "name": "Colorado",
-    "ec": "9"
+    "ec": "9",
+    "candidates": []
 },
 {
     "abbr": "CT",
     "name": "Connecticut",
-    "ec": "7"
+    "ec": "7",
+    "candidates": []
 },
 {
     "abbr": "DE",
     "name": "Delaware",
-    "ec": "3"
+    "ec": "3",
+    "candidates": []
 },
 {
     "abbr": "DC",
     "name": "District of Columbia",
-    "ec": "3"
+    "ec": "3",
+    "candidates": []
 },
 {
     "abbr": "FL",
     "name": "Florida",
-    "ec": "29"
+    "ec": "29",
+    "candidates": []
 },
 {
     "abbr": "GA",
     "name": "Georgia",
-    "ec": "16"
+    "ec": "16",
+    "candidates": []
 },
 {
     "abbr": "HI",
     "name": "Hawaii",
-    "ec": "4"
+    "ec": "4",
+    "candidates": []
 },
 {
     "abbr": "ID",
     "name": "Idaho",
-    "ec": "4"
+    "ec": "4",
+    "candidates": []
 },
 {
     "abbr": "IL",
     "name": "Illinois",
-    "ec": "20"
+    "ec": "2[]",
+    "candidates": []
 },
 {
     "abbr": "IN",
     "name": "Indiana",
-    "ec": "11"
+    "ec": "11",
+    "candidates": []
 },
 {
     "abbr": "IA",
     "name": "Iowa",
-    "ec": "6"
+    "ec": "6",
+    "candidates": []
 },
 {
     "abbr": "KS",
     "name": "Kansas",
-    "ec": "6"
+    "ec": "6",
+    "candidates": []
 },
 {
     "abbr": "KY",
     "name": "Kentucky",
-    "ec": "8"
+    "ec": "8",
+    "candidates": []
 },
 {
     "abbr": "LA",
     "name": "Louisiana",
-    "ec": "8"
+    "ec": "8",
+    "candidates": []
 },
 {
     "abbr": "ME",
     "name": "Maine",
-    "ec": "4"
+    "ec": "4",
+    "candidates": []
 },
 {
     "abbr": "MD",
     "name": "Maryland",
-    "ec": "10"
+    "ec": "1[]",
+    "candidates": []
 },
 {
     "abbr": "MA",
     "name": "Massachusetts",
-    "ec": "11"
+    "ec": "11",
+    "candidates": []
 },
 {
     "abbr": "MI",
     "name": "Michigan",
-    "ec": "16"
+    "ec": "16",
+    "candidates": []
 },
 {
     "abbr": "MN",
     "name": "Minnesota",
-    "ec": "10"
+    "ec": "1[]",
+    "candidates": []
 },
 {
     "abbr": "MS",
     "name": "Mississippi",
-    "ec": "6"
+    "ec": "6",
+    "candidates": []
 },
 {
     "abbr": "MO",
     "name": "Missouri",
-    "ec": "10"
+    "ec": "1[]",
+    "candidates": []
 },
 {
     "abbr": "MT",
     "name": "Montana",
-    "ec": "3"
+    "ec": "3",
+    "candidates": []
 },
 {
     "abbr": "NE",
     "name": "Nebraska",
-    "ec": "5"
+    "ec": "5",
+    "candidates": []
 },
 {
     "abbr": "NV",
     "name": "Nevada",
-    "ec": "6"
+    "ec": "6",
+    "candidates": []
 },
 {
     "abbr": "NH",
     "name": "New Hampshire",
-    "ec": "4"
+    "ec": "4",
+    "candidates": []
 },
 {
     "abbr": "NJ",
     "name": "New Jersey",
-    "ec": "14"
+    "ec": "14",
+    "candidates": []
 },
 {
     "abbr": "NM",
     "name": "New Mexico",
-    "ec": "5"
+    "ec": "5",
+    "candidates": []
 },
 {
     "abbr": "NY",
     "name": "New York",
-    "ec": "29"
+    "ec": "29",
+    "candidates": []
 },
 {
     "abbr": "NC",
     "name": "North Carolina",
-    "ec": "15"
+    "ec": "15",
+    "candidates": []
 },
 {
     "abbr": "ND",
     "name": "North Dakota",
-    "ec": "3"
+    "ec": "3",
+    "candidates": []
 },
 {
     "abbr": "OH",
     "name": "Ohio",
-    "ec": "18"
+    "ec": "18",
+    "candidates": []
 },
 {
     "abbr": "OK",
     "name": "Oklahoma",
-    "ec": "7"
+    "ec": "7",
+    "candidates": []
 },
 {
     "abbr": "OR",
     "name": "Oregon",
-    "ec": "7"
+    "ec": "7",
+    "candidates": []
 },
 {
     "abbr": "PA",
     "name": "Pennsylvania",
-    "ec": "20"
+    "ec": "2[]",
+    "candidates": []
 },
 {
     "abbr": "RI",
     "name": "Rhode Island",
-    "ec": "4"
+    "ec": "4",
+    "candidates": []
 },
 {
     "abbr": "SC",
     "name": "South Carolina",
-    "ec": "9"
+    "ec": "9",
+    "candidates": []
 },
 {
     "abbr": "SD",
     "name": "South Dakota",
-    "ec": "3"
+    "ec": "3",
+    "candidates": []
 },
 {
     "abbr": "TN",
     "name": "Tennessee",
-    "ec": "11"
+    "ec": "11",
+    "candidates": []
 },
 {
     "abbr": "TX",
     "name": "Texas",
-    "ec": "38"
+    "ec": "38",
+    "candidates": []
 },
 {
     "abbr": "UT",
     "name": "Utah",
-    "ec": "6"
+    "ec": "6",
+    "candidates": []
 },
 {
     "abbr": "VT",
     "name": "Vermont",
-    "ec": "3"
+    "ec": "3",
+    "candidates": []
 },
 {
     "abbr": "VA",
     "name": "Virginia",
-    "ec": "13"
+    "ec": "13",
+    "candidates": []
 },
 {
     "abbr": "WA",
     "name": "Washington",
-    "ec": "12"
+    "ec": "12",
+    "candidates": []
 },
 {
     "abbr": "WV",
     "name": "West Virginia",
-    "ec": "5"
+    "ec": "5",
+    "candidates": []
 },
 {
     "abbr": "WI",
     "name": "Wisconsin",
-    "ec": "10"
+    "ec": "1[]",
+    "candidates": []
 },
 {
     "abbr": "WY",
     "name": "Wyoming",
-    "ec": "3"
+    "ec": "3",
+    "candidates": []
 }
 ]
 
