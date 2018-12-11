@@ -73,7 +73,7 @@ function filterCandidates (response, myFilter) {
             return candidateResult;
         };
     });
-    console.log("These are the filteredCandidates at end of filterCandidates " + filteredCandidates);
+    //console.log("These are the filteredCandidates at end of filterCandidates " + filteredCandidates);
 	// do I need this next return?
     return filteredCandidates;
 }
@@ -122,6 +122,10 @@ function wrangleWinners (filteredCandidates) {
         let stateCandidates = filteredCandidates.filter(function (candidateResult){
             return candidateResult.stateAbbr === state.abbr;
         });
+
+        console.log(stateCandidates);
+
+        state.candidates = stateCandidates;
         
         // What if there are no stateCandidates?
         if (stateCandidates.length > 0) {	
@@ -329,36 +333,39 @@ function getGeoJSON () {
 }; // end of getGeoJSON
 
 function allThisStuff (myFilter) {
-	console.log("allThisStuff has started and myFilter = " + myFilter);
+	//console.log("allThisStuff has started and myFilter = " + myFilter);
     fetch("everyone.php").then(function(response){   
-        console.log("RESPONSE at start of allThisStuff = " + response);        
+        //console.log("RESPONSE at start of allThisStuff = " + response);        
         return response.json();
     }).then(function(response){ 
         filteredCandidates = filterCandidates(response, myFilter);
         wrangleWinners (filteredCandidates);
         getGeoJSON();    
     });
+    console.log(states);
 } // end of allThisStuff
 
-let opponentsArray = allSocialists;
+//let opponentsArray = allSocialists;
+// is making everyone the default this easy?
+let opponentsArray = everyone;
 
 allThisStuff (opponentsArray);  
 	
 function battlefield (them, person) {
     fetch("everyone.php").then(function(response){  
-        console.log("RESPONSE at start of BATTLEFIELD = " + response);          
+        //console.log("RESPONSE at start of BATTLEFIELD = " + response);          
         return response.json();
     }).then(function(response){ 
         filteredCandidates = [];
         let filteredThem = filterCandidates(response, them);
-        console.log("filteredThem before combining are " + filteredCandidates);
+        //console.log("filteredThem before combining are " + filteredCandidates);
         combineThem (filteredThem);
-        console.log("filteredThem after combining are " + filteredCandidates);
+        //console.log("filteredThem after combining are " + filteredCandidates);
         let filteredPerson = filterCandidates(response, person);
-        console.log("themResults are " + themResults);
+        //console.log("themResults are " + themResults);
         // Changing next line from themResults to filteredThem BUT NOT YET
         filteredCandidates = [...themResults,...filteredPerson];
-        console.log("filteredCandidates after concatenating are " + filteredCandidates);
+        //console.log("filteredCandidates after concatenating are " + filteredCandidates);
         wrangleWinners (filteredCandidates);
         getGeoJSON();    
     });    
@@ -376,7 +383,7 @@ function battlefield3 (left, right) {
         let filteredRight = filterCandidates(response, right);
 		let finalRight = combineThem (filteredRight);
         filteredCandidates = [...finalLeft,...finalRight];
-		console.log(filteredCandidates);
+		//console.log(filteredCandidates);
         wrangleWinners (filteredCandidates);
         getGeoJSON();    
     });    
@@ -386,7 +393,7 @@ function battlefield3 (left, right) {
 $(document).ready(function(){
     $('input[type=radio]').click(function(){
         let buttonvalue = this.value;
-		console.log(buttonvalue);
+		//console.log(buttonvalue);
         switch (buttonvalue) {
             case 'socialists-all':
                 allThisStuff(allSocialists);
@@ -428,7 +435,7 @@ $(document).ready(function(){
 
         <div class="form-check">
             <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="opponents" id="socialists-all" value="socialists-all" checked="">
+                <input type="radio" class="form-check-input" name="opponents" id="socialists-all" value="socialists-all">
                 All Socialists
             </label>
         </div>
@@ -470,7 +477,7 @@ $(document).ready(function(){
         </div>  
         <div class="form-check">
             <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="opponents" id="everyone" value="everyone"> 
+                <input type="radio" class="form-check-input" name="opponents" id="everyone" value="everyone" checked=""> 
                 Everyone
             </label>
         </div>          
