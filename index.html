@@ -24,11 +24,16 @@
     </head>
 <body>
 <div class="container">
+
     <h1>2016 Presidential Election Insights</h1>
+
     <p><a href="https://github.com/jotasprout/prezPlayPro">Ye Olde GitHub Repo</a></p>
     <p>Compare different outcomes based on certain candidates. For example, if all "Left wing" candidates combined their votes, could they have collectively defeated Trump?</p>
     <p>At present, I'm using only the popular vote for each state. Electoral College results (and other interactive yummy goodness) coming soon.</p>
+
+    <div id="stateCandidates" class="hidden"></div>
     <div id="mappymap"></div>
+
 <script>
 
 // Width and Height
@@ -212,10 +217,10 @@ function attachCandidatesToMap (json) {
     for (var i = 0; i < winners.length; i++) {
         // Get the state name
         let candiState = candiStates[i][0].stateName;
-        console.log("candiState is " + candiState);
+        
         // Get winning candidate
         let theseCandidates = candiStates[i];
-        console.log("this states candidates are " + theseCandidates);
+        
         //Find the corresponding state inside the GeoJSON
         for (var j = 0; j < json.features.length; j++) {
             let jsonState = json.features[j].properties.name;
@@ -351,11 +356,44 @@ function colorStates (usasvg) {
                     break;  
             }
         })
+        .on("mouseover", function(d) {
+            //const candidates = d.properties.candidates;
+            const stateCandi = d3.select("#stateCandidates");
+            //const candiName = d.properties.candidates[0].candidateName;
+            //const popVotes = d.properties.candidates[0].popVotes;
+            stateCandi.classed("hidden", false);
+            //stateCandi.text(`${candiName} got ${popVotes}`);
+            
+            for (var c = 0; c < d.properties.candidates.length; c++) {
+                const candiID = d.properties.candidates[c].candidateID;
+                const candiName = d.properties.candidates[c].candidateName;
+                const popVotes = d.properties.candidates[c].popVotes;
+                const candiParty = d.properties.candidates[c].partyAbbr;
+                stateCandi.append("div")
+                          .text(`${candiName} (${candiParty}), ${popVotes}`);
+                //console.log(`${candiName} got ${popVotes}`);
+            }
+            /**/
+        })
         .append("title")
         .text(function(d){
             return d.properties.name + ": " + d.properties.winnerName + ", " + d.properties.partyName + ", (" + d.properties.partyAbbr + ")";
-        }); 
+        });
+
+        /*
+        .on("mouseout", function(){
+            d3.select("#stateCandidates").classed("hidden", true);
+        });
+        */
+         
 } // end of colorStates 
+
+function makeToolTip (d) {
+    
+    svg.select("#stateCandidates")
+       .text(`${candiName} (${candiParty}) got ${popVotes} votes`);
+    console.log(`${candiName} (${candiParty}) got ${popVotes} votes`);
+}
 
 function getGeoJSON () {
     d3.json("myPrezData/us-states.json", function(json) {
