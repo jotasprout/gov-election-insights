@@ -51,6 +51,7 @@ const svg = d3.select("#mappymap")
                 .attr("height", h);
 
 let winners = [];
+let candiStates = [];
 let themResults = [];
 let filteredCandidates = [];
 let themID = 0;
@@ -115,6 +116,7 @@ function combineThem (filteredCandidates) {
 // Gets candidate with highest popVotes from each state  
 function wrangleWinners (filteredCandidates) {
 	winners = [];
+    candiStates = [];
     // console.log(filteredCandidates);
     // states are from array in separate js file
     states.forEach(function (state){
@@ -123,12 +125,7 @@ function wrangleWinners (filteredCandidates) {
             return candidateResult.stateAbbr === state.abbr;
         });
 
-        console.log(stateCandidates);
-
-        const candiStates = states;
-        console.log (candiStates);
-
-        // state.candidates = stateCandidates;
+        //console.log(stateCandidates);
         
         // What if there are no stateCandidates?
         if (stateCandidates.length > 0) {	
@@ -146,7 +143,8 @@ function wrangleWinners (filteredCandidates) {
                 };
             };                        
             
-            winners.push(stateWinner);						
+            winners.push(stateWinner);	
+            candiStates.push(stateCandidates);					
             
         } else {
             
@@ -163,12 +161,14 @@ function wrangleWinners (filteredCandidates) {
             
             // console.log (state.name + " has no votes or candidates");
 
-            winners.push(stateWinner);						
-            
+            winners.push(stateWinner);	
+            stateCandidates.push(stateWinner);					
+            candiStates.push(stateCandidates);
         };
     });
 	
 	console.log(winners);
+    console.log (candiStates);
 
 } // end of wrangleWinners  
 
@@ -204,6 +204,34 @@ function attachWinnersToMap (json) {
     // console.log(json);
     return json;
 } // end of attachWinnersToMap  
+
+// Adds all state's candidates info to each state object
+function attachCandidatesToMap (json) {
+    //Merge candidate results data with GeoJSON
+    //Loop through once for each state
+    for (var i = 0; i < winners.length; i++) {
+        // Get the state name
+        let candiState = candiStates[i][0].stateName;
+        console.log("candiState is " + candiState);
+        // Get winning candidate
+        let theseCandidates = candiStates[i];
+        console.log("this states candidates are " + theseCandidates);
+        //Find the corresponding state inside the GeoJSON
+        for (var j = 0; j < json.features.length; j++) {
+            let jsonState = json.features[j].properties.name;
+            if (candiState == jsonState) {
+            // console.log(dataState + " equals " + jsonState);
+                json.features[j].properties.candidates = theseCandidates;
+            }
+            else {
+            // console.log(dataState + " does not equal " + jsonState);
+            };
+        };
+        
+    };
+    // console.log(json);
+    return json;
+} // end of attachCandidatesToMap  
 
 // Colors map based on winning candidates
 function colorStates (usasvg) {
@@ -331,7 +359,10 @@ function colorStates (usasvg) {
 
 function getGeoJSON () {
     d3.json("myPrezData/us-states.json", function(json) {
-        $.when(attachWinnersToMap(json)).then(colorStates(json));
+        $.when(attachWinnersToMap(json))
+        .then(colorStates(json))
+        .then(attachCandidatesToMap(json));
+        console.log(json);
     });
 }; // end of getGeoJSON
 
