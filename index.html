@@ -370,21 +370,24 @@ function colorStates (usasvg) {
                 const popVotes = d.properties.candidates[c].popVotes;
                 const candiParty = d.properties.candidates[c].partyAbbr;
                 stateCandi.append("div")
+                          .attr("class", "candiRow")
                           .text(`${candiName} (${candiParty}), ${popVotes}`);
                 //console.log(`${candiName} got ${popVotes}`);
             }
             /**/
         })
+        
+
+        /**/
+        .on("mouseout", function(){
+            d3.selectAll(".candiRow").remove();
+            d3.select("#stateCandidates").classed("hidden", true);
+        })
         .append("title")
         .text(function(d){
             return d.properties.name + ": " + d.properties.winnerName + ", " + d.properties.partyName + ", (" + d.properties.partyAbbr + ")";
         });
-
-        /*
-        .on("mouseout", function(){
-            d3.select("#stateCandidates").classed("hidden", true);
-        });
-        */
+        
          
 } // end of colorStates 
 
