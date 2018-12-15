@@ -360,10 +360,16 @@ function colorStates (usasvg) {
         })
         .on("mouseover", function(d) {
             //const candidates = d.properties.candidates;
+            
             const stateCandi = d3.select("#stateCandidates");
-            //const candiName = d.properties.candidates[0].candidateName;
-            //const popVotes = d.properties.candidates[0].popVotes;
+            /*
+            const candiName = d.properties.candidates[0].candidateName;
+            const popVotes = d.properties.candidates[0].popVotes;
+            stateCandi.append("div").attr("class", "candiName").text(`${candiName}`);
+            stateCandi.append("div").attr("class", "popVotes").text(`${popVotes}`);
+            */
             stateCandi.classed("hidden", false);
+            
             //stateCandi.text(`${candiName} got ${popVotes}`);
             
             for (var c = 0; c < d.properties.candidates.length; c++) {
@@ -371,22 +377,21 @@ function colorStates (usasvg) {
                 const candiName = d.properties.candidates[c].candidateName;
                 const popVotes = d.properties.candidates[c].popVotes;
                 const candiParty = d.properties.candidates[c].partyAbbr;
-                d3.select("#booger").appendHTML(`<tr><td class='candiName'>${candiName}</td><td class='popVotes'>${popVotes}</td></tr>`);
                 //insertRow.attr("id", `${candiID}`);
-                //const insertCell = d3.select(`#${candiID}`).append("td");
-                
+                //const insertCell = d3.select(`#${candiID}`).append("td");  
                 //insertCell.attr("class", "candiName").text(`${candiName}`);
                 //insertCell.attr("class", "popVotes").text(`${popVotes}`);
-                /*
+                
+                
                 stateCandi.append("div")
                           .attr("class", "candiRow")
                           .text(`${candiName} (${candiParty}), ${popVotes}`);
-                          */
+                /**/          
                 //console.log(`${candiName} got ${popVotes}`);
-            }
+
             /**/
-        })
-        
+        }
+    })
 
         /**/
         .on("mouseout", function(){
