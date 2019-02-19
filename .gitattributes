@@ -1,4 +1,5 @@
-site/* linguist-vendored
 confirmToDelete/* linguist-vendored
+imgs/* linguist-vendored
 myPrezData/* linguist-vendored
-prezPlayProScreenshotsPlus linguist-vendored
+prezPlayProScreenshotsPlus/* linguist-vendored
+site/* linguist-vendored
