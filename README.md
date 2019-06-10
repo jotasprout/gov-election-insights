@@ -28,3 +28,8 @@ Like the U.S. Constitution, this schema is a living document and has evolved ove
 
 ## Blog Posts
 * [I Have a Dream Come True](https://jotascript.wordpress.com/2015/11/18/i-have-a-dream-come-true/) - concepts from 2012 in Photoshop
+
+## Note to Self
+Check this out
+
+http://election.princeton.edu/for-fellow-geeks/
