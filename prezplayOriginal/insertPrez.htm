@@ -1,0 +1,130 @@
+<?php
+
+    session_start();
+
+    if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false) {
+        header("Location: stone/presidents.php"); # user goes to locked version if they aren't logged in
+    }
+
+    # if they are logged in, they see the content on this page below
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Triumphant Presidential Form</title>
+    
+    <script src="../js/jquery-214.js"></script>
+    <script src="../js/jquery_play.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="../js/bootstrap/css/bootstrap.min.css">
+    <script src="../js/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/bootstrap/css/justified-nav.css">
+
+    <LINK href="favicon.ico" rel="icon" type="image/x-icon">
+    <LINK href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <LINK href="favicon.ico" rel="icon" type="image/ico"> 
+    
+</head>
+<body>
+	<div class="container">
+
+            <DIV class="masthead">
+                <a href="http://www.jotascript.com"><img src="../croppedmore-js-headerUnicorn.png" width="680" height="198" alt="Curiosity created a unicorn"/></a>       
+
+            </div> <!-- /masthead -->
+            
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="http://www.jotascript.com">Home</a>
+                    </div>
+                    
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a href="http://www.jotascript.com/tutes/tutes.htm">Tutorials</a></li>
+                            <li><a href="http://www.jotascript.com/education.htm">Education<span class="sr-only"> (current)</span></a></li>
+                            <li><a href="http://www.jotascript.com/experience.htm">Experience</a></li>
+                        </ul>
+              
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="https://jotascript.wordpress.com">Blog</a></li>
+                        </ul>
+                    </div> <!-- /collapse -->
+                </div> <!-- /container-fluid -->
+          
+            </nav> <!-- /navbar -->
+
+        <!-- This form uses code in handle_prez to insert input into the database -->
+        <form class="form-horizontal" action="handle_prez.php" method="post">
+            <fieldset>
+                <legend>Push a Prez</legend>
+                <div class="form-group"> <!-- Row 1 -->
+                    <!-- Column 1 -->
+                    <label class="col-lg-2 control-label" for="firstName">First Name</label>
+                    <!-- Column 2 -->
+                    <div class="col-lg-4">
+                        <input class="form-control" type="text" id="firstName" name="firstName" placeholder="First Name" />
+                    </div>
+                </div><!-- /Row 1 -->
+    
+                <div class="form-group"> <!-- Row 2 -->
+                    <!-- Column 1 -->
+                    <label class="col-lg-2 control-label" for="lastName">Last Name</label>
+                    <!-- Column 2 -->
+                    <div class="col-lg-4">
+                        <input class="form-control" type="text" id="lastName" name="lastName" placeholder="Last Name" />
+                    </div>
+                </div><!-- /Row 2 -->
+    
+                <div class="form-group"> <!-- Row 3 -->
+                    <label class="col-lg-2 control-label" for="party">Party</label>
+                    <div class="col-lg-4">
+                        <select class="form-control" id="party" name="party">
+                            <option value="">- Choose -</option>
+                            <option value="Democratic">Democratic</option>
+                            <option value="Republican">Republican</option>
+                            <option value="Democratic-Republican">Democratic-Republican</option>
+                            <option value="Independent">Independent</option>
+                            <option value="Federalist">Federalist</option>
+                            <option value="Whig">Whig</option>
+                        </select>
+                    </div>
+                </div><!-- /Row 3 -->
+    
+                <div class="form-group"> <!-- Row 4 -->
+                    <!-- Column 1 -->
+                    <label class="col-lg-2 control-label" for="firstYear">First Year</label>
+                    <!-- Column 2 -->
+                    <div class="col-lg-4">
+                        <input class="form-control" type="text" id="firstYear" name="firstYear" placeholder="First Year" />
+                    </div>
+                </div><!-- /Row 4 -->
+    
+                <div class="form-group"> <!-- Row 5 -->
+                    <!-- Column 1 -->
+                    <label class="col-lg-2 control-label" for="lastYear">Last Year</label>
+                    <!-- Column 2 -->
+                    <div class="col-lg-4">
+                        <input class="form-control" type="text" id="lastYear" name="lastYear" placeholder="Last Year" />
+                    </div>
+                </div><!-- /Row 5 -->
+    
+                <div class="form-group"> <!-- Row 6 -->           
+                    <div class="col-lg-4 col-lg-offset-2">
+                        <button class="btn btn-default" type="reset">Nevermind</button>
+                        <button class="btn btn-primary" type="submit">PushPrez</button>
+                    </div>
+                </div><!-- /Row 6 -->
+            </fieldset>
+        </form>
+	
+
+    <footer class="footer">
+
+        <p>&copy; Sprout Means Grow 2016</p>
+
+    </footer>
+</div> <!-- /container -->
+</body>
+</html>
