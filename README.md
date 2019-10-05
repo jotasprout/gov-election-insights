@@ -35,10 +35,7 @@ Below shows results if only socialist candidates [except for Jill Stein (Green P
 ## Schema
 ![Schema diagram showing tables with columns for candidates, states, party affiliations, and election results.](https://jotascript.files.wordpress.com/2018/10/schema_101618.png)
 
-Like the U.S. Constitution, this schema is a living document and has evolved over time.
-
-## Blog Posts
-* [I Have a Dream Come True](https://jotascript.wordpress.com/2015/11/18/i-have-a-dream-come-true/) - concepts from 2012 in Photoshop
+Like the U.S. Constitution, this schema is a living document and evolves over time.
 
 ## Note to Self
 Check this out
