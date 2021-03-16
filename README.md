@@ -12,17 +12,17 @@ See my _interactive data visualization of presidential election results_ [here](
 
 ## Examples
 
-<img src="https://www.roxorsoxor.com/imgs/snagsforgh/ppp-everyone.png" width="640">
+<img src="https://www.roxorsoxor.com/imgs/snagsforgh/electionsInsights/ppp-everyone.png" width="640">
 
 Above includes every candidate -- but, of course, only President Trump and Secretary Clinton are displayed on the map as winners.
 
-<img src="https://www.roxorsoxor.com/imgs/snagsforgh/ppp-allLeftVStrump.png" width="640">
+<img src="https://www.roxorsoxor.com/imgs/snagsforgh/electionsInsights/ppp-allLeftVStrump.png" width="640">
 
 Above shows slightly different results if we combined all the "left" candidates versus President Trump. 
 
 However, if we also combine "right" candidates and have a Left vs Right battle royale:
 
-<img src="https://www.roxorsoxor.com/imgs/snagsforgh/ppp-allLeftAllRight.png" width="640">
+<img src="https://www.roxorsoxor.com/imgs/snagsforgh/electionsInsights/ppp-allLeftAllRight.png" width="640">
 
 Below shows results if only socialist candidates [except for Jill Stein (Green Party)] ran. Gray states are those with no socialist candidates (or there were socialist candidates but they received zero votes).
 
