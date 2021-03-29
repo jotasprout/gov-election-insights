@@ -5,7 +5,7 @@ For example, if all "Left wing" candidates combined their votes, could they have
 
 At present, I'm using only the popular vote for each state. Electoral College results (and other interactive yummy goodness) coming soon.
 
-See my _interactive data visualization of presidential election results_ moving content from old to new host right this very second.
+See my _interactive data visualization of presidential election results_ **moving content from old to new host right this very second**.
 
 * Python scripts for scraping various data sources
 * D3.js for data viz
