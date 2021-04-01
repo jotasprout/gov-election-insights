@@ -8,7 +8,12 @@ At present, I'm using only the popular vote for each state. Electoral College re
 See my _interactive data visualization of presidential election results_ ![here](https://roxorsoxor.com/prezplaypro/everyone.html).
 
 * Python scripts for scraping various data sources
+* MySQL to create new tables
 * D3.js for data viz
+
+## Note
+- The Electoral College values change in some elections
+- The same candidate in different states may run in a different party
 
 ## Examples
 
