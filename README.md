@@ -1,13 +1,17 @@
 # Election Insights
-Compare different outcomes based on certain candidates or candidate groups.
+Most election maps show only red or blue states -- victories gained by one of two candidates. More often than not, however, there are multiple presidential candidates on a ballot. This app answers questions such as, 
+- "What are the results if all votes for left-leaning candidates are compared to all votes for right-leaning candidates?" 
+- "What is the result if votes for all right-leaning candidates are compared to the winning left-leaning candidate?"
 
 For example, if all "Left wing" candidates combined their votes, could they have collectively defeated Trump?
 
-At present, I'm using only the popular vote for each state. Electoral College results (and other interactive yummy goodness) coming soon.
+At present, I'm using only the popular vote for each state. Electoral College data coming soon.
 
-See my _interactive data visualization of presidential election results_ ![here](https://roxorsoxor.com/prezplaypro/everyone.html).
+See my 2016 _interactive data visualization of presidential election results_ ![here](https://roxorsoxor.com/prezplaypro/everyone.html).
 
-* Python scripts for scraping various data sources
+## Languages
+
+* Python scripts for downloading data and scraping data sources 
 * MySQL to create new tables
 * D3.js for data viz
 
