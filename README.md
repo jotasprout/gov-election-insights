@@ -34,7 +34,7 @@ However, if we also combine "right" candidates as well for a Left vs Right battl
 
 <img src="https://www.roxorsoxor.com/imgs/snagsforgh/electionsInsights/ppp-allLeftAllRight.png" width="640">
 
-The Left gains Wisconsin.
+The Left gains Wisconsin, Michigan, and Pennsylvania.
 
 Below shows results if only socialist candidates [except for Jill Stein (Green Party)] ran. Gray states are those with no socialist candidates (or there were socialist candidates but they received zero votes).
 
